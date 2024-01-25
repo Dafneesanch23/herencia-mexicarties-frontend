@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Iniciar Sesión</title>
+    <!--Importaciones para Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script async defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!--Estilos propios-->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="card">
+            <!--Logotipo que sobresale de la tarjeta-->
+            <img src="../public/images/logo.png" class="card-img-top card-properties" alt="Logotipo">
+          <div class="card-body pt-5">
+            <h2 class="card-title text-center mt-4">Iniciar Sesión</h2>
+            <form class="m-4">
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Ingrese su correo">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="Ingrese su contraseña">
+              </div>
+              
+              <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+              <div class="text-center mt-3">
+                <a href="#" class="create-account-link">¿No tienes cuenta? Registrate</a>
+              </div>
+            </form>
+            <div class="text-start mt-4">
+                <a href="#" class="privacy-link">Privacidad</a>
+            </div>
+          </div>
+
+        </div>
+    </div>
+
+  </body>
+</html>
