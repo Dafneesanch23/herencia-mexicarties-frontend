@@ -270,6 +270,10 @@ font-weight: bold;
   color: var(--dark-icon-color);
 }
 
+.darkmode .text-licores {
+  color: #ffffff; /* Cambiar el color del texto a blanco en modo oscuro */
+}
+
 /****************/
 /* BOTON IDIOMA */
 /****************/
