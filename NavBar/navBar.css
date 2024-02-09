@@ -270,6 +270,16 @@ font-weight: bold;
   color: var(--dark-icon-color);
 }
 
+.darkmode .text-licores {
+  color: #ffffff;
+}
+
+.darkmode .options-user button {
+  background-color: #333; 
+  color: #fff;
+  border: 1px solid #fff; 
+}
+
 /****************/
 /* BOTON IDIOMA */
 /****************/
