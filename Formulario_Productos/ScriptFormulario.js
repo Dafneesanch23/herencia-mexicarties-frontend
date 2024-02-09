@@ -23,7 +23,7 @@ const dataProducts = () => {
         imagen,
     };
 
-    showAlert(JSON.stringify(productData));
+    console.log(JSON.stringify(productData));
     return true;
 }
 
