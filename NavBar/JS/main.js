@@ -1,5 +1,5 @@
 const body = document.querySelector('body');
-const btn = document.querySelector('.btn');
+const btn_dark = document.querySelector('.btn_dark');
 const icon = document.querySelector('.btn__icon');
 
 //to save the dark mode use the object "local storage".
@@ -31,7 +31,7 @@ function load(){
 
 load();
 
-btn.addEventListener('click', () => {
+btn_dark.addEventListener('click', () => {
 
   body.classList.toggle('darkmode');
   icon.classList.add('animated');
@@ -61,10 +61,10 @@ const languageFlag = document.getElementById('languageFlag');
 
 function toggleFlag() {
   if (languageFlag.src.includes('mexico.png')) {
-    languageFlag.src = '../Imagenes/eu.png';
+    languageFlag.src = '/Imagenes/eu.png';
     languageFlag.alt = 'Bandera de Estados Unidos';
   } else {
-    languageFlag.src = '../Imagenes/mexico.png';
+    languageFlag.src = '/Imagenes/mexico.png';
     languageFlag.alt = 'Bandera de México';
   }
 }
@@ -76,12 +76,4 @@ languageButton.addEventListener('click', (e) => {
     toggleFlag();
     languageFlag.classList.remove('hidden');
   }, 100);
-});
-
-// Volver a inicio con el logo del pie de página. 
-document.querySelector('.descripcion-section img').addEventListener('click', function() {
-  window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-  });
 });
