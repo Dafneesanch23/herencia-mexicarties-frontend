@@ -12,10 +12,9 @@
     <!--Font awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
   <!--Estilos propios-->
+  <link rel="stylesheet" href="/NavBar/navBar.css">
   <link rel="stylesheet" href="./css/createAcount.css">
-  <!--Funcionalidad con JS-->
-  <script async defer src="./js/createAcount.js"></script>
-  <script async defer src="./js/translate-createAcount.js"></script>
+  
 </head>
 
 <body>
@@ -25,8 +24,8 @@
 
     <div class="container options-user">
       <span id="greetingText"></span>
-      <button id="btn-register">Registrarse</button>
-      <button id="btn-login">Iniciar sesión</button>
+      <button><a class="navbar-brand" id="btn-register" href="/CreateAcount/createAcount.html">Registrarse</a></button>
+      <button><a class="navbar-brand" id="btn-login" href="/Login/login.html">Iniciar sesión</a></button>
     </div>
 
     <div class="container">
@@ -57,9 +56,9 @@
                 TIENDA
               </a>
               <ul class="dropdown-menu estilos-navbar" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#" id="handicraftslink">ARTESANIAS</a></li>
-                <li><a class="dropdown-item" href="#" id="clothinglink">ROPA ARTESANAL</a></li>
-                <li><a class="dropdown-item" href="#" id="liquorslink">LICORES</a></li>
+                <li><a class="dropdown-item" href="/tienda_en_linea/tienda.html" id="handicraftslink">ARTESANIAS</a></li>
+                <li><a class="dropdown-item" href="/tienda_en_linea/tienda.html" id="clothinglink">ROPA ARTESANAL</a></li>
+                <li><a class="dropdown-item" href="/Tienda/Licores/HTML/Licores.html" id="liquorslink">LICORES</a></li>
               </ul>
             </li>
 
@@ -88,7 +87,7 @@
             <li class="nav-item">
               <div class="btn-options">
                 <!--DARKMODE-->
-                <div class="btn">
+                <div class="btn_dark">
                   <div class="btn__indicator">
                     <div class="btn__icon-container">
                       <i class="btn__icon fa-solid"></i>
@@ -158,7 +157,7 @@
                 <h3 class="text-center" id="textfooter2"> Descubre la autenticidad de México en cada detalle</h3>
             </div>
             <a href="#top">
-                <img src="../Imagenes/logo.png" alt="México" class="img-fluid mt-2">
+                <img src="/Imagenes/logo.png" alt="México" class="img-fluid mt-2">
             </a>
         </div>
     </div>
@@ -167,8 +166,8 @@
         <div class="row">
             <div class="col-lg-4 footer-left">
                 <ul>
-                    <li><a href="#" class="footer-link" id="footerlink1">Términos y condiciones</a></li>
-                    <li><a href="#" class="footer-link" id="footerlink2">Servicio al cliente</a></li>
+                    <li><a href="/Terminos/TerminosCondiciones.html" class="footer-link" id="footerlink1">Términos y condiciones</a></li>
+                    <li><a href="/Contacto/contact.html" class="footer-link" id="footerlink2">Servicio al cliente</a></li>
                     <li><a href="/QuienesSomos/QuienesSomos.html" class="footer-link" id="footerlink3">Conócenos</a></li>
                     <li><a href="/Politicas/politicasPrivacidad.html" class="footer-link" id="footerlink4">Políticas de privacidad</a></li>
                 </ul>
@@ -176,8 +175,8 @@
             <div class="col-lg-4 footer-center">
                 <p id="textfooter3">Recibe información exclusiva y promociones vía email</p>
 
-                <a href="/Login/login.html">
-                    <button id="subscribeButton">Suscríbete</button>
+                <a href="/CreateAcount/createAcount.html">
+                    <button id="subscribeButton">Registrate</button>
                 </a>
 
             </div>
@@ -197,6 +196,10 @@
 </footer>
     <!-- FINAL del Pie de Página -->
 
+    <!--Funcionalidad con JS-->
+  <script src="/NavBar/JS/main.js"></script>
+  <script src="./js/createAcount.js"></script>
+  <script src="./js/translate-createAcount.js"></script>
 </body>
 
 </html>
