@@ -5,7 +5,7 @@ function getRandomNumber(min, max) {
 }
 
 const productos = [
-    { id: 1, nombre: 'Huipil Floral', tipo: 'Huipil', artesano: 'Artesano1', imagen: { url: 'url_imagen_1.jpg', alt: 'Huipil Floral' }, precio: 200, lugarFabricacion: 'México' },
+    { id: 1, nombre: 'Huipil Floral', tipo: 'Huipil', artesano: 'Artesano1', imagen: { url: "./index/images/huipil.png", alt: 'Huipil Floral' }, precio: 200, lugarFabricacion: 'México' },
     { id: 2, nombre: 'Vestido Étnico', tipo: 'Vestido', artesano: 'Artesano2', imagen: { url: 'url_imagen_2.jpg', alt: 'Vestido Étnico' }, precio: 150, lugarFabricacion: 'México' },
     { id: 3, nombre: 'Alebrije Colorido', tipo: 'Alebrije', artesano: 'Artesano3', imagen: { url: 'url_imagen_3.jpg', alt: 'Alebrije Colorido' }, precio: 80, lugarFabricacion: 'México' },
 ];
