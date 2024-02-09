@@ -1,79 +1,95 @@
-const body = document.querySelector('body');
-const btn = document.querySelector('.btn');
-const icon = document.querySelector('.btn__icon');
+/**************************************/
+/* BOTÓN LOGIN                 */
+/**************************************/
 
-//to save the dark mode use the object "local storage".
+document.addEventListener("DOMContentLoaded", () => {
 
-//function that stores the value true if the dark mode is activated or false if it's not.
-function store(value){
-  localStorage.setItem('darkmode', value);
-}
+  /*******************************************************/
+  /* Función para mostrar mensaje de error al validar    */
+  /*******************************************************/
 
-function toggleDarkMode() {
-  document.body.classList.toggle("darkmode");
-}
+  const showAlert = (message) => {
+      const alertContainer = document.getElementById('alert-container');
+      alertContainer.innerHTML = `<div class="alert alert-danger alert-dismissible fade show justify-content-center" style="text-align: center;" role="alert">
+                                    ${message}
+                                  </div>`;
+  };
 
-//function that indicates if the "darkmode" property exists. It loads the page as we had left it.
-function load(){
-  const darkmode = localStorage.getItem('darkmode');
+  const clearAlerts = () => {
+      const alertContainer = document.getElementById('alert-container');
+      alertContainer.innerHTML = '';
+  };
 
-  //if the dark mode was never activated
-  if(!darkmode){
-    store(false);
-    icon.classList.add('fa-sun');
-  } else if( darkmode == 'true'){ //if the dark mode is activated
-    body.classList.add('darkmode');
-    icon.classList.add('fa-moon');
-  } else if(darkmode == 'false'){ //if the dark mode exists but is disabled
-    icon.classList.add('fa-sun');
-  }
-}
+  /**************************************/
+  /* Función para validar formulario    */
+  /**************************************/
 
-load();
+  const dataValidation = () => {
 
-btn.addEventListener('click', () => {
+      /**************************************/
+      /* Datos del formulario               */
+      /**************************************/
+      const email = document.getElementById('user-email').value;
+      const password = document.getElementById('user-password').value
 
-  body.classList.toggle('darkmode');
-  icon.classList.add('animated');
+      /**************************************/
+      /* Funciones para la validación       */
+      /**************************************/
 
-  //save true or false
-  store(body.classList.contains('darkmode'));
+      const validateEmail = (email) => {
+          // Expresión regular para la validación de correo electrónico (Me la encontré en internet para validar correos xd)
+          const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return re.test(email);
+      };
 
-  if(body.classList.contains('darkmode')){
-    icon.classList.remove('fa-sun');
-    icon.classList.add('fa-moon');
-  }else{
-    icon.classList.remove('fa-moon');
-    icon.classList.add('fa-sun');
-  }
+      const fieldsAreNotEmpty = () => {
+          const email = document.getElementById('user-email').value.trim();
+          const password = document.getElementById('user-password').value.trim();
 
-  setTimeout( () => {
-    icon.classList.remove('animated');
-  }, 500)
-})
+          return email && password;
+      };
 
-/****************************/
-/* Boton para cambiar idioma*/
-/****************************/
+      /*********************************************/
+      /* Se ocupan las funciones para validar      */
+      /*********************************************/
 
-const languageButton = document.getElementById('toggleLanguage');
-const languageFlag = document.getElementById('languageFlag');
+      // Limpia alertas mostradas en pantalla.
+      clearAlerts();
 
-function toggleFlag() {
-  if (languageFlag.src.includes('mexico.png')) {
-    languageFlag.src = '../Imagenes/eu.png';
-    languageFlag.alt = 'Bandera de Estados Unidos';
-  } else {
-    languageFlag.src = '../Imagenes/mexico.png';
-    languageFlag.alt = 'Bandera de México';
-  }
-}
+      if (!fieldsAreNotEmpty()) {
+          showAlert('Por favor, rellene todos los campos.');
+          return false;
+      }
 
-languageButton.addEventListener('click', (e) => {
-  e.preventDefault();
-  languageFlag.classList.add('hidden');
-  setTimeout(() => {
-    toggleFlag();
-    languageFlag.classList.remove('hidden');
-  }, 100);
+      if (!validateEmail(email)) {
+          showAlert('El correo electrónico no es válido.');
+          return false;
+      }
+
+      /******************************************************/
+      /* Si cumple con las validaciones, se crea JSON       */
+      /******************************************************/
+
+      const userData = {
+          email,
+          password
+      };
+
+      showAlert(JSON.stringify(userData));
+      return userData;
+  };
+
+  /**************************************/
+  /* Se ocupa la función validar datos  */
+  /**************************************/
+
+  const form = document.querySelector('form');
+
+  form.onsubmit = (e) => {
+      e.preventDefault();
+      const data = dataValidation()
+      if (data) {
+          console.log(data)
+      }
+  };
 });

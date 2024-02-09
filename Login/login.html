@@ -12,9 +12,11 @@
   <!--Font awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
   <!--Estilos propios-->
+  <link rel="stylesheet" href="/NavBar/navBar.css">
   <link rel="stylesheet" href="./css/login.css">
   <!--Validaciones y uso de funciones -->
   <script async defer src="./js/login.js"></script>
+  <script async defer src="/NavBar/JS/main.js"></script>
 </head>
 
 <body>
@@ -22,15 +24,15 @@
   <!-- Barra de navegación -->
   <header class="estilo-header">
     <div class="container options-user">
-      <span></span>
-      <button>Registrarse</button>
-      <button>Iniciar sesión</button>
+      <span id="greetingText"></span>
+      <button><a class="navbar-brand" id="btn-register" href="/CreateAcount/createAcount.html">Registrarse</a></button>
+      <button><a class="navbar-brand" id="btn-login" href="/Login/login.html">Iniciar sesión</a></button>
     </div>
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
         <!--Imagen-->
-        <a class="navbar-brand" href="../index/index.html">
-          <img width="150" src="../Imagenes/logo.png" alt="logo">
+        <a class="navbar-brand" href="/index/index.html">
+          <img width="150" src="/Imagenes/logo.png" alt="logo">
         </a>
         <!--Botón de hamburguesa para pantallas más chicas-->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -41,7 +43,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <ul class="navbar-nav align-items-center justify-content-between">
             <li class="nav-item active">
-              <a class="nav-link" href="../index/index.html">INICIO</a>
+              <a class="nav-link" href="/index/index.html">INICIO</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -49,13 +51,13 @@
                 TIENDA
               </a>
               <ul class="dropdown-menu estilos-navbar" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">ARTESANIAS</a></li>
-                <li><a class="dropdown-item" href="#">ROPA ARTESANAL</a></li>
-                <li><a class="dropdown-item" href="#">LICORES</a></li>
+                <li><a class="dropdown-item" href="/tienda_en_linea/tienda.html">ARTESANIAS</a></li>
+                <li><a class="dropdown-item" href="/tienda_en_linea/tienda.html">ROPA ARTESANAL</a></li>
+                <li><a class="dropdown-item" href="/Tienda/Licores/HTML/Licores.html">LICORES</a></li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../QuienesSomos/QuienesSomos.html">QUIENES SOMOS</a>
+              <a class="nav-link" href="/QuienesSomos/QuienesSomos.html">QUIENES SOMOS</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">DESCUBRE MÉXICO</a>
@@ -64,18 +66,18 @@
               <a class="nav-link" href="../Artesanos/Artesanos.html">CONOCE A LOS ARTESANOS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../Contacto/contact.html">CONTACTO</a>
+              <a class="nav-link" href="/Contacto/contact.html">CONTACTO</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
-                <img width="100" src="../Imagenes/huacal.png" alt="huacal">
+                <img width="100" src="/Imagenes/huacal.png" alt="huacal">
                 <div id="huacal-number" class="huacal-number">0</div>
               </a>
             </li>
             <li class="nav-item">
               <div class="btn-options">
                 <!--DARKMODE-->
-                <div class="btn">
+                <div class="btn_dark">
                   <div class="btn__indicator">
                     <div class="btn__icon-container">
                       <i class="btn__icon fa-solid"></i>
@@ -85,7 +87,7 @@
                 <!--IDIOMA-->
                 <div class="btn-idioma">
                   <a href="#" id="toggleLanguage">
-                    <img id="languageFlag" width="50" src="../Imagenes/mexico.png" alt="Bandera de México">
+                    <img id="languageFlag" width="50" src="/Imagenes/mexico.png" alt="Bandera de México">
                   </a>
                 </div>
               </div>
@@ -99,16 +101,17 @@
   </header>
 
   <main>
+    <div id="alert-container"></div>
     <div class="d-flex justify-content-center">
       <div class="card">
         <div class="card-body">
           <h2 class="card-title text-center">Iniciar Sesión</h2>
-          <form id="login-form" class="m-4">
+          <form id="login-form" class="m-4" novalidate autocomplete="off">
             <div class="form-group">
-              <input type="email" class="form-control" placeholder="Correo">
+              <input id="user-email" type="email" class="form-control" placeholder="Correo">
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" placeholder="Contraseña">
+              <input id="user-password" type="password" class="form-control" placeholder="Contraseña">
             </div>
 
             <button type="submit" class="btn btn-primary btn-block justify-content-center">Ingresar</button>
@@ -132,50 +135,50 @@
   <footer>
     <!-- Sección de Descripción -->
     <div class="descripcion-section">
-      <div class="descripcion-content container">
-        <h4> Tejemos historias de tradición y pasión </h4>
-        <div class="container">
-          <h3 class="text-center"> Descubre la autenticidad de México en cada detalle</h3>
+        <div class="descripcion-content container">
+            <h4 id="textfooter1"> Tejemos historias de tradición y pasión </h4> 
+            <div class="container"> 
+                <h3 class="text-center" id="textfooter2"> Descubre la autenticidad de México en cada detalle</h3>
+            </div>
+            <a href="#top">
+                <img src="/Imagenes/logo.png" alt="México" class="img-fluid mt-2">
+            </a>
         </div>
-        <a href="#top">
-          <img src="../Imagenes/logo.png" alt="México" class="img-fluid mt-2">
-        </a>
-      </div>
     </div>
 
     <div class="container">
-      <div class="row">
-        <div class="col-lg-4 footer-left">
-          <ul>
-            <li><a href="#" class="footer-link">Términos y condiciones</a></li>
-            <li><a href="#" class="footer-link">Servicio al cliente</a></li>
-            <li><a href="#" class="footer-link">Conócenos</a></li>
-            <li><a href="../Politicas/politicasPrivacidad.html" class="footer-link">Políticas de privacidad</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-4 footer-center">
-          <p>Recibe información exclusiva y promociones vía email</p>
+        <div class="row">
+            <div class="col-lg-4 footer-left">
+                <ul>
+                    <li><a href="/Terminos/TerminosCondiciones.html" class="footer-link" id="footerlink1">Términos y condiciones</a></li>
+                    <li><a href="/Contacto/contact.html" class="footer-link" id="footerlink2">Servicio al cliente</a></li>
+                    <li><a href="/QuienesSomos/QuienesSomos.html" class="footer-link" id="footerlink3">Conócenos</a></li>
+                    <li><a href="/Politicas/politicasPrivacidad.html" class="footer-link" id="footerlink4">Políticas de privacidad</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 footer-center">
+                <p id="textfooter3">Recibe información exclusiva y promociones vía email</p>
 
-          <a href="../Login/login.html">
-            <button id="subscribeButton">Suscríbete</button>
-          </a>
+                <a href="/CreateAcount/createAcount.html">
+                    <button id="subscribeButton">Registrate</button>
+                </a>
 
+            </div>
+            <div class="col-lg-4 footer-right">
+                <a href="#" class="footer-link" id="textfooter4">Métodos de pago</a>
+                <div class= "img-pagos-container">
+                <img class="img-pagos" src="/Imagenes/pagos.jpg" alt="logo-mercado-pago">
+                </div>
+            </div>
         </div>
-        <div class="col-lg-4 footer-right">
-          <a href="#" class="footer-link">Métodos de pago</a>
-          <div class="img-pagos-container">
-            <img class="img-pagos" src="../Imagenes/pagos.jpg" alt="logo-mercado-pago">
-          </div>
+        <div class="row">
+            <div class="col-lg-12 bottom-text">
+                <p>&copy; 2024 Herencia Mexicarties</p>
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12 bottom-text">
-          <p>&copy; 2024 Herencia Mexicarties</p>
-        </div>
-      </div>
     </div>
-  </footer>
-  <!-- FINAL del Pie de Página -->
+</footer>
+    <!-- FINAL del Pie de Página -->
 </body>
 
 </html>

@@ -77,3 +77,4 @@ languageButton.addEventListener('click', (e) => {
     languageFlag.classList.remove('hidden');
   }, 100);
 });
+
