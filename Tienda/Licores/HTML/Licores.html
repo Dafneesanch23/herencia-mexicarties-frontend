@@ -3,82 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Quiénes somos</title>
-    <!-- font awesome style -->
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <title>Licores</title>
+     <!--Importaciones para Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--NAVBAR CSS-->
+    <link rel="stylesheet" href="/NavBar/navBar.css">
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="/Tienda/Licores/CSS/Licores.css">
-   <!--CSS para darkmode-->
-   <link rel="stylesheet" href="/Darkmode/CSS/darkmode.css">
-    <!-- slider imagenes de quienes somos -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <!--ICONS CDN-->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-<!--DARKMODE-->   
-      <div class="btn">
-        <div class="btn__indicator">
-         <div class="btn__icon-container">
-        <i class="btn__icon fa-solid"></i>
-         </div>
-       </div>
-     </div>     
-      <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <!--Imagen-->
-          <a class="navbar-brand" href="/index/index.html">
-            <img width="150" src="/QuienesSomos/Imagenes/logo.png" alt="logo">
-          </a>
-          <!--Botón de hamburguesa para pantallas más chicas-->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!--Contenido de barra de navegacion-->
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-            <ul class="navbar-nav align-items-center">
-              <li class="nav-item active">
-                <a class="nav-link" href="/index/index.html">INICIO</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">TIENDA</a>
-                <ul class="dropdown-menu estilos-navbar" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">ARTESANIAS</a></li>
-                  <li><a class="dropdown-item" href="#">ROPA ARTESANAL</a></li>
-                  <li><a class="dropdown-item" href="#">LICORES</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">QUIENES SOMOS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">DESCUBRE MÉXICO</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">ARTESANOS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">CONTACTO</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <img width="100" src="/Tienda/Licores/Img/huacal.png" alt="huacal">
-                  <div id="huacal-number" class="huacal-number">0</div>
-                </a>
-              </li>
+   <!-- Estilos personalizados -->
+   <link rel="stylesheet" href="/footer/footer.css">
+   <!-- Script para desplazarse al inicio de la página -->
+   <script async defer src="./scrip.js"></script>
+   </head>
+
+<!-- Barra de navegación -->
+<!-- Barra de navegación -->
+<header class="estilo-header">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <!--Imagen-->
+      <a class="navbar-brand" href="/index/index.html">
+        <img width="150" src="/Imagenes/logo.png" alt="logo">
+      </a>
+      <!--Botón de hamburguesa para pantallas más chicas-->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--Contenido de barra de navegacion-->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item active">
+            <a class="nav-link" href="/index/index.html">INICIO</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">TIENDA</a>
+            <ul class="dropdown-menu estilos-navbar" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">ARTESANIAS</a></li>
+              <li><a class="dropdown-item" href="#">ROPA ARTESANAL</a></li>
+              <li><a class="dropdown-item" href="/Tienda/Licores/HTML/Licores.html">LICORES</a></li>
             </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/QuienesSomos/QuienesSomos.html">QUIENES SOMOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">DESCUBRE MÉXICO</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/Artesanos/Artesanos.html">CONOCE A LOS ARTESANOS</a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Contacto/contact.html">CONTACTO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <img width="100" src="/Imagenes/huacal.png" alt="huacal">
+              <div id="huacal-number" class="huacal-number">0</div>
+          </li>
+            </a>
+        </ul>
+          <!--DARKMODE-->   
+  <div class="btn_dark">
+    <div class="btn__indicator">
+     <div class="btn__icon-container">
+    <i class="btn__icon fa-solid"></i>
+     </div>
+   </div>
+ </div>
+    <!--IDIOMA-->
+    <div class="btn-idioma">
+      <a href="#" id="toggleLanguage">
+        <img id="languageFlag" width="50" src="/Imagenes/mexico.png" alt="Bandera de México">
+      </a>
+    </div>
+  </div>
+</li>
+</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</header>
+
+<!-- Banner rosa con título -->
+<section class="inner_page_head">
+  <div class="container_fuild">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="full">
+                  <h3>VINOS Y LICORES</h3>
+              </div>
           </div>
-        </nav>
       </div>
-    </header>
+  </div>
+</section>
+
+<br>
+<br>
+
+<!-- Banner con título -->
+<section class="product_section layout_padding">
+<div class="container">
+  <div class="heading_container heading_center">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h4> LICORES </h4> 
+        <h3> <span>ARTESANALES</span></h3>  
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+  <br>
+  <br>
+</header>
+
+  <div class="container">
+  <img src="/Tienda/Licores/Img/charanda-licores_M.jpeg" alt="" class="special-image">
+  </div>
+  <div class="container-list">
+  <h1>Vinos y Licores Artesanales Mexicanos</h1>
+  <p class="text-licores">México cuenta con una rica tradición en la producción de licores, muchos de los cuales son conocidos internacionalmente. Herencia Mexicarties ofrece una variedad de licores que reflejan la diversidad cultural y la artesanía destiladora del país. Aquí tienes algunas opciones que podrías encontrar con nosotros:</p>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4" id="liquor-grid"></div>
+  </div>
+
+<!-- Modal para mostrar la información detallada del producto -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="productModalLabel">Detalles del Producto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="productModalBody" class="btn-huacal">
+        <!-- Aquí se mostrará la información detallada del producto -->
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
+  <!-- INCIO Pie de Página -->
+  <footer>
+    <!-- Sección de Descripción -->
+    <div class="descripcion-section">
+        <div class="descripcion-content container">
+            <h4> Tejemos historias de tradición y pasión </h4> 
+            <div class="container"> 
+                <h3 class="text-center"> Descubre la autenticidad de México en cada detalle</h3>
+            </div>
+            <a href="#top">
+                <img src="/Imagenes/logo.png" alt="México" class="img-fluid mt-2">
+            </a>
+        </div>
+    </div>
 
-    <!-- Pie de Página -->
-<footer>
     <div class="container">
         <div class="row">
             <div class="col-lg-4 footer-left">
@@ -86,15 +175,22 @@
                     <li><a href="#" class="footer-link">Términos y condiciones</a></li>
                     <li><a href="#" class="footer-link">Servicio al cliente</a></li>
                     <li><a href="#" class="footer-link">Conócenos</a></li>
-                    <li><a href="#" class="footer-link">Políticas de privacidad</a></li>
+                    <li><a href="../Politicas/politicasPrivacidad.html" class="footer-link">Políticas de privacidad</a></li>
                 </ul>
             </div>
             <div class="col-lg-4 footer-center">
                 <p>Recibe información exclusiva y promociones vía email</p>
-                <button id="subscribeButton">Suscríbete</button>
+
+                <a href="../Login/login.html">
+                    <button id="subscribeButton">Suscríbete</button>
+                </a>
+
             </div>
             <div class="col-lg-4 footer-right">
                 <a href="#" class="footer-link">Métodos de pago</a>
+                <div class= "img-pagos-container">
+                <img class="img-pagos" src="/Imagenes/pagos.jpg" alt="logo-mercado-pago">
+                </div>
             </div>
         </div>
         <div class="row">
@@ -103,26 +199,12 @@
             </div>
         </div>
     </div>
- 
-
-
-
-
-
-
-    
-    
- </footer>
- <!-- Bootstrap JS y jQuery (colócalos antes de cerrar el cuerpo) -->
- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
- 
- <!-- Script para desplazarse al inicio de la página -->
- <script src="script.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
- <!--script darkmode-->
- <script src="/Darkmode/JS/main.js"></script>
-    </body>
- 
- </html>
+</footer>
+    <!-- FINAL del Pie de Página -->
+<!-- Script para desplazarse al inicio de la página -->
+<script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<!--script darkmode-->
+<script src="/NavBar/JS/main.js"></script>
+<!--Script para productos-->
+<script src="/Tienda/Licores/JS/licores.js"></script>

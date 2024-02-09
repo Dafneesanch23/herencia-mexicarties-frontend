@@ -7,111 +7,119 @@
       <!-- Estilos propios -->
       <link href="./CSS/style.css" rel="stylesheet" />
       <!-- responsive style -->
-      <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
-   
-       <!-- Script para desplazarse al inicio de la página -->
-    <script async defer src="./scrip.js"></script>
-
-    </head>
-
-   <body>
-           <!-- Barra de navegación -->
-  <header class="estilo-header">
-    <div class="container options-user">
-      <span></span>
-      <button>Registrarse</button>
-      <button>Iniciar sesión</button>
-    </div>
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <!--Imagen-->
-        <a class="navbar-brand" href="../index/index.html">
-          <img width="150" src="../Imagenes/logo.png" alt="logo">
-        </a>
-        <!--Botón de hamburguesa para pantallas más chicas-->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!--Contenido de barra de navegacion-->
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-          <ul class="navbar-nav align-items-center justify-content-between">
-            <li class="nav-item active">
-              <a class="nav-link" href="../index/index.html">INICIO</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                TIENDA
-              </a>
-              <ul class="dropdown-menu estilos-navbar" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">ARTESANIAS</a></li>
-                <li><a class="dropdown-item" href="#">ROPA ARTESANAL</a></li>
-                <li><a class="dropdown-item" href="#">LICORES</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../QuienesSomos/QuienesSomos.html">QUIENES SOMOS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">DESCUBRE MÉXICO</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../Artesanos/Artesanos.html">CONOCE A LOS ARTESANOS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../Contacto/contact.html">CONTACTO</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <img width="100" src="../Imagenes/huacal.png" alt="huacal">
-                <div id="huacal-number" class="huacal-number">0</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <div class="btn-options">
-                <!--DARKMODE-->
-                <div class="btn">
-                  <div class="btn__indicator">
-                    <div class="btn__icon-container">
-                      <i class="btn__icon fa-solid"></i>
-                    </div>
+      <link href="./CSS/responsive.css" rel="stylesheet" />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   </head>
+   <body class="sub_page">
+      <div class="hero_area">
+         <!-- header section strats -->
+         <header class="header_section">
+            <div class="container">
+               <nav class="navbar navbar-expand-lg custom_nav-container ">
+                  <a class="navbar-brand" href="../index.html"><img width="150" src="./imagenes/logo.png" alt="#" /></a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class=""> </span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                     <ul class="navbar-nav">
+                        <li class="nav-item">
+                           <a class="nav-link" href="../index.html">INICIO</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">TIENDA <span class="caret"></span></a>
+                           <ul class="dropdown-menu">
+                              <li><a href="#">ROPA ARTESANAL</a></li>
+                              <li><a href="#">ARTESANIAS</a></li>
+                              <li><a href="">LICORES</a></li>
+                           </ul>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="../QuienesSomos/QuienesSomos.html">QUIENES SOMOS</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="../blog_list.html">DESCUBRE MÉXICO</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="../Contacto/contact.html">CONTACTO</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#">
+                                 <g>
+                                    <g>
+                                       <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                                          c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                                    </g>
+                                 </g>
+                                 <g>
+                                    <g>
+                                       <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                                          C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                                          c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                                          C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                                    </g>
+                                 </g>
+                                 <g>
+                                    <g>
+                                       <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                                          c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                                    </g>
+                                 </g>
+                                 <g>
+                                 </g>
+                                 <g>
+                                 </g>
+                                 <g>
+                                 </g>
+                                 <g>
+                                 </g>
+                                 <g>
+                                 </g>
+                                 <g>
+                                 </g>
+                                 <g>
+                                 </g>
+                                 <g>
+                                 </g>
+                                 <g>
+                                 </g>
+                                 <g>
+                                 </g>
+                                 <g>
+                                 </g>
+                                 <g>
+                                 </g>
+                                 <g>
+                                 </g>
+                                 <g>
+                                 </g>
+                                 <g>
+                                 </g>
+                           </a>
+                        </li>
+                        <form class="form-inline">
+                           <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                           <i class="fa fa-search" aria-hidden="true"></i>
+                           </button>
+                        </form>
+                     </ul>
                   </div>
-                </div>
-                <!--IDIOMA-->
-                <div class="btn-idioma">
-                  <a href="#" id="toggleLanguage">
-                    <img id="languageFlag" width="50" src="../Imagenes/mexico.png" alt="Bandera de México">
-                  </a>
-                </div>
-              </div>
-            </li>
-            </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Banner rosa con título -->
-  <section class="inner_page_head">
-    <div class="container_fuild">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="full">
-            <h3>CONTÁCTANOS</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <br>
-  <br>
+               </nav>
+            </div>
+         </header>
          <!-- end header section -->
-      
-      
+      </div>
+      <!-- Banner rosa con título -->
+      <section class="inner_page_head">
+         <div class="container_fuild">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="full">
+                     <h3>Contáctanos</h3>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
       <!-- Formulario de contacto -->
 
       <main>
