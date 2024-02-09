@@ -271,7 +271,13 @@ font-weight: bold;
 }
 
 .darkmode .text-licores {
-  color: #ffffff; /* Cambiar el color del texto a blanco en modo oscuro */
+  color: #ffffff;
+}
+
+.darkmode .options-user button {
+  background-color: #333; 
+  color: #fff;
+  border: 1px solid #fff; 
 }
 
 /****************/
