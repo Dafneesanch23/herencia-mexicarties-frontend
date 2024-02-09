@@ -18,4 +18,5 @@ document.querySelectorAll('[name="slider"]').forEach(radio => {
     // Cambiar el texto según el id del slide
     textoBio.innerHTML = textos[slideId];
   });
-});
+}
+);
