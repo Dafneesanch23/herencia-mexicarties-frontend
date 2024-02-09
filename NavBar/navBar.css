@@ -280,6 +280,10 @@ font-weight: bold;
   border: 1px solid #fff; 
 }
 
+.darkmode #textoBio p {
+  color: #ffffff; /* Cambiar el color del texto a blanco en modo oscuro */
+}
+
 /****************/
 /* BOTON IDIOMA */
 /****************/
