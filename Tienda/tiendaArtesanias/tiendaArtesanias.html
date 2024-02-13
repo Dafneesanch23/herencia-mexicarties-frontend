@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda en Línea</title>
-    <link rel="shortcut icon" href="/Imagenes/logo.png" type="">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="/NavBar/navBar.css">
-    <link rel="stylesheet" href="/footer/footer.css">
+    <link rel="shortcut icon" href="/Public/Imagenes/logo.png" type="">
+    <link rel="stylesheet" href="/Tienda/tiendaArtesanias/CSS/styles.css">
+    <link rel="stylesheet" href="/Public/CSS/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
@@ -19,14 +21,14 @@
     <header class="estilo-header">
         <div class="container options-user">
             <span></span>
-            <button><a class="navbar-brand" href="/CreateAcount/createAcount.html">Registrarse</a></button>
+            <button><a class="navbar-brand" href="/CrearCuenta/crearCuenta.html">Registrarse</a></button>
             <button><a class="navbar-brand" href="/Login/login.html">Iniciar sesión</a></button>
         </div>
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <!--Imagen-->
-                <a class="navbar-brand" href="/index/index.html">
-                    <img width="150" src="/Imagenes/logo.png" alt="logo">
+                <a class="navbar-brand" href="/Inicio/index.html">
+                    <img width="150" src="/Public/Imagenes/logo.png" alt="logo">
                 </a>
                 <!--Botón de hamburguesa para pantallas más chicas-->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -47,8 +49,9 @@
                             </a>
                             <ul class="dropdown-menu estilos-navbar" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" href="#">ARTESANIAS</a></li>
-                                <li><a class="dropdown-item" href="/Comprar/ProcesoCompra.html">ROPA ARTESANAL</a></li>
-                                <li><a class="dropdown-item" href="/Tienda/Licores/HTML/Licores.html">LICORES</a></li>
+                                <li><a class="dropdown-item" href="/Tienda/tiendaRopa/tiendaRopa.html">ROPA
+                                        ARTESANAL</a></li>
+                                <li><a class="dropdown-item" href="/Tienda/tiendaLicores/Licores.html">LICORES</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -65,7 +68,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/Huacal/huacal.html">
-                                <img width="100" src="/Imagenes/huacal.png" alt="huacal">
+                                <img width="100" src="/Public/Imagenes/huacal.png" alt="huacal">
                                 <div id="huacal-number" class="huacal-number">0</div>
                             </a>
                         </li>
@@ -82,7 +85,7 @@
                                 <!--IDIOMA-->
                                 <div class="btn-idioma">
                                     <a href="#" id="toggleLanguage">
-                                        <img id="languageFlag" width="50" src="/Imagenes/mexico.png"
+                                        <img id="languageFlag" width="50" src="/Public/Imagenes/mexico.png"
                                             alt="Bandera de México">
                                     </a>
                                 </div>
@@ -155,7 +158,7 @@
                     <h3 class="text-center"> Descubre la autenticidad de México en cada detalle</h3>
                 </div>
                 <a href="#top">
-                    <img src="/Imagenes/logo.png" alt="México" class="img-fluid mt-2">
+                    <img src="/Public/Imagenes/logo.png" alt="México" class="img-fluid mt-2">
                 </a>
             </div>
         </div>
@@ -183,7 +186,7 @@
                 <div class="col-lg-4 footer-right">
                     <a href="/Comprar/ProcesoCompra.html" class="footer-link">Métodos de pago</a>
                     <div class="img-pagos-container">
-                        <img class="img-pagos" src="/Imagenes/pagos.jpg" alt="logo-mercado-pago">
+                        <img class="img-pagos" src="/Public/Imagenes/pagos.jpg" alt="logo-mercado-pago">
                     </div>
                 </div>
             </div>
@@ -194,8 +197,8 @@
             </div>
         </div>
     </footer>
-    <script src="./javascript/script.js"></script>
-    <script src="/NavBar/JS/main.js"></script>
+    <script src="/Tienda/tiendaArtesanias/JS/tiendaArtesanias.js"></script>
+    <script src="/Public/JS/main.js"></script>
     <script async defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
