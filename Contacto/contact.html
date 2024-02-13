@@ -1,26 +1,29 @@
 <html lang="es">
 
-   <head>
-      <title>CONTÁCTANOS</title>
-      <!-- Estilos propios -->
-      <link href="./CSS/style.css" rel="stylesheet" />
-      <!-- responsive style -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    </head>
+<head>
+  <title>Contáctanos</title>
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="/NavBar/navBar.css">
+  <link href="./CSS/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
 
-   <body>
-           <!-- Barra de navegación -->
+<body>
+  <!-- Barra de navegación -->
   <header class="estilo-header">
     <div class="container options-user">
-      <span></span>
-      <button><a class="navbar-brand" href="/CreateAcount/createAcount.html">Registrarse</a></button>
-      <button><a class="navbar-brand" href="/Login/login.html">Iniciar sesión</a></button>
+      <span id="greetingText"></span>
+      <button><a class="navbar-brand" id="btn-register" href="/CreateAcount/createAcount.html">Registrarse</a></button>
+      <button><a class="navbar-brand" id="btn-login" href="/Login/login.html">Iniciar sesión</a></button>
     </div>
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
         <!--Imagen-->
-        <a class="navbar-brand" href="../index/index.html">
-          <img width="150" src="../Imagenes/logo.png" alt="logo">
+        <a class="navbar-brand" href="/index/index.html">
+          <img width="150" src="/Imagenes/logo.png" alt="logo">
         </a>
         <!--Botón de hamburguesa para pantallas más chicas-->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -31,7 +34,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <ul class="navbar-nav align-items-center justify-content-between">
             <li class="nav-item active">
-              <a class="nav-link" href="../index/index.html">INICIO</a>
+              <a class="nav-link" href="/index/index.html">INICIO</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -39,33 +42,33 @@
                 TIENDA
               </a>
               <ul class="dropdown-menu estilos-navbar" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="../tienda_en_linea/tienda.html">ARTESANIAS</a></li>
-                <li><a class="dropdown-item" href="../index/index.html">ROPA ARTESANAL</a></li>
-                <li><a class="dropdown-item" href="../Tienda/Licores/HTML/Licores.html">LICORES</a></li>
+                <li><a class="dropdown-item" href="/tienda_en_linea/tienda.html">ARTESANIAS</a></li>
+                <li><a class="dropdown-item" href="/tienda_en_linea/tienda.html">ROPA ARTESANAL</a></li>
+                <li><a class="dropdown-item" href="/Tienda/Licores/HTML/Licores.html">LICORES</a></li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../QuienesSomos/HTML/QuienesSomos.html">QUIENES SOMOS</a>
+              <a class="nav-link" href="/QuienesSomos/HTML/QuienesSomos.html">QUIENES SOMOS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../DescubreMéxico/descubreMexico.html">DESCUBRE MÉXICO</a>
+              <a class="nav-link" href="/DescubreMéxico/descubreMexico.html">DESCUBRE MÉXICO</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../Artesanos/Artesanos.html">CONOCE A LOS ARTESANOS</a>
+              <a class="nav-link" href="/Artesanos/Artesanos.html">CONOCE A LOS ARTESANOS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../Contacto/contact.html">CONTACTO</a>
+              <a class="nav-link" href="/Contacto/contact.html">CONTACTO</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
-                <img width="100" src="../Imagenes/huacal.png" alt="huacal">
+                <img width="100" src="/Imagenes/huacal.png" alt="huacal">
                 <div id="huacal-number" class="huacal-number">0</div>
               </a>
             </li>
             <li class="nav-item">
               <div class="btn-options">
                 <!--DARKMODE-->
-                <div class="btn">
+                <div class="btn_dark">
                   <div class="btn__indicator">
                     <div class="btn__icon-container">
                       <i class="btn__icon fa-solid"></i>
@@ -75,7 +78,7 @@
                 <!--IDIOMA-->
                 <div class="btn-idioma">
                   <a href="#" id="toggleLanguage">
-                    <img id="languageFlag" width="50" src="../Imagenes/mexico.png" alt="Bandera de México">
+                    <img id="languageFlag" width="50" src="/Imagenes/mexico.png" alt="Bandera de México">
                   </a>
                 </div>
               </div>
@@ -103,220 +106,249 @@
 
   <br>
   <br>
-         <!-- end header section -->
-      <!-- Formulario de contacto -->
+  <!-- end header section -->
+  <!-- Formulario de contacto -->
 
-      <main>
-        <div class="d-flex justify-content-center">
-          <div class="card">
-            <div class="card-body">
-              <legend class="card-title text-center mt-4">¿EN QUÉ PODEMOS AYUDARTE?</legend>
-              <form class="m-4">
-                <div class="form-group">
-                    <label for="username">Nombre:</label>
-                  <input type="text" class="form-control" id="username" name= "username" placeholder="Jane Doe" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Correo electrónico: </label>
-                  <input type="email" class="form-control" name= "email" id="email" placeholder="tucorreo@ejemplo.com" required>
-                </div>
-                <div class="form-group" row="3">
-                  <label for="message">Mensaje:</label>
-                           <textarea type="text"  class="form-control" name="message" id="message" placeholder="Escribe tu mensaje aquí" id="message" required></textarea>
-                </div>
-                <div class="d-flex justify-content-center">
-                <button type="submit" class="btn btn-primary btn-block">Guardar</button>
-                </div>
-    
-                <!-- <div class="text-center mt-3">
+  <main>
+    <div class="d-flex justify-content-center">
+      <div class="card">
+        <div class="card-body">
+          <legend class="card-title text-center mt-4">¿EN QUÉ PODEMOS AYUDARTE?</legend>
+          <form class="m-4">
+            <div class="form-group">
+              <label for="username">Nombre:</label>
+              <input type="text" class="form-control" id="username" name="username" placeholder="Jane Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico: </label>
+              <input type="email" class="form-control" name="email" id="email" placeholder="tucorreo@ejemplo.com"
+                required>
+            </div>
+            <div class="form-group" row="3">
+              <label for="message">Mensaje:</label>
+              <textarea type="text" class="form-control" name="message" id="message"
+                placeholder="Escribe tu mensaje aquí" id="message" required></textarea>
+            </div>
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-primary btn-block">Guardar</button>
+            </div>
+
+            <!-- <div class="text-center mt-3">
                   <a href="#" class="create-account-link">¿Ya tienes una cuenta? Inicia sesión</a>
                 </div> -->
-              </form>
-              <div class="text-start mt-4">
-                <a href="../Politicas/politicasPrivacidad.html" class="privacy-link">Privacidad</a>
-              </div>
-            </div>
+          </form>
+          <div class="text-start mt-4">
+            <a href="../Politicas/politicasPrivacidad.html" class="privacy-link">Privacidad</a>
           </div>
         </div>
-      </main>
-
-        <!-- Termino de formulario -->
-
-        
-      <!-- Preguntas frecuentes -->
-
-      <div class="row p-3 mt-0">
-         <div class="col-md-12">
-            <div class="full">
-               <h1 class="px-4 FAQS">PREGUNTAS FRECUENTES</h1>
-            </div>
-         </div>
       </div>
+    </div>
+  </main>
 
-      <!-- Acordeón desplegable de preguntas -->
-      <!-- SECCIÓN PRODUCTOS -->
-      <div class="accordion accordion-flush p-3" id="accordionFlushExample">
-         <div class="accordion-item">
-           <h2 class="accordion-header">
-             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-               <span class = "px-2">PRODUCTOS</span> 
-               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
-                  <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
-                </svg>
-             </button>
-           </h2>
-           <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-             <div class="accordion-body">
-               <h5>¿Cómo encuentro productos específicos en su tienda?</h5>
-               <div>Puedes encontrar nuestros productos en la barra de navegación del sitio como "TIENDA" dentro se dividen los productos 
-                en las siguientes categorias "ARTESANIAS", "LICORES" y "ROPA". Una vez que elijas una de las opciones puedes usar el buscador 
-                si requieres algo más específico como alguna prenda de un artesano en especial.</div>
-                <h5>¿Sus productos tienen garantía?</h5>
-                <div>Si, nuestros productos cuentan con una garantía de <strong>30 días naturales</strong> a partir de que el producto llega a tu domicilio, 
-                 solamente en caso de que tenga algún defecto asociado a su elaboración. Recordar que cada producto es hecho a mano por lo que es
-                 normal que existan ligeras variaciones con las fotos publicadas.</div>
-                <h5>¿Puedo personalizar un producto?</h5>
-                <div>Si es posible, para ello envíanos un mensaje con la información del producto a personalizar a través de la sección "CONTÁCTANOS" 
-                 para dar seguimiento a tu pedido de manera personal por correo electrónico. Es muy importante que revises que todos tus datos sean 
-                 correctos antes de enviar tu mensaje.
-                </div>
-                <h5>¿Cómo encuentro información sobre tallas y dimensiones</h5>
-                <div>Dentro de la descripción de cada producto puedes encontrar información detallada al respecto.</div>
-            </div>
-           </div>
-         </div>
-         <!-- SECCIÓN ENVÍOS -->
-         <div class="accordion-item">
-           <h2 class="accordion-header">
-             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-               <span class = "px-2">ENVÍOS</span> 
-               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
-                  <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
-                </svg>
-             </button>
-           </h2>
-           <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-             <div class="accordion-body">
-               <h5>¿Dónde está mi pedido?</h5>
-               <div>La guía de tu pedido se genera de 3 a 5 días hábiles posterior a tu compra y se te hará llegar un correo con la información correspondiente.
-                Es muy sencillo, solamente debes seguir las intrucciones que se detallan en el correo. 
-               </div>
-               <h5>Ya pasaron 5 días hábiles y no he recibido el email con mi número de guía de mi compra</h5>
-               <div>Es posible que haya algún problema con los datos proporcionados, por favor escribe un correo a <u>servicioalcliente@herenciamex.com</u> y no 
-                olvides proporcionar tu número de pedido para el seguimiento.
-               </div>
-               <h5>¿Cómo solicito la devolución de mi pedido?</h5>
-               <div>Puedes hacerlo dejandonos un mensaje a través de "CONTÁCTANOS" o enviar un correo a <u>servicioalcliente@herenciamex.com</u> 
-                y nos pondremos en contacto contigo a la brevedad.</div>
-            </div>
-           </div>
-         </div>
-         <!-- SECCIÓN CUENTA Y REGISTRO -->
-         <div class="accordion-item">
-           <h2 class="accordion-header">
-             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-               <span class = "px-2">CUENTA Y REGISTRO</span> 
-               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-                </svg>
-             </button>
-           </h2>
-           <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-             <div class="accordion-body">
-              <h5>¿Es necesario tener una cuenta para comprar algún artículo?</h5>
-              <div>Si, ya que esto sirve como respaldo tanto para la tienda como el cliente en brindar seguridad al momento de su compra, así garantizamos nuestro servicio.
-              </div>
-              <h5>¿Cómo creo mi cuenta?</h5>
-              <div>Accediendo a la opción de <strong>"Registrate"</strong> en la parte superior de la barra de navegación del sitio y llenando todos los campos indicados,
-               aseguráte que tu información es correcta. </div>
-              <h5></h5>
-              <div>Lorem ipsum dolor sit amet.</div>
-             </div>
-           </div>
-         </div>
-         <!-- SECCIÓN SEGURIDAD Y PRIVACIDAD -->
-         <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-               <span class = "px-2">SEGURIDAD Y PRIVACIDAD</span>
-               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
-                  <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1"/>
-                </svg>
-              </button>
-            </h2>
-            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-                <h5>¿Cómo se utiliza mi información personal?</h5>
-                <div>La información compartida es utilizada unicamente para procesar pedidos, enviar actualizaciones de los mismos y brindar un servicio eficiente.
-                 La información proporcionada no se comparte con terceros y es almacenada en nuestra base de datos utilizando buenas prácticas del manejo de datos.
-                 Para más detalles te invitamos a leer nuestra <u>Política de Privacidad.</u> <!--****AÑADIR LINK**** -->
-                </div>
-                <h5>¿Cómo se almancenan los detalles de mi tarjeta de crédito</h5>
-                <div>Lorem ipsum dolor sit amet.</div>
-                <h5>¿Cómo puedo actualizar o eliminar mi información personal?</h5>
-                <div>Puedes realizarlo ingresando a la información de tu cuenta y elegir "EDITAR" o "BORRAR CUENTA" según la opción deseada.</div>
-              </div>
-            </div>
-          </div>
-       </div>
+  <!-- Termino de formulario -->
 
-         <!-- INCIO Pie de Página -->
-    <footer>
-      <!-- Sección de Descripción -->
-      <div class="descripcion-section">
-          <div class="descripcion-content container">
-              <h4> Tejemos historias de tradición y pasión </h4> 
-              <div class="container"> 
-                  <h3 class="text-center"> Descubre la autenticidad de México en cada detalle</h3>
-              </div>
-              <a href="#top">
-                  <img src="../Imagenes/logo.png" alt="México" class="img-fluid mt-2">
-              </a>
-          </div>
+
+  <!-- Preguntas frecuentes -->
+
+  <div class="row p-3 mt-0">
+    <div class="col-md-12">
+      <div class="full">
+        <h1 class="px-4 FAQS">PREGUNTAS FRECUENTES</h1>
       </div>
+    </div>
+  </div>
 
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-4 footer-left">
-                  <ul>
-                      <li><a href="../Terminos/TerminosCondiciones.html" class="footer-link">Términos y condiciones</a></li>
-                      <li><a href="./contact.html" class="footer-link">Servicio al cliente</a></li>
-                      <li><a href="../QuienesSomos/HTML/QuienesSomos.html" class="footer-link">Conócenos</a></li>
-                      <li><a href="../Politicas/politicasPrivacidad.html" class="footer-link">Políticas de privacidad</a></li>
-                  </ul>
-              </div>
-              <div class="col-lg-4 footer-center">
-                  <p>Recibe información exclusiva y promociones vía email</p>
-
-                  <a href="../Login/login.html">
-                      <button id="subscribeButton">Suscríbete</button>
-                  </a>
-
-              </div>
-              <div class="col-lg-4 footer-right">
-                  <a href="../Comprar/ProcesoCompra.html" class="footer-link">Métodos de pago</a>
-                  <div class= "img-pagos-container">
-                  <img class="img-pagos" src="../Imagenes/pagos.jpg" alt="logo-mercado-pago">
-                  </div>
-              </div>
+  <!-- Acordeón desplegable de preguntas -->
+  <!-- SECCIÓN PRODUCTOS -->
+  <div class="accordion accordion-flush p-3" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          <span class="px-2">PRODUCTOS</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag"
+            viewBox="0 0 16 16">
+            <path
+              d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
+          </svg>
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <h5>¿Cómo encuentro productos específicos en su tienda?</h5>
+          <div>Puedes encontrar nuestros productos en la barra de navegación del sitio como "TIENDA" dentro se dividen
+            los productos
+            en las siguientes categorias "ARTESANIAS", "LICORES" y "ROPA". Una vez que elijas una de las opciones puedes
+            usar el buscador
+            si requieres algo más específico como alguna prenda de un artesano en especial.</div>
+          <h5>¿Sus productos tienen garantía?</h5>
+          <div>Si, nuestros productos cuentan con una garantía de <strong>30 días naturales</strong> a partir de que el
+            producto llega a tu domicilio,
+            solamente en caso de que tenga algún defecto asociado a su elaboración. Recordar que cada producto es hecho
+            a mano por lo que es
+            normal que existan ligeras variaciones con las fotos publicadas.</div>
+          <h5>¿Puedo personalizar un producto?</h5>
+          <div>Si es posible, para ello envíanos un mensaje con la información del producto a personalizar a través de
+            la sección "CONTÁCTANOS"
+            para dar seguimiento a tu pedido de manera personal por correo electrónico. Es muy importante que revises
+            que todos tus datos sean
+            correctos antes de enviar tu mensaje.
           </div>
-          <div class="row">
-              <div class="col-lg-12 bottom-text">
-                  <p>&copy; 2024 Herencia Mexicarties</p>
-              </div>
-          </div>
+          <h5>¿Cómo encuentro información sobre tallas y dimensiones</h5>
+          <div>Dentro de la descripción de cada producto puedes encontrar información detallada al respecto.</div>
+        </div>
       </div>
+    </div>
+    <!-- SECCIÓN ENVÍOS -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          <span class="px-2">ENVÍOS</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck"
+            viewBox="0 0 16 16">
+            <path
+              d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
+          </svg>
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <h5>¿Dónde está mi pedido?</h5>
+          <div>La guía de tu pedido se genera de 3 a 5 días hábiles posterior a tu compra y se te hará llegar un correo
+            con la información correspondiente.
+            Es muy sencillo, solamente debes seguir las intrucciones que se detallan en el correo.
+          </div>
+          <h5>Ya pasaron 5 días hábiles y no he recibido el email con mi número de guía de mi compra</h5>
+          <div>Es posible que haya algún problema con los datos proporcionados, por favor escribe un correo a
+            <u>servicioalcliente@herenciamex.com</u> y no
+            olvides proporcionar tu número de pedido para el seguimiento.
+          </div>
+          <h5>¿Cómo solicito la devolución de mi pedido?</h5>
+          <div>Puedes hacerlo dejandonos un mensaje a través de "CONTÁCTANOS" o enviar un correo a
+            <u>servicioalcliente@herenciamex.com</u>
+            y nos pondremos en contacto contigo a la brevedad.</div>
+        </div>
+      </div>
+    </div>
+    <!-- SECCIÓN CUENTA Y REGISTRO -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+          <span class="px-2">CUENTA Y REGISTRO</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle"
+            viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+            <path fill-rule="evenodd"
+              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+          </svg>
+        </button>
+      </h2>
+      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <h5>¿Es necesario tener una cuenta para comprar algún artículo?</h5>
+          <div>Si, ya que esto sirve como respaldo tanto para la tienda como el cliente en brindar seguridad al momento
+            de su compra, así garantizamos nuestro servicio.
+          </div>
+          <h5>¿Cómo creo mi cuenta?</h5>
+          <div>Accediendo a la opción de <strong>"Registrate"</strong> en la parte superior de la barra de navegación
+            del sitio y llenando todos los campos indicados,
+            aseguráte que tu información es correcta. </div>
+          <h5></h5>
+          <div>Lorem ipsum dolor sit amet.</div>
+        </div>
+      </div>
+    </div>
+    <!-- SECCIÓN SEGURIDAD Y PRIVACIDAD -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+          <span class="px-2">SEGURIDAD Y PRIVACIDAD</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock"
+            viewBox="0 0 16 16">
+            <path
+              d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1" />
+          </svg>
+        </button>
+      </h2>
+      <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <h5>¿Cómo se utiliza mi información personal?</h5>
+          <div>La información compartida es utilizada unicamente para procesar pedidos, enviar actualizaciones de los
+            mismos y brindar un servicio eficiente.
+            La información proporcionada no se comparte con terceros y es almacenada en nuestra base de datos utilizando
+            buenas prácticas del manejo de datos.
+            Para más detalles te invitamos a leer nuestra <u>Política de Privacidad.</u> <!--****AÑADIR LINK**** -->
+          </div>
+          <h5>¿Cómo se almancenan los detalles de mi tarjeta de crédito</h5>
+          <div>Lorem ipsum dolor sit amet.</div>
+          <h5>¿Cómo puedo actualizar o eliminar mi información personal?</h5>
+          <div>Puedes realizarlo ingresando a la información de tu cuenta y elegir "EDITAR" o "BORRAR CUENTA" según la
+            opción deseada.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INCIO Pie de Página -->
+  <footer>
+    <!-- Sección de Descripción -->
+    <div class="descripcion-section">
+      <div class="descripcion-content container">
+        <h4> Tejemos historias de tradición y pasión </h4>
+        <div class="container">
+          <h3 class="text-center"> Descubre la autenticidad de México en cada detalle</h3>
+        </div>
+        <a href="#top">
+          <img src="../Imagenes/logo.png" alt="México" class="img-fluid mt-2">
+        </a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 footer-left">
+          <ul>
+            <li><a href="../Terminos/TerminosCondiciones.html" class="footer-link">Términos y condiciones</a></li>
+            <li><a href="./contact.html" class="footer-link">Servicio al cliente</a></li>
+            <li><a href="../QuienesSomos/HTML/QuienesSomos.html" class="footer-link">Conócenos</a></li>
+            <li><a href="../Politicas/politicasPrivacidad.html" class="footer-link">Políticas de privacidad</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 footer-center">
+          <p>Recibe información exclusiva y promociones vía email</p>
+
+          <a href="../Login/login.html">
+            <button id="subscribeButton">Suscríbete</button>
+          </a>
+
+        </div>
+        <div class="col-lg-4 footer-right">
+          <a href="../Comprar/ProcesoCompra.html" class="footer-link">Métodos de pago</a>
+          <div class="img-pagos-container">
+            <img class="img-pagos" src="../Imagenes/pagos.jpg" alt="logo-mercado-pago">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 bottom-text">
+          <p>&copy; 2024 Herencia Mexicarties</p>
+        </div>
+      </div>
+    </div>
   </footer>
-      <!-- FINAL del Pie de Página -->
+  <!-- FINAL del Pie de Página -->
 
 
-      <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-      
-    <!-- Script para desplazarse al inicio de la página -->
-    <script src="./JS/main.js"></script>
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <!-- Script para desplazarse al inicio de la página -->
+  <script src="/NavBar/JS/main.js"></script>
 </body>
 
 </html>
-      
