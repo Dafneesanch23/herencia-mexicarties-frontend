@@ -11,3 +11,5 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
   });
+
+/*tarjetas sobre los estados*/
