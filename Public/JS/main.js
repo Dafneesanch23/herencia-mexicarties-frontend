@@ -61,10 +61,10 @@ const languageFlag = document.getElementById('languageFlag');
 
 function toggleFlag() {
   if (languageFlag.src.includes('mexico.png')) {
-    languageFlag.src = '/Imagenes/eu.png';
+    languageFlag.src = '/Public/Imagenes/eu.png';
     languageFlag.alt = 'Bandera de Estados Unidos';
   } else {
-    languageFlag.src = '/Imagenes/mexico.png';
+    languageFlag.src = '/Public/Imagenes/mexico.png';
     languageFlag.alt = 'Bandera de México';
   }
 }
