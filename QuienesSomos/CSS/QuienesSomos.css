@@ -293,6 +293,10 @@
   background-color: #f7444e;
 }
 
+ .darkmode {
+  color: #fff;
+}
+
 /***** Pie de pagina ****/
 
 footer {
