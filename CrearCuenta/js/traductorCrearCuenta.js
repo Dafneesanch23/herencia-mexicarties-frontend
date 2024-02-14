@@ -9,11 +9,11 @@ document.getElementById('toggleLanguage').addEventListener('click', (e) => {
 
   // Si se tiene la imagen de México cambia a la de EUA.
   if (languageFlag.src.includes('mexico.png')) {
-    languageFlag.src = '/Imagenes/eu.png';
+    languageFlag.src = '/Public/Imagenes/eu.png';
     languageFlag.alt = 'Bandera de Estados Unidos de América';
     newLang = 'en';
   } else {
-    languageFlag.src = '/Imagenes/mexico.png';
+    languageFlag.src = '/Public/Imagenes/mexico.png';
     languageFlag.alt = 'Bandera de México';
     newLang = 'es';
   }
@@ -119,10 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Se asegura de que la bandera coincida con el idioma
   const languageFlag = document.getElementById('languageFlag');
   if (selectedLanguage === 'en') {
-      languageFlag.src = '/Imagenes/eu.png';
+      languageFlag.src = '/Public/Imagenes/eu.png';
       languageFlag.alt = 'Bandera de Estados Unidos';
   } else {
-      languageFlag.src = '/Imagenes/mexico.png';
+      languageFlag.src = '/Public/Imagenes/mexico.png';
       languageFlag.alt = 'Bandera de México';
   }
 });
