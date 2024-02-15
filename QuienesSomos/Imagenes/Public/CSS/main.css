@@ -274,8 +274,8 @@ font-weight: bold;
   color: #ffffff;
 }
 
-.darkmode .options-user button {
-  background-color: #333; 
+.darkmode .options-user .btn-register {
+  background-color: #000000; 
   color: #fff;
   border: 1px solid #fff; 
 }
