@@ -82,54 +82,62 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!fieldsAreNotEmpty()) {
             showAlert('Por favor, rellene todos los campos.');
-            return false;
+            return;
         }
 
         if (!validatePhone(phone)) {
             showAlert('El número de teléfono no es válido. Deben ser 10 dígitos.');
-            return false;
+            return;
         }
 
         if (!validateEmail(email)) {
             showAlert('El correo electrónico no es válido.');
-            return false;
+            return;
         }
 
         if (!validatePassword(password)) {
             showAlert('La contraseña debe tener una mayúscula, una minúscula, un número y 6 caracteres como mínimo.');
-            return false;
+            return;
         }
 
         if (!comparePasswords()) {
             showAlert('Las contraseñas no coinciden.');
-            return false;
+            return;
         }
 
         /******************************************************/
         /* Si cumple con las validaciones, se crea JSON       */
         /******************************************************/
 
+        const typeUser = 2; // 1 -> Usuario, 2 -> Admin
         const userData = {
             fullname,
             email,
             phone,
-            password
+            password,
+            typeUser
         };
 
-        showAlert(JSON.stringify(userData));
-        return userData;
+        // 🚧🚧🚧🚧🚧 Es provisional 🚧🚧🚧🚧🚧
+        localStorage.setItem('User', JSON.stringify(userData));
+
+        if (userData.typeUser === 1){
+            window.location.href = '/Inicio/inicio.html';
+        } else {
+            window.location.href = '/formularioProductos/FormularioProd.html';
+        }
+        
+
+        // 🚧🚧🚧🚧🚧 Es provisional 🚧🚧🚧🚧🚧
     };
 
-    /**************************************/
-    /* Se ocupa la función validar datos  */
-    /**************************************/
 
+    /*************************************************************/
+    /* Se ejecuta cuando se presiona el botón registrar usuario  */
+    /*************************************************************/
     const form = document.querySelector('form');
-
     form.onsubmit = (e) => {
         e.preventDefault();
-        if (dataValidation()) {
-            
-        }
+        dataValidation();
     };
 });
