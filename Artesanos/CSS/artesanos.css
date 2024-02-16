@@ -1,5 +1,26 @@
 /********* Artesanos ************/
 
+/* Estilos de darkmode para la sección de artesanos */
+body.darkmode .artesano-container {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  /* border: 5px solid var(--color1);
+  border-radius: 15px; */
+}
+
+body.darkmode .artesano-description {
+  background-color: var(--color6);
+} 
+
+body.darkmode .artesano-description h2 {
+  color: var(--color3); /* Ejemplo de modificación de color de título */
+}
+
+body.darkmode .artesano-description p {
+  color: var(--color3); /* Ejemplo de modificación de color de texto */
+}
+
+
 .carousel-inner img {
   width: 100%;
   height: 100%;
@@ -9,6 +30,7 @@
 
 .artesano-container {
   margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .artesano-description {
@@ -17,29 +39,13 @@
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   margin-top: 2rem;
-  text-align: center;
+  text-align: justify;
 }
 
 .carousel-control-prev,
 .carousel-control-next {
   width: 5%;
 }
-
-
-/* .darkmode .artesano-description{
-  background-color: var(--dark-color);
-}
-
-.darkmode {
-  artesano-description h2 {
-    color: var(--light-color);
-  }
-  }
-.darkmode {
-  artesano-description p {
-    color: #ffffff;
-  }
-  } */
 
 
 
