@@ -42,12 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
           return re.test(email);
       };
 
-      const fieldsAreNotEmpty = () => {
-          const email = document.getElementById('user-email').value.trim();
-          const password = document.getElementById('user-password').value.trim();
-
-          return email && password;
-      };
+      const fieldsAreNotEmpty = (email, password) => email.trim() && password.trim();
 
       /*********************************************/
       /* Se ocupan las funciones para validar      */
@@ -56,27 +51,42 @@ document.addEventListener("DOMContentLoaded", () => {
       // Limpia alertas mostradas en pantalla.
       clearAlerts();
 
-      if (!fieldsAreNotEmpty()) {
+      if (!fieldsAreNotEmpty(email, password)) {
           showAlert('Por favor, rellene todos los campos.');
-          return false;
+          return;
       }
-
+      
       if (!validateEmail(email)) {
           showAlert('El correo electrónico no es válido.');
-          return false;
+          return;
       }
 
-      /******************************************************/
-      /* Si cumple con las validaciones, se crea JSON       */
-      /******************************************************/
+      // 🚧🚧🚧🚧🚧 Es provisional 🚧🚧🚧🚧🚧
+    
+      // Se regresa un objeto
+      const getDataUser = () => JSON.parse(localStorage.getItem('User'));
 
-      const userData = {
-          email,
-          password
-      };
+      const dataUser = getDataUser();
+      if(!dataUser){
+        showAlert('Usuario no registrado.');
+        return false;
+      }
 
-      showAlert(JSON.stringify(userData));
-      return userData;
+      if(dataUser.password !== password){
+        showAlert('Contraseña incorrecta.');
+        return false;
+      }
+
+      if(dataUser.typeUser === 1){ // Usuario comprador
+        window.location.href = '/Inicio/inicio.html';
+      }else {
+        window.location.href = '/formularioProductos/FormularioProd.html';
+      }
+
+      
+
+      // 🚧🚧🚧🚧🚧 Es provisional 🚧🚧🚧🚧🚧
+
   };
 
   /**************************************/
@@ -87,9 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.onsubmit = (e) => {
       e.preventDefault();
-      const data = dataValidation()
-      if (data) {
-          console.log(data)
-      }
+      dataValidation()
   };
 });
