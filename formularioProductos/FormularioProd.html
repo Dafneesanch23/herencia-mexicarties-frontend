@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../Public/CSS/main.css">
   <link rel="stylesheet" href="./CSS/formularioProductos.css">
   <!--Funcionalidad con JS-->
-  <script async src="./JS/formularioProductos1.js"></script>
+  <script async src="./JS/formularioProductos.js"></script>
   <script async src="../Public/JS/main.js"></script>
   <!--ICONS CDN DARK MODE-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -137,7 +137,7 @@
       <div class="card">
         <div class="card-body">
           <legend class="card-title text-center mt-4">DATOS DEL PRODUCTO</legend>
-          <form class="m-4">
+          <form class="m-4" id="formulario-productos">
             <div class="form-group">
               <label for="nombre-producto">Nombre del producto</label>
               <input type="text" class="form-control" id="nombre-producto" name="nombre-producto"
@@ -151,9 +151,18 @@
             <div class="form-group">
               <label for="categoria">Categoría: </label>
               <select class="form-select" id="categoria" name="categoria" aria-label="Default select example">
-                <option selected value="Artesania">Artesania</option>
-                <option value="Licor">Licor</option>
-                <option value="Ropa">Ropa</option>
+                <option selected value="Artesania" id="category1">Artesania</option>
+                <option value="Licor" id="category2">Licor</option>
+                <option value="Ropa" id="category3">Ropa</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="talla">Talla: </label>
+              <select class="form-select" id="talla" name="talla" aria-label="Default select example">
+                <option selected value="N/A" id="no-aplica">No aplica</option>
+                <option value="S" id="small-size">S</option>
+                <option value="M" id="medium-size">M</option>
+                <option value="L" id="large-size">L</option>
               </select>
             </div>
             <div class="form-group">
@@ -164,9 +173,39 @@
             <div class="form-group">
               <label for="lugar">Lugar de elaboración: </label>
               <select class="form-select" id="lugar" name="lugar" aria-label="Default select example">
-                <option selected value="Michoacan">Michoacán</option>
+                <option selected value="Aguascalientes">Aguascalientes</option>
+                <option value="Baja-California">Baja California</option>
+                <option value="Baja-California-Sur">Baja California Sur</option>
+                <option value="Campeche">Campeche</option>
+                <option value="CDMX">CDMX</option>
+                <option value="Chiapas">Chiapas</option>
+                <option value="Chihuahua">Chihuahua</option>
+                <option value="Coahuila">Coahuila</option>
+                <option value="Colima">Colima</option>
+                <option value="Durango">Durango</option>
+                <option value="EDOMEX">EDO. México</option>
+                <option value="Guanajuato">Guanajuato</option>
+                <option value="Guerrero">Guerrero</option>
+                <option value="Hidalgo">Hidalgo</option>
                 <option value="Jalisco">Jalisco</option>
+                <option value="Michoacan">Michoacan</option>
+                <option value="Morelia">Morelos</option>
+                <option value="Nayarit">Nayarit</option>
+                <option value="Nuevo-Leon">Nuevo León</option>
                 <option value="Oaxaca">Oaxaca</option>
+                <option value="Puebla">Puebla</option>
+                <option value="Queretaro">Querétaro</option>
+                <option value="Quintana-roo">Quintana Roo</option>
+                <option value="Sinaloa">Sinaloa</option>
+                <option value="San-Luis-Potosi">San Luis Potosí</option>
+                <option value="Sonora">Sonora</option>
+                <option value="Tabasco">Tabasco</option>
+                <option value="Tamaulipas">Tamaulipas</option>
+                <option value="Tlaxcala">Tlaxcala</option>
+                <option value="Veracruz">Veracruz</option>
+                <option value="Yucatan">Yucatan</option>
+                <option value="Zacatecas">Zacatecas</option>
+                
               </select>
             </div>
             <div class="form-group">
@@ -180,7 +219,7 @@
                 aria-label="Default select example">
             </div>
             <div class="d-flex justify-content-center">
-              <button type="button" onclick="save()" class="btn btn-primary btn-block">Guardar</button>
+              <button type="button" onclick="save(event)" class="btn btn-primary btn-block">Guardar</button>
             </div>
           </form>
           <div class="text-start mt-4">
@@ -191,6 +230,21 @@
     </div>
   </main>
 
+   <!-- Lista de productos agregados -->
+   <main>
+    <div id="alert-container"></div>
+    <div class="d-flex justify-content-center">
+      <div class="card">
+        <div class="card-body">
+          <legend class="card-title text-center mt-4">INVENTARIO DE PRODUCTOS</legend>
+            <div id="inventario-productos" class = "">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
   <!-- INCIO Pie de Página -->
   <footer>
