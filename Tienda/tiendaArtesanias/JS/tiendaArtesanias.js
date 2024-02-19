@@ -60,19 +60,14 @@ function mostrarProductos(productosAMostrar) {
     productosAMostrar.slice(0, productosPorPagina).forEach(producto => {
         const productoCard = `
     <div class="col-md-3 producto dark-card">
-        <div class="card option_container">
-            <div class="options">
-                <a class="option1" style="text-decoration: none;" onclick="echarAlHuacal()">
-                    Echar al huacal
-                </a>
-                <a href="" class="option2" style="text-decoration: none;">
-                    Comprar
-                </a>
-            </div>
+        <div class="card option_container" id="${producto.id}" data-producto='${JSON.stringify(producto)}' onclick="mostrarDetallesProducto.call(this)"">
             <img src="${producto.imagen_url}" class="card-img-top" alt="${producto.imagen_alt}">
             <div class="card-body">
                 <h5 class="card-title">${producto.nombre}</h5>
                 <p class="card-text">Precio: ${producto.precio} USD</p>
+            </div>
+            <div class="overlay-text" onclick="mostrarDetallesProducto()">
+                Ver más
             </div>
         </div>
     </div>
@@ -95,19 +90,14 @@ async function mostrarMasProductos() {
     productos.slice(productosMostrados, productosMostrados + productosPorPagina).forEach(producto => {
         const productoCard = `
         <div class="col-md-3 producto dark-card">
-        <div class="card option_container">
-            <div class="options">
-                <a class="option1" style="text-decoration: none;" onclick="echarAlHuacal()">
-                    Echar al huacal
-                </a>
-                <a href="" class="option2" style="text-decoration: none;">
-                    Comprar
-                </a>
-            </div>
+        <div class="card option_container" id="${producto.id}" data-producto='${JSON.stringify(producto)}' onclick="mostrarDetallesProducto.call(this)">
             <img src="${producto.imagen_url}" class="card-img-top" alt="${producto.imagen_alt}">
             <div class="card-body">
                 <h5 class="card-title">${producto.nombre}</h5>
                 <p class="card-text">Precio: ${producto.precio} USD</p>
+            </div>
+            <div class="overlay-text" onclick="mostrarDetallesProducto()">
+                Ver más
             </div>
         </div>
     </div>
@@ -128,6 +118,20 @@ function echarAlHuacal() {
     huacalNumber.innerText = newCount;
 }
 
+function mostrarDetallesProducto() {
+    const producto = this.dataset.producto;
+    const modalBody = document.getElementById('productModalBody');
+    modalBody.innerHTML = `
+      <h2>${producto.nombre}</h2>
+      <img src="${producto.imagen_url}" alt="${producto.nombre}">
+      <p>${producto.nombre}</p>
+      <p>Precio: $${producto.precio}</p>
+      <button class="btn btn-primary" onclick="echarAlHuacal()">Echar al Huacal</button>
+      <button class="btn btn-secondary">Agregar a Lista de Deseos</button>
+    `;
+
+    $('#productModal').modal('show');
+}
 
 /*Funciones a correr*/
 
