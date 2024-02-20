@@ -12,4 +12,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-/*tarjetas sobre los estados*/
+  $(document).ready(function () {
+  
+
+/*tarjetas de estados*/
+$(document).ready(function () {
+  $('.card-back img').click(function () {
+    var cardId = $(this).data('card-id');
+    $('#modal' + cardId).modal('show');
+  });
+});
