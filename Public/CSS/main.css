@@ -12,7 +12,7 @@
     --tam-letra2: 0.75rem;
     --tam-letra4: 0.90rem;
     --tam-letra3: 2rem;
-    --dark-color: #000000;
+    --dark-color: #1d2a35;
     --dark-icon-color: #ffffff;
     --light-color: #ffffff;
     --light-icon-color: #FFDE59;
@@ -388,7 +388,7 @@ body.darkmode .heading_container h3::after {
     margin:  0 auto;
 }
 .descripcion-section {
-    background-color: #000;
+    background-color: #1d2a35;
     color: #fff;
     text-align: center;
     padding: 50px;
@@ -438,7 +438,7 @@ body.darkmode .heading_container h3::after {
 
 /************** footer ***************/
 footer {
-    background-color: #000;
+    background-color: #1d2a35;
     color: #fff;
     text-align: center;
     padding: 20px;

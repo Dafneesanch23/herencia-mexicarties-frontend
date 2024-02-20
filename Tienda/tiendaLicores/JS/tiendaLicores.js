@@ -114,9 +114,6 @@ const licoresMexicanos = [
       overlayText.classList.add('overlay-text');
       overlayText.textContent = 'Ver más';
   
-      // Agregar evento click al texto "Ver más"
-      overlayText.addEventListener('click', () => mostrarDetallesProducto(licor));
-  
       // Agregar la imagen y el texto "Ver más" al thumbnail del producto
       productThumbnail.appendChild(image);
       productThumbnail.appendChild(overlayText);
@@ -125,6 +122,8 @@ const licoresMexicanos = [
     });
   }
   
+  // Obtener referencia al modal
+  const productModal = new bootstrap.Modal(document.getElementById('productModal'));
 
   // Función para mostrar los detalles del producto en el modal
   function mostrarDetallesProducto(producto) {
@@ -138,7 +137,7 @@ const licoresMexicanos = [
       <button class="btn btn-secondary" onclick="agregarAListaDeDeseos('${producto.name}')">Agregar a Lista de Deseos</button>
     `;
   
-    $('#productModal').modal('show');
+    productModal.show();
   }
   
   // Llama a la función para mostrar las miniaturas de los licores artesanales mexicanos
@@ -153,19 +152,8 @@ const licoresMexicanos = [
     huacalNumber.textContent = parseInt(huacalNumber.textContent) + 1;
 }
 
-// Obtener referencia al botón "Ver más"
-const verMasButton = document.getElementById('verMasButton');
-
-// Obtener referencia al modal
-const productModal = new bootstrap.Modal(document.getElementById('productModal'));
-
-// Agregar evento clic al botón "Ver más" para abrir el modal
-verMasButton.addEventListener('click', () => {
-    productModal.show(); // Mostrar el modal al hacer clic en el botón "Ver más"
-});
-  
   // Función para agregar un producto a la lista de deseos
-  function agregarAListaDeDeseos(nombreProducto) {
-    const producto = licoresMexicanos.find(licor => licor.name === nombreProducto);
-    console.log('Producto añadido a la lista de deseos:', producto);
-  }
+  // function agregarAListaDeDeseos(nombreProducto) {
+  //   const producto = licoresMexicanos.find(licor => licor.name === nombreProducto);
+  //   console.log('Producto añadido a la lista de deseos:', producto);
+  // }
