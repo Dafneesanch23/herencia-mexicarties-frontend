@@ -515,7 +515,8 @@ footer {
 
 #subscribeButton:hover {
     background-color: #ff0646;
-    font-weight: bold;
+    /* font-weight: bold; */
+    color: #ffffff
 }
 
 .bottom-text {
