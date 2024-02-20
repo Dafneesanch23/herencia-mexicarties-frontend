@@ -1,41 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <title>Políticas de privacidad</title>
-  <!--Importaciones para Bootstrap-->
+  <!--Importacion para Bootstrap-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script async defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
   <!--Font awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
   <!--Estilos propios-->
   <link rel="stylesheet" href="../Public/CSS/main.css">
-  <link rel="stylesheet" href="../Politicas/CSS/politicasPrivacidad.css">
-  <!--Validaciones y uso de funciones -->
-  <script async defer src="../Public/JS/main.js"></script>
-  <script async defer src="#"></script>
+  <link rel="stylesheet" href="./CSS/politicasPrivacidad.css">
 </head>
 
 <body>
-  <!-- Barra de navegación -->
+
+<!-- --------------------------------------  -->
+<!-- ------BARRA DE NAVEGACIÓN-------------  -->
+<!-- --------------------------------------  -->
   <header class="estilo-header">
 
     <div class="container options-user">
-      <span id="textUser"></span>
-      <button id="btn-sign-off"><a class="navbar-brand" id="txt-sign-off">Cerrar sesión</a></button>
-      <button id="btn-register"><a class="navbar-brand" id="txt-register" href="/CrearCuenta/crearCuenta.html">Registrarse</a></button>
-      <button id="btn-login"><a class="navbar-brand" id="txt-login" href="/Login/login.html">Iniciar sesión</a></button>
+      <span></span>
+      <button><a class="navbar-brand" href="../CrearCuenta/crearCuenta.html">Registrarse</a></button>
+      <button><a class="navbar-brand" href="../Login/login.html">Iniciar sesión</a></button>
     </div>
 
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
 
         <!--Imagen-->
-        <a class="navbar-brand" href="/Inicio/inicio.html" id="navbarLogo">
-          <img width="150" src="/Public/Imagenes/logo.png" alt="logo">
+        <a class="navbar-brand" href="../Inicio/index.html">
+          <img width="150" src="../Public/Imagenes/logo.png" alt="logo">
         </a>
 
         <!--Botón de hamburguesa para pantallas más chicas-->
@@ -47,9 +43,8 @@
         <!--Contenido de barra de navegacion-->
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <ul class="navbar-nav align-items-center justify-content-between">
-
-            <li class="nav-item ">
-              <a class="nav-link" href="/Inicio/inicio.html" id="homelink">INICIO</a>
+            <li class="nav-item active">
+              <a class="nav-link" href="../Inicio/index.html">INICIO</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -58,28 +53,26 @@
                 TIENDA
               </a>
               <ul class="dropdown-menu estilos-navbar" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="/Tienda/tiendaArtesanias/tiendaArtesanias.html"
-                    id="handicraftslink">ARTESANIAS</a></li>
-                <li><a class="dropdown-item" href="/Tienda/tiendaRopa/tiendaRopa.html" id="clothinglink">ROPA
-                    ARTESANAL</a></li>
-                <li><a class="dropdown-item" href="/Tienda/tiendaLicores/Licores.html" id="liquorslink">LICORES</a></li>
+                <li><a class="dropdown-item" href="../Tienda/tiendaArtesanias/tiendaArtesanias.html">ARTESANIAS</a></li>
+                <li><a class="dropdown-item" href="../Tienda/tiendaRopa/tiendaRopa.html">ROPA ARTESANAL</a></li>
+                <li><a class="dropdown-item" href="../Tienda/tiendaLicores/Licores.html">LICORES</a></li>
               </ul>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/QuienesSomos/QuienesSomos.html" id="aboutlink">QUIENES SOMOS</a>
+              <a class="nav-link" href="../QuienesSomos/QuienesSomos.html">QUIENES SOMOS</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/DescubreMéxico/descubreMexico.html" id="discoverlink">DESCUBRE MÉXICO</a>
+              <a class="nav-link" href="../DescubreMéxico/descubreMexico.html">DESCUBRE MÉXICO</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/Artesanos/Artesanos.html" id="artisanslink">CONOCE A LOS ARTESANOS</a>
+              <a class="nav-link" href="../Artesanos/Artesanos.html">CONOCE A LOS ARTESANOS</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/Contacto/contact.html" id="contactlink">CONTACTO</a>
+              <a class="nav-link" href="../Contacto/contact.html">CONTACTO</a>
             </li>
 
             <li class="nav-item">
@@ -100,8 +93,8 @@
                 </div>
                 <!--IDIOMA-->
                 <div class="btn-idioma">
-                  <a id="toggleLanguage" class="change-language" data-lang="es">
-                    <img id="languageFlag" width="50" src="/Public/Imagenes/mexico.png" alt="Bandera de México">
+                  <a href="#" id="toggleLanguage">
+                    <img id="languageFlag" width="50" src="../Public/Imagenes/mexico.png" alt="Bandera de México">
                   </a>
                 </div>
               </div>
@@ -114,39 +107,44 @@
     </div>
   </header>
 
-  <!-- Banner rosa con título -->
-  <section class="inner_page_head">
-    <div class="container_fuild">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="full">
-            <h3>HERENCIA MEXICARTIES</h3>
+    <!-- Banner rosa con título -->
+    <section class="inner_page_head">
+      <div class="container_fuild">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="full">
+              <h3>HERENCIA MEXICARTIES</h3>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <br>
-  <br>
-
-  <!-- Banner con título -->
-  <section class="product_section layout_padding">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <div class="container">
-          <div class="heading_container heading_center">
-            <h4> P O L Í T I C A S </h4>
-            <h3> <span>DE PRIVACIDAD</span></h3>
+    </section>
+  
+    <br>
+    <br>
+  
+    <!-- Banner con título -->
+    <section class="product_section layout_padding">
+      <div class="container">
+        <div class="heading_container heading_center">
+          <div class="container">
+            <div class="heading_container heading_center">
+              <h4> P O L Í T I C A S </h4>
+              <h3> <span>DE PRIVACIDAD</span></h3>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  
+    <br>
+    <br>
 
-  <br>
 
-<!-- Politicas de privacidad -->
+<!-- --------------------------------------  -->
+<!-- -------------CONTENIDO----------------  -->
+<!-- --------------------------------------  -->
+ <!-- Politicas de privacidad -->
 <div class="container">
   <h1 class="text-center mb-4"></h1>
 <div class="privacy-box">
@@ -177,74 +175,69 @@
 
 
 
-      <!-- INCIO Pie de Página -->
-      <footer>
-        <!-- Sección de Descripción -->
-        <div class="descripcion-section">
-            <div class="descripcion-content container">
-                <h4> Tejemos historias de tradición y pasión </h4> 
-                <div class="container"> 
-                    <h3 class="text-center"> Descubre la autenticidad de México en cada detalle</h3>
-                </div>
-                <a href="#top">
-                  <img src="../Public/Imagenes/logo.png" alt="México" class="img-fluid mt-2">
-                </a>
-            </div>
-        </div>
-
+<!-- --------------------------------------  -->
+<!-- --------------FOOTER------------------  -->
+<!-- --------------------------------------  -->
+  <footer>
+    <!-- Sección de Descripción -->
+    <div class="descripcion-section">
+      <div class="descripcion-content container">
+        <h4 id="textfooter1"> Tejemos historias de tradición y pasión </h4>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 footer-left">
-                    <ul>
-                      <li><a href="../Terminos/TerminosCondiciones.html" class="footer-link">Términos y condiciones</a></li>
-                      <li><a href="../Contacto/contact.html" class="footer-link">Servicio al cliente</a></li>
-                      <li><a href="../QuienesSomos/QuienesSomos.html" class="footer-link">Conócenos</a></li>
-                      <li><a href="../Politicas/politicasPrivacidad.html" class="footer-link">Políticas de privacidad</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 footer-center">
-                    <p>Recibe información exclusiva y promociones vía email</p>
-
-                    <a href="../Login/login.html">
-                        <button id="subscribeButton">Suscríbete</button>
-                    </a>
-
-                </div>
-                <div class="col-lg-4 footer-right">
-                  <a href="../ProcesoCompra/ProcesoCompra.html" class="footer-link">Métodos de pago</a>
-                  <div class= "img-pagos-container">
-                  <img class="img-pagos" src="../Public/Imagenes/pagos.jpg" alt="logo-mercado-pago">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 bottom-text">
-                    <p>&copy; 2024 Herencia Mexicarties</p>
-                </div>
-            </div>
+          <h3 class="text-center" id="textfooter2"> Descubre la autenticidad de México en cada detalle</h3>
         </div>
-    </footer>
-        <!-- FINAL del Pie de Página -->
+        <a href="#top">
+          <img src="../Public/Imagenes/logo.png" alt="México" class="img-fluid mt-2">
+        </a>
+      </div>
+    </div>
 
-  <!-- ===========================================-->
-  <!-- QUIENES SOMOS-->
-  <!-- ===========================================-->
-  <!-- <section class="w-50 mx-auto text-center product_section layout_padding" >
-  <div class="container">
-     <div class="heading_container heading_center">
-          <div class="container">
-<h2 class="border-top border-3">
-  Quiénes<span> Somos</span>
-</h2>
-</div>
-<div class="row">
-<p class="text-center"></p>
-</div>
-     </div>
-   <p class="border-top border-3"><span class="text p-3 fs-4"> ¡Bienvenidos!,</span>Herencia Mexicarties surge desde la pasión familiar por la cultura mexicana. Creemos fielmente en el significado que tienen los objetos, más aún cuando son piezas artesanales. Cada obra tiene una historia representativa de cada Estado de México, y caracteriza a la persona que la fábrica. A medida que las fuimos conociendo, más nos interesó compartir estas experiencias con ustedes.</p>
-</div>
-  </section> -->
-  <script src="./JS/main.js"></script>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 footer-left">
+          <ul>
+            <li><a href="../Terminos/TerminosCondiciones.html" class="footer-link" id="footerlink1">Términos y
+                condiciones</a></li>
+            <li><a href="../Contacto/contact.html" class="footer-link" id="footerlink2">Servicio al cliente</a></li>
+            <li><a href="../QuienesSomos/QuienesSomos.html" class="footer-link" id="footerlink3">Conócenos</a></li>
+            <li><a href="../Politicas/politicasPrivacidad.html" class="footer-link" id="footerlink4">Políticas de
+                privacidad</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 footer-center">
+          <p id="textfooter3">Recibe información exclusiva y promociones vía email</p>
+
+          <a href="../CrearCuenta/crearCuenta.html">
+            <button id="subscribeButton">Registrate</button>
+          </a>
+
+        </div>
+        <div class="col-lg-4 footer-right">
+          <a href="../ProcesoCompra/ProcesoCompra.html" class="footer-link" id="textfooter4">Métodos de pago</a>
+          <div class="img-pagos-container">
+            <img class="img-pagos" src="../Public/Imagenes/pagos.jpg" alt="logo-mercado-pago">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 bottom-text">
+          <p>&copy; 2024 Herencia Mexicarties</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- FINAL del Pie de Página -->
+
+
+  <!--Funcionalidad con JS-->
+  <!--Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <!--Globales-->
+  <script src="../Public/JS/main.js"></script>
+  <!--Propios-->
+  <script src="#"></script>
 </body>
 
 </html>
