@@ -1,75 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Ropa artesanal</title>
   <!--Importaciones para Bootstrap-->
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-kJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script async defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <!--Font awesome-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-  <!--Estilos propios-->
-  <link rel="stylesheet" href="/Inicio/CSS/inicio.css">
-  <!--ICONS CDN-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Estilos personalizados -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!--NAVBAR CSS-->
   <link rel="stylesheet" href="/Public/CSS/main.css">
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="/Tienda/tiendaLicores/CSS/tiendaLicores.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!--ICONS CDN-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="/Tienda/tiendaRopa/CSS/tiendaRopa.css">
   <!-- Script para desplazarse al inicio de la página -->
   <script async defer src="/Public/JS/main.js"></script>
 </head>
 
+
 <body>
   <!-- Barra de navegación -->
   <header class="estilo-header">
+
     <div class="container options-user">
-      <span></span>
-      <button>Registrarse</button>
-      <button>Iniciar sesión</button>
+      <span id="textUser"></span>
+      <button id="btn-sign-off"><a class="navbar-brand" id="txt-sign-off">Cerrar sesión</a></button>
+      <button id="btn-register"><a class="navbar-brand" id="txt-register"
+          href="/CrearCuenta/crearCuenta.html">Registrarse</a></button>
+      <button id="btn-login"><a class="navbar-brand" id="txt-login" href="/Login/login.html">Iniciar sesión</a></button>
     </div>
+
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
+
         <!--Imagen-->
-        <a class="navbar-brand" href="/index/index.html">
+        <a class="navbar-brand" href="/Inicio/inicio.html" id="navbarLogo">
           <img width="150" src="/Public/Imagenes/logo.png" alt="logo">
         </a>
+
         <!--Botón de hamburguesa para pantallas más chicas-->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggler">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <!--Contenido de barra de navegacion-->
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <ul class="navbar-nav align-items-center justify-content-between">
-            <li class="nav-item active">
-              <a class="nav-link" href="/Inicio/inicio.html">INICIO</a>
+
+            <li class="nav-item ">
+              <a class="nav-link" href="/Inicio/inicio.html" id="homelink">INICIO</a>
             </li>
+
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" role="button"
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 TIENDA
               </a>
               <ul class="dropdown-menu estilos-navbar" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="/Tienda/tiendaArtesanias/">ARTESANIAS</a></li>
-                <li><a class="dropdown-item" href="/Tienda/tiendaRopa/">ROPA ARTESANAL</a></li>
-                <li><a class="dropdown-item" href="/Tienda/tiendaLicores/">LICORES</a></li>
+                <li><a class="dropdown-item" href="/Tienda/tiendaArtesanias/tiendaArtesanias.html"
+                    id="handicraftslink">ARTESANIAS</a></li>
+                <li><a class="dropdown-item" href="/Tienda/tiendaRopa/tiendaRopa.html" id="clothinglink">ROPA
+                    ARTESANAL</a></li>
+                <li><a class="dropdown-item" href="/Tienda/tiendaLicores/Licores.html" id="liquorslink">LICORES</a></li>
               </ul>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link" href="/QuienesSomos/QuienesSomos.html">QUIENES SOMOS</a>
+              <a class="nav-link" href="/QuienesSomos/QuienesSomos.html" id="aboutlink">QUIENES SOMOS</a>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link" href="/DescubreMéxico/descubreMexico.html">DESCUBRE MÉXICO</a>
+              <a class="nav-link" href="/DescubreMéxico/descubreMexico.html" id="discoverlink">DESCUBRE MÉXICO</a>
             </li>
+
             <li class="nav-item">
-                <a class="nav-link" href="/artesanos/Artesanos.html">CONOCE A LOS ARTESANOS</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Contacto/contact.html">CONTACTO</a>
+              <a class="nav-link" href="/Artesanos/Artesanos.html" id="artisanslink">CONOCE A LOS ARTESANOS</a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/Contacto/contact.html" id="contactlink">CONTACTO</a>
+            </li>
+
             <li class="nav-item">
               <a class="nav-link" href="/Huacal/huacal.html">
                 <img width="100" src="/Public/Imagenes/huacal.png" alt="huacal">
@@ -78,132 +97,169 @@
             </li>
             <li class="nav-item">
               <div class="btn-options">
-       <!--DARKMODE-->   
-          <div class="btn_dark">
-            <div class="btn__indicator">
-             <div class="btn__icon-container">
-            <i class="btn__icon fa-solid"></i>
-             </div>
-           </div>
-         </div>
-            <!--IDIOMA-->
-            <div class="btn-idioma">
-              <a href="#" id="toggleLanguage">
-                <img id="languageFlag" width="50" src="/Public/Imagenes/mexico.png" alt="Bandera de México">
-              </a>
-            </div>
+                <!--DARKMODE-->
+                <div class="btn_dark">
+                  <div class="btn__indicator">
+                    <div class="btn__icon-container">
+                      <i class="btn__icon fa-solid"></i>
+                    </div>
+                  </div>
+                </div>
+                <!--IDIOMA-->
+                <div class="btn-idioma">
+                  <a id="toggleLanguage" class="change-language" data-lang="es">
+                    <img id="languageFlag" width="50" src="/Public/Imagenes/mexico.png" alt="Bandera de México">
+                  </a>
+                </div>
+              </div>
+            </li>
+            </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner rosa con título -->
+  <section class="inner_page_head">
+    <div class="container_fuild">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="full">
+            <h3>ROPA ARTESANAL</h3>
           </div>
-        </li>
-        </a>
-        </li>
-        </ul>
         </div>
-        </nav>
-        </div>
-        </header>
+      </div>
+    </div>
+  </section>
 
-    <!-- Banner rosa con título -->
-    <section class="inner_page_head">
-        <div class="container_fuild">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="full">
-                        <h3>TIENDA EN LÍNEA</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <br>
+  <br>
 
-    <br>
-    <br>
-
-    <!-- Banner con título -->
-    <section class="product_section layout_padding">
-        <div class="container">
-            <div class="heading_container heading_center">
-                <div class="container">
-                    <div class="heading_container heading_center">
-                        <h4>ROPA</h4>
-                        <h3> <span>ARTESANAL</span></h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <br>
-    <br>
-
-
-    <!--Contenido-->
+  <!-- Banner con título -->
+  <section class="product_section layout_padding">
     <div class="container">
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" id="searchBar" placeholder="Buscar por lugar, tipo o artesano"
-                oninput="filtrarProductos()">
+      <div class="heading_container heading_center">
+        <div class="container">
+          <div class="heading_container heading_center">
+            <h4> BORDADOS</h4>
+            <h3> <span>ARTESANALES</span></h3>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div id="productosContainer" class="row">
+  <br>
+  <br>
+  </header>
 
+  <div class="container">
+    <img src="./images/vestidoPortada.webp" alt="" class="special-image">
+  </div>
+  <div class="container-list">
+    <h1>Ropa Artesanal Mexicana</h1>
+    <p class="text-center"  style="font-size: 20px;">Encuentra en nuestra tienda una amplia variedad de prendas hechas a mano.
+      <br>
+      La ropa artesanal mexicana es una expresión vibrante de la rica herencia cultural del país. 
+      <br>Tejida a mano y bordada con técnicas tradicionales, utiliza materiales locales y se distingue por colores vivos y diseños detallados.
+      <br> Prendas como huipiles y sarapes reflejan la identidad única de cada región, incorporando motivos florales y simbolismo cultural. 
+      <br>Más allá de su aspecto estético, esta ropa representa la diversidad y la historia de las comunidades indígenas y regionales de México.</p>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4" id="liquor-grid"></div>
+  </div>
+  <br>
+  <br>
+
+  <!-- Modal para mostrar la información detallada del producto -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModalLabel">Detalles del Producto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-
-        <br>
-
-        <div class="text-center"><button class="btn btn-primary btn-mostrar-mas" onclick="mostrarMasProductos()" style="background-color: #ff0646; border: #ffff;" >Más</button>
+        <div class="modal-body" id="productModalBody" class="btn-huacal">
+          <!-- Aquí se mostrará la información detallada del producto -->
         </div>
-        <br>
+      </div>
+    </div>
+  </div>
+  <section class="w-50 mx-auto text-center product_section layout_padding" >
+    <p class="text-center"></p>
+    </div>
+         </div>
+         <br>
 
+       <p class="border-top border-3">
+        Estos productos no solo ofrecen prendas de vestir, sino que también cuentan historias a través de los bordados, representando la diversidad y la riqueza cultural de México.
+</p>
+<br>
+<br>
+    </div>
+      </section>
+
+
+  <!-- INCIO Pie de Página -->
+  <footer>
+    <!-- Sección de Descripción -->
+    <div class="descripcion-section">
+      <div class="descripcion-content container">
+        <h4> Tejemos historias de tradición y pasión </h4>
+        <div class="container">
+          <h3 class="text-center"> Descubre la autenticidad de México en cada detalle</h3>
+        </div>
+        <a href="#top">
+          <img src="/Public/Imagenes/logo.png" alt="México" class="img-fluid mt-2">
+        </a>
+      </div>
     </div>
 
-    <!--footer-->
-    <footer>
-        <!-- Sección de Descripción -->
-        <div class="descripcion-section">
-            <div class="descripcion-content container">
-                <h4> Tejemos historias de tradición y pasión </h4>
-                <div class="container">
-                    <h3 class="text-center"> Descubre la autenticidad de México en cada detalle</h3>
-                </div>
-                <a href="#top">
-                    <img src="/Imagenes/logo.png" alt="México" class="img-fluid mt-2">
-                </a>
-            </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 footer-left">
+          <ul>
+            <li><a href="/Terminos/TerminosCondiciones.html" class="footer-link">Términos y condiciones</a></li>
+            <li><a href="/Contacto/contact.html" class="footer-link">Servicio al cliente</a></li>
+            <li><a href="/QuienesSomos/QuienesSomos.html" class="footer-link">Conócenos</a></li>
+            <li><a href="/Politicas/politicasPrivacidad.html" class="footer-link">Políticas de privacidad</a></li>
+          </ul>
         </div>
+        <div class="col-lg-4 footer-center">
+          <p>Recibe información exclusiva y promociones vía email</p>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 footer-left">
-                    <ul>
-                        <li><a href="/Terminos/TerminosCondiciones.html" class="footer-link">Términos y condiciones</a></li>
-                        <li><a href="/Contacto/contact.html" class="footer-link">Servicio al cliente</a></li>
-                        <li><a href="/Contacto/contact.html" class="footer-link">Conócenos</a></li>
-                        <li><a href="/Politicas/politicasPrivacidad.html" class="footer-link">Políticas de
-                                privacidad</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 footer-center">
-                    <p>Recibe información exclusiva y promociones vía email</p>
+          <a href="/Login/login.html">
+            <button id="subscribeButton">Suscríbete</button>
+          </a>
 
-                    <a href="/Login/login.html">
-                        <button id="subscribeButton">Suscríbete</button>
-                    </a>
-
-                </div>
-                <div class="col-lg-4 footer-right">
-                    <a href="#" class="footer-link">Métodos de pago</a>
-                    <div class="img-pagos-container">
-                        <img class="img-pagos" src="/Imagenes/pagos.jpg" alt="logo-mercado-pago">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 bottom-text">
-                    <p>&copy; 2024 Herencia Mexicarties</p>
-                </div>
-            </div>
         </div>
-    </footer>
-  
+        <div class="col-lg-4 footer-right">
+          <a href="#" class="footer-link">Métodos de pago</a>
+          <div class="img-pagos-container">
+            <img class="img-pagos" src="/Public/Imagenes/pagos.jpg" alt="logo-mercado-pago">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 bottom-text">
+          <p>&copy; 2024 Herencia Mexicarties</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- FINAL del Pie de Página -->
+  <!-- Script para desplazarse al inicio de la página -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <!--script darkmode-->
+  <script src="/Public/JS/main.js"></script>
+  <!--Script para productos-->
+  <script async defer src="./JS/tiendaRopa.js"></script>
+  <!--Scripts adicionales-->
+  <script src="/QuienesSomos/JS/QuienesSomos.js"></script>
+  <script src="/CrearCuenta/js/crearCuenta.js"></script>
+  <script src="/CrearCuenta/js/crearCuenta.js"></script>
+  <script src="/Login/js/login.js"></script>
 </body>
-
-</html>

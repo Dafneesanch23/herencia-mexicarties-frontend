@@ -301,15 +301,16 @@ font-weight: bold;
     text-align: center;
     color: #fff;
     /*Tamaño de la barra*/
-    padding-top: 30px; 
-    padding-bottom: 20px; 
+    padding-top: 25px; 
+    padding-bottom: 25px; 
 }
 
 .inner_page_head h3 {
-    font-size: 32px; /* Tamaño del título*/
-    font-weight: 800;
-    font-family: var(--texto1);
-    text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  font-family: var(--texto1);
+  text-align: center;
+  margin-bottom: 0px; /* Agrega esta línea para eliminar el margen inferior */
 }
 
 .inner_page_head .container_fuild {
@@ -375,38 +376,6 @@ body.darkmode .heading_container h3::after {
   }
   
 
-  /* Guión bajo en quienes somos
-  .heading_container h2::after {
-    content: "";
-    display: block;
-    width: 70px;
-    height: 5px;
-    background: #ff0646;
-    margin: 10px auto;
-  }
-  
-  Color rosa resaltado en Somos
-  .heading_container h2 span {
-    color: #ff0646;
-  }
-  
-  Centrar Quienes Somos
-  .heading_container p {
-    margin-top: 10px;
-    margin-bottom: 0;
-  }
-
-    Color rosa resaltado en Nuestra familia
-    .heading_container h3 span {
-      color: #ff0646;
-    }
-      /* Titulo quienes somos*/
-  /* .heading_container h2 {
-    position: relative;
-    margin-bottom: 0;
-    font-size: 3.5rem;
-    font-weight: bold;
-  } */
 
 
 /**********************************************/
@@ -454,15 +423,16 @@ body.darkmode .heading_container h3::after {
       text-align: center;
     }
   
-    /*Guión bajo titulo descubre*/
-    h3:after {
-      content: "";
-      display: block;
-      width: 100%; /* Ajustar el ancho al 100% */
-      max-width: 500px; /* Establecer un ancho máximo */
-      height: 5px;
-      background: #ff0646;
-      margin: 10px auto;
+
+
+  .descripcion-section h3::after {
+    content: "";
+    display: block;
+    width: 100%; /* Ajustar el ancho al 100% */
+    max-width: 500px; /* Establecer un ancho máximo */
+    height: 5px;
+    background: #ff0646;
+    margin: 10px auto;
   }
 
 
@@ -513,7 +483,8 @@ footer {
 
 #subscribeButton:hover {
     background-color: #ff0646;
-    font-weight: bold;
+    /* font-weight: bold; */
+    color: #ffffff
 }
 
 .bottom-text {

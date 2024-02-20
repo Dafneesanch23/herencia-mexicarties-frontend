@@ -1,49 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <title>Términos y condiciones</title>
-  <!--Importaciones para Bootstrap-->
+  <!--Importacion para Bootstrap-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script async defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
   <!--Font awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
   <!--Estilos propios-->
   <link rel="stylesheet" href="../Public/CSS/main.css">
-  <link rel="stylesheet" href="../Terminos/CSS/terminosCondiciones.css">
-  <!--Validaciones y uso de funciones -->
-  <script async defer src="../Public/JS/main.js"></script>
-  <script async defer src="../Artesanos/JS/artesanos.js"></script>
+  <link rel="stylesheet" href="./CSS/terminosCondiciones.css">
 </head>
 
 <body>
-  <!-- Barra de navegación -->
+
+<!-- --------------------------------------  -->
+<!-- ------BARRA DE NAVEGACIÓN-------------  -->
+<!-- --------------------------------------  -->
   <header class="estilo-header">
+
     <div class="container options-user">
       <span></span>
       <button><a class="navbar-brand" href="../CrearCuenta/crearCuenta.html">Registrarse</a></button>
       <button><a class="navbar-brand" href="../Login/login.html">Iniciar sesión</a></button>
     </div>
+
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
+
         <!--Imagen-->
         <a class="navbar-brand" href="../Inicio/index.html">
           <img width="150" src="../Public/Imagenes/logo.png" alt="logo">
         </a>
+
         <!--Botón de hamburguesa para pantallas más chicas-->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggler">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <!--Contenido de barra de navegacion-->
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <ul class="navbar-nav align-items-center justify-content-between">
             <li class="nav-item active">
               <a class="nav-link" href="../Inicio/index.html">INICIO</a>
             </li>
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -55,28 +58,33 @@
                 <li><a class="dropdown-item" href="../Tienda/tiendaLicores/Licores.html">LICORES</a></li>
               </ul>
             </li>
+
             <li class="nav-item">
               <a class="nav-link" href="../QuienesSomos/HTML/QuienesSomos.html">QUIENES SOMOS</a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link" href="../DescubreMéxico/descubreMexico.html">DESCUBRE MÉXICO</a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link" href="../Artesanos/Artesanos.html">CONOCE A LOS ARTESANOS</a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link" href="../Contacto/contact.html">CONTACTO</a>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link" href="../Huacal/huacal.html">
-                <img width="100" src="../Public/Imagenes/huacal.png" alt="huacal">
+              <a class="nav-link" href="/Huacal/huacal.html">
+                <img width="100" src="/Public/Imagenes/huacal.png" alt="huacal">
                 <div id="huacal-number" class="huacal-number">0</div>
               </a>
             </li>
             <li class="nav-item">
               <div class="btn-options">
                 <!--DARKMODE-->
-                <div class="btn">
+                <div class="btn_dark">
                   <div class="btn__indicator">
                     <div class="btn__icon-container">
                       <i class="btn__icon fa-solid"></i>
@@ -99,152 +107,153 @@
     </div>
   </header>
 
-  <!-- Banner rosa con título -->
-  <section class="inner_page_head">
-    <div class="container_fuild">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="full">
-            <h3>HERENCIA MEXICARTIES</h3>
+    <!-- Banner rosa con título -->
+    <section class="inner_page_head">
+      <div class="container_fuild">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="full">
+              <h3>HERENCIA MEXICARTIES</h3>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <br>
-  <br>
-
-  <!-- Banner con título -->
-  <section class="product_section layout_padding">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <div class="container">
-          <div class="heading_container heading_center">
-            <h4> T É R M I N O S </h4>
-            <h3> <span>Y CONDICIONES</span></h3>
+    </section>
+  
+    <br>
+    <br>
+  
+    <!-- Banner con título -->
+    <section class="product_section layout_padding">
+      <div class="container">
+        <div class="heading_container heading_center">
+          <div class="container">
+            <div class="heading_container heading_center">
+              <h4> T É R M I N O S </h4>
+              <h3> <span>Y CONDICIONES</span></h3>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  
+    <br>
+    <br>
 
-  <br>
 
-<!-- Politicas de privacidad -->
+<!-- --------------------------------------  -->
+<!-- -------------CONTENIDO----------------  -->
+<!-- --------------------------------------  -->
+<!-- Términos y condiciones -->
 <div class="container">
   <h1 class="text-center mb-4"></h1>
 <div class="privacy-box">
 
-    <h4>1. Información General:</h4>
-    <p>1.1 "Herencia Mexicarties" es una plataforma de comercio electrónico operada por Herencia Mexicarties S.A de C.V. una empresa registrada en México.</p>
-    <p>1.2 Nuestra tienda está dedicada a la venta de artesanías mexicanas auténticas, con un enfoque especial en atraer a clientes extranjeros y, al mismo tiempo, dar la bienvenida a clientes locales en México.</p>
+  <h4>1. Información General:</h4>
+  <p>1.1 "Herencia Mexicarties" es una plataforma de comercio electrónico operada por Herencia Mexicarties S.A de C.V. una empresa registrada en México.</p>
+  <p>1.2 Nuestra tienda está dedicada a la venta de artesanías mexicanas auténticas, con un enfoque especial en atraer a clientes extranjeros y, al mismo tiempo, dar la bienvenida a clientes locales en México.</p>
 
-    <h4>2. Productos y Descripciones:</h4>
-    <p>2.1 Nos esforzamos por proporcionar descripciones precisas y detalladas de nuestros productos, destacando la autenticidad y el valor cultural de cada artesanía.</p>
-    <p>2.2 Las imágenes de los productos son representativas y pueden variar ligeramente de los productos reales debido a la naturaleza artesanal de los artículos.</p>
+  <h4>2. Productos y Descripciones:</h4>
+  <p>2.1 Nos esforzamos por proporcionar descripciones precisas y detalladas de nuestros productos, destacando la autenticidad y el valor cultural de cada artesanía.</p>
+  <p>2.2 Las imágenes de los productos son representativas y pueden variar ligeramente de los productos reales debido a la naturaleza artesanal de los artículos.</p>
 
-    <h4>3. Precios y Pagos:</h4>
-    <p>3.1 Todos los precios se indican en pesos mexicanos (MXN) y están sujetos a cambios sin previo aviso.</p>
-    <p>3.2 Aceptamos pagos a través de métodos seguros en línea. Los detalles de pago se manejan de manera segura y no almacenamos información de tarjetas de crédito.</p>
+  <h4>3. Precios y Pagos:</h4>
+  <p>3.1 Todos los precios se indican en pesos mexicanos (MXN) y están sujetos a cambios sin previo aviso.</p>
+  <p>3.2 Aceptamos pagos a través de métodos seguros en línea. Los detalles de pago se manejan de manera segura y no almacenamos información de tarjetas de crédito.</p>
 
-    <h4>4. Envíos y Entregas:</h4>
-    <p>4.1 Ofrecemos envío nacional e internacional. Los costos de envío y los tiempos de entrega variarán según la ubicación.</p>
-    <p>4.2 Nos esforzamos por garantizar la entrega oportuna, pero no podemos hacernos responsables de retrasos causados por circunstancias fuera de nuestro control.</p>
+  <h4>4. Envíos y Entregas:</h4>
+  <p>4.1 Ofrecemos envío nacional e internacional. Los costos de envío y los tiempos de entrega variarán según la ubicación.</p>
+  <p>4.2 Nos esforzamos por garantizar la entrega oportuna, pero no podemos hacernos responsables de retrasos causados por circunstancias fuera de nuestro control.</p>
 
-    <h4>5. Devoluciones y Cambios:</h4>
-    <p>5.1 Aceptamos devoluciones dentro de un plazo de 15 días después de la recepción del producto, siempre que se cumplan las condiciones de devolución especificadas en nuestra política de devoluciones.</p>
-    <p>5.2 Para solicitar cambios o devoluciones, comunícate con nuestro servicio al cliente a través de <a href="mailto:servicioalcliente@herenciamexi.com">servicioalcliente@herenciamexi.com</a> o al teléfono <a href="tel:+52999999999">+52 999999999</a>.</p>
+  <h4>5. Devoluciones y Cambios:</h4>
+  <p>5.1 Aceptamos devoluciones dentro de un plazo de 15 días después de la recepción del producto, siempre que se cumplan las condiciones de devolución especificadas en nuestra política de devoluciones.</p>
+  <p>5.2 Para solicitar cambios o devoluciones, comunícate con nuestro servicio al cliente a través de <a href="mailto:servicioalcliente@herenciamexi.com">servicioalcliente@herenciamexi.com</a> o al teléfono <a href="tel:+52999999999">+52 999999999</a>.</p>
 
-    <h4>6. Blog y Contenido Adicional:</h4>
-    <p>6.1 Nuestro blog ofrece contenido relacionado con el turismo en México, historias sobre artesanos y detalles detrás de la creación de las piezas.</p>
-    <p>6.2 La información proporcionada en el blog tiene fines informativos y de entretenimiento. No nos hacemos responsables por decisiones tomadas basadas en dicho contenido.</p>
+  <h4>6. Blog y Contenido Adicional:</h4>
+  <p>6.1 Nuestro blog ofrece contenido relacionado con el turismo en México, historias sobre artesanos y detalles detrás de la creación de las piezas.</p>
+  <p>6.2 La información proporcionada en el blog tiene fines informativos y de entretenimiento. No nos hacemos responsables por decisiones tomadas basadas en dicho contenido.</p>
 
-    <h4>7. Privacidad y Seguridad:</h4>
-    <p>7.1 Respetamos tu privacidad. Consulta nuestra <a href="#">política de privacidad</a> para obtener información sobre cómo manejamos y protegemos tus datos.</p>
-    <p>7.2 Implementamos medidas de seguridad para proteger la información del cliente, pero no podemos garantizar la seguridad absoluta de la información transmitida en línea.</p>
+  <h4>7. Privacidad y Seguridad:</h4>
+  <p>7.1 Respetamos tu privacidad. Consulta nuestra <a href="#">política de privacidad</a> para obtener información sobre cómo manejamos y protegemos tus datos.</p>
+  <p>7.2 Implementamos medidas de seguridad para proteger la información del cliente, pero no podemos garantizar la seguridad absoluta de la información transmitida en línea.</p>
 
-    <h4>8. Modificaciones a los Términos y Condiciones:</h4>
-    <p>8.1 Nos reservamos el derecho de realizar cambios en estos términos y condiciones en cualquier momento. Los cambios entrarán en vigencia inmediatamente después de su publicación en el sitio.</p>
-    <p>Al continuar utilizando "Herencia Mexicarties", aceptas estos términos y condiciones actualizados.</p>
+  <h4>8. Modificaciones a los Términos y Condiciones:</h4>
+  <p>8.1 Nos reservamos el derecho de realizar cambios en estos términos y condiciones en cualquier momento. Los cambios entrarán en vigencia inmediatamente después de su publicación en el sitio.</p>
+  <p>Al continuar utilizando "Herencia Mexicarties", aceptas estos términos y condiciones actualizados.</p>
 
-    <br>
-    <p>¡Gracias por elegirnos!</p>
-    <br>
-    <p>Herencia Mexicarties S.A. de C.V.</p>
+  <br>
+  <p>¡Gracias por elegirnos!</p>
+  <br>
+  <p>Herencia Mexicarties S.A. de C.V.</p>
 
 </div>
 </div>
 
 
 
-      <!-- INCIO Pie de Página -->
-      <footer>
-        <!-- Sección de Descripción -->
-        <div class="descripcion-section">
-            <div class="descripcion-content container">
-                <h4> Tejemos historias de tradición y pasión </h4> 
-                <div class="container"> 
-                    <h3 class="text-center"> Descubre la autenticidad de México en cada detalle</h3>
-                </div>
-                <a href="#top">
-                  <img src="../Public/Imagenes/logo.png" alt="México" class="img-fluid mt-2">
-                </a>
-            </div>
-        </div>
-
+<!-- --------------------------------------  -->
+<!-- --------------FOOTER------------------  -->
+<!-- --------------------------------------  -->
+  <footer>
+    <!-- Sección de Descripción -->
+    <div class="descripcion-section">
+      <div class="descripcion-content container">
+        <h4 id="textfooter1"> Tejemos historias de tradición y pasión </h4>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 footer-left">
-                    <ul>
-                      <li><a href="../Terminos/TerminosCondiciones.html" class="footer-link">Términos y condiciones</a></li>
-                      <li><a href="../Contacto/contact.html" class="footer-link">Servicio al cliente</a></li>
-                      <li><a href="../QuienesSomos/QuienesSomos.html" class="footer-link">Conócenos</a></li>
-                      <li><a href="../Politicas/politicasPrivacidad.html" class="footer-link">Políticas de privacidad</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 footer-center">
-                    <p>Recibe información exclusiva y promociones vía email</p>
-
-                    <a href="../Login/login.html">
-                        <button id="subscribeButton">Suscríbete</button>
-                    </a>
-
-                </div>
-                <div class="col-lg-4 footer-right">
-                  <a href="../ProcesoCompra/ProcesoCompra.html" class="footer-link">Métodos de pago</a>
-                  <div class= "img-pagos-container">
-                  <img class="img-pagos" src="../Public/Imagenes/pagos.jpg" alt="logo-mercado-pago">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 bottom-text">
-                    <p>&copy; 2024 Herencia Mexicarties</p>
-                </div>
-            </div>
+          <h3 class="text-center" id="textfooter2"> Descubre la autenticidad de México en cada detalle</h3>
         </div>
-    </footer>
-        <!-- FINAL del Pie de Página -->
+        <a href="#top">
+          <img src="../Public/Imagenes/logo.png" alt="México" class="img-fluid mt-2">
+        </a>
+      </div>
+    </div>
 
-  <!-- ===========================================-->
-  <!-- QUIENES SOMOS-->
-  <!-- ===========================================-->
-  <!-- <section class="w-50 mx-auto text-center product_section layout_padding" >
-  <div class="container">
-     <div class="heading_container heading_center">
-          <div class="container">
-<h2 class="border-top border-3">
-  Quiénes<span> Somos</span>
-</h2>
-</div>
-<div class="row">
-<p class="text-center"></p>
-</div>
-     </div>
-   <p class="border-top border-3"><span class="text p-3 fs-4"> ¡Bienvenidos!,</span>Herencia Mexicarties surge desde la pasión familiar por la cultura mexicana. Creemos fielmente en el significado que tienen los objetos, más aún cuando son piezas artesanales. Cada obra tiene una historia representativa de cada Estado de México, y caracteriza a la persona que la fábrica. A medida que las fuimos conociendo, más nos interesó compartir estas experiencias con ustedes.</p>
-</div>
-  </section> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 footer-left">
+          <ul>
+            <li><a href="../Terminos/TerminosCondiciones.html" class="footer-link" id="footerlink1">Términos y
+                condiciones</a></li>
+            <li><a href="../Contacto/contact.html" class="footer-link" id="footerlink2">Servicio al cliente</a></li>
+            <li><a href="../QuienesSomos/QuienesSomos.html" class="footer-link" id="footerlink3">Conócenos</a></li>
+            <li><a href="../Politicas/politicasPrivacidad.html" class="footer-link" id="footerlink4">Políticas de
+                privacidad</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 footer-center">
+          <p id="textfooter3">Recibe información exclusiva y promociones vía email</p>
+
+          <a href="../CrearCuenta/crearCuenta.html">
+            <button id="subscribeButton">Registrate</button>
+          </a>
+
+        </div>
+        <div class="col-lg-4 footer-right">
+          <a href="../ProcesoCompra/ProcesoCompra.html" class="footer-link" id="textfooter4">Métodos de pago</a>
+          <div class="img-pagos-container">
+            <img class="img-pagos" src="../Public/Imagenes/pagos.jpg" alt="logo-mercado-pago">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 bottom-text">
+          <p>&copy; 2024 Herencia Mexicarties</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- FINAL del Pie de Página -->
+
+
+  <!--Funcionalidad con JS-->
+  <!--Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <!--Globales-->
+  <script src="../Public/JS/main.js"></script>
+  <!--Propios-->
+  <script src="#"></script>
 </body>
 
 </html>

@@ -25,7 +25,7 @@ const translations = {
   "es": {
       // HEADER
       "btn-register": "Registrarse",
-      "btn-login": "Inicia sesión",
+      "btn-login": "Iniciar sesión",
       "homelink": "INICIO",
       "navbarDropdownMenuLink": "TIENDA",
       "handicraftslink": "ARTESANIAS",

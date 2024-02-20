@@ -64,3 +64,26 @@
   padding: 2.5px;
   border-radius: 5px;
 }
+  /* Estilo personalizado para el modal */
+  .modal-content {
+    border: 2px solid #ff0646;
+    background-color: #ffffff;
+    text-align: justify;
+  }
+
+  .modal-header {
+    background-color: #ff0646;
+    color: #ffffff;
+    border-bottom: 2px solid #ff0646;
+
+  }
+
+  .modal-footer {
+    background-color: #ff0646;
+    border-top: 2px solid #ff0646;
+  }
+.modal-title {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}

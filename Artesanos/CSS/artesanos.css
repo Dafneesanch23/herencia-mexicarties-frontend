@@ -1,5 +1,26 @@
 /********* Artesanos ************/
 
+/* Estilos de darkmode para la sección de artesanos */
+body.darkmode .artesano-container {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  /* border: 5px solid var(--color1);
+  border-radius: 15px; */
+}
+
+body.darkmode .artesano-description {
+  background-color: var(--color6);
+} 
+
+body.darkmode .artesano-description h2 {
+  color: var(--color3); /* Ejemplo de modificación de color de título */
+}
+
+body.darkmode .artesano-description p {
+  color: var(--color3); /* Ejemplo de modificación de color de texto */
+}
+
+
 .carousel-inner img {
   width: 100%;
   height: 100%;
@@ -9,6 +30,7 @@
 
 .artesano-container {
   margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .artesano-description {
@@ -17,7 +39,7 @@
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   margin-top: 2rem;
-  text-align: center;
+  text-align: justify;
 }
 
 .carousel-control-prev,
@@ -26,20 +48,68 @@
 }
 
 
-/* .darkmode .artesano-description{
-  background-color: var(--dark-color);
+/* Agrega estilos al modal 1 */
+.modal-body {
+  text-align: center;
 }
 
-.darkmode {
-  artesano-description h2 {
-    color: var(--light-color);
-  }
-  }
-.darkmode {
-  artesano-description p {
-    color: #ffffff;
-  }
-  } */
+.modal-content {
+  border-radius: 15px;
+}
+
+.modal-dialog {
+  max-width: 800px;
+}
+
+
+/* Agrega estilos al modal 2 */
+
+/* .modal-container {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.modal-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.close {
+  color: #fff;
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+} */
+
+
 
 
 
