@@ -34,4 +34,6 @@ form.onsubmit = (e) => {
     if (dataProducts()) {
         console.log("Todo salió bien");
     }
-};
+
+}
+

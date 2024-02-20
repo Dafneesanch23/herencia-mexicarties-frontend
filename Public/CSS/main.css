@@ -376,38 +376,6 @@ body.darkmode .heading_container h3::after {
   }
   
 
-  /* Guión bajo en quienes somos
-  .heading_container h2::after {
-    content: "";
-    display: block;
-    width: 70px;
-    height: 5px;
-    background: #ff0646;
-    margin: 10px auto;
-  }
-  
-  Color rosa resaltado en Somos
-  .heading_container h2 span {
-    color: #ff0646;
-  }
-  
-  Centrar Quienes Somos
-  .heading_container p {
-    margin-top: 10px;
-    margin-bottom: 0;
-  }
-
-    Color rosa resaltado en Nuestra familia
-    .heading_container h3 span {
-      color: #ff0646;
-    }
-      /* Titulo quienes somos*/
-  /* .heading_container h2 {
-    position: relative;
-    margin-bottom: 0;
-    font-size: 3.5rem;
-    font-weight: bold;
-  } */
 
 
 /**********************************************/

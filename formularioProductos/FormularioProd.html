@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -5,12 +6,11 @@
   <!--Importaciones para Bootstrap-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
- 
   <!--Estilos propios-->
   <link rel="stylesheet" href="../Public/CSS/main.css">
   <link rel="stylesheet" href="./CSS/formularioProductos.css">
   <!--Funcionalidad con JS-->
-  <script async src="./JS/formularioProductos1.js"></script>
+  <script async src="./JS/formularioProductos.js"></script>
   <script async src="../Public/JS/main.js"></script>
   <!--ICONS CDN DARK MODE-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,51 +21,66 @@
 
   <!-- Barra de navegación -->
   <header class="estilo-header">
+
     <div class="container options-user">
-      <span id="greetingText"></span>
-      <button><a class="navbar-brand" id="btn-register" href="../CrearCuenta/crearCuenta.html">Registrarse</a></button>
-      <button><a class="navbar-brand" id="btn-login" href="../Login/login.html">Iniciar sesión</a></button>
+      <span id="textUser"></span>
+      <button id="btn-sign-off"><a class="navbar-brand" id="txt-sign-off">Cerrar sesión</a></button>
+      <button id="btn-register"><a class="navbar-brand" id="txt-register" href="../CrearCuenta/crearCuenta.html">Registrarse</a></button>
+      <button id="btn-login"><a class="navbar-brand" id="txt-login" href="../Login/login.html">Iniciar sesión</a></button>
     </div>
+
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
+
         <!--Imagen-->
-        <a class="navbar-brand" href="../Inicio/inicio.html">
+        <a class="navbar-brand" href="../Inicio/inicio.html" id="navbarLogo">
           <img width="150" src="../Public/Imagenes/logo.png" alt="logo">
         </a>
+
         <!--Botón de hamburguesa para pantallas más chicas-->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggler">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <!--Contenido de barra de navegacion-->
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <ul class="navbar-nav align-items-center justify-content-between">
-            <li class="nav-item active">
-              <a class="nav-link" href="../Inicio/inicio.html">INICIO</a>
+
+            <li class="nav-item ">
+              <a class="nav-link" href="../Inicio/inicio.html" id="homelink">INICIO</a>
             </li>
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 TIENDA
               </a>
               <ul class="dropdown-menu estilos-navbar" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="../Tienda/tiendaArtesanias/tiendaArtesanias.html">ARTESANIAS</a></li>
-                <li><a class="dropdown-item" href="../Tienda/tiendaRopa/tiendaRopa.html">ROPA ARTESANAL</a></li>
-                <li><a class="dropdown-item" href="../Tienda/tiendaLicores/Licores.html">LICORES</a></li>
+                <li><a class="dropdown-item" href="../Tienda/tiendaArtesanias/tiendaArtesanias.html"
+                    id="handicraftslink">ARTESANIAS</a></li>
+                <li><a class="dropdown-item" href="../Tienda/tiendaRopa/tiendaRopa.html" id="clothinglink">ROPA
+                    ARTESANAL</a></li>
+                <li><a class="dropdown-item" href="../Tienda/tiendaLicores/Licores.html" id="liquorslink">LICORES</a></li>
               </ul>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link" href="../QuienesSomos/QuienesSomos.html">QUIENES SOMOS</a>
+              <a class="nav-link" href="../QuienesSomos/QuienesSomos.html" id="aboutlink">QUIENES SOMOS</a>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link" href="../DescubreMéxico/descubreMexico.html">DESCUBRE MÉXICO</a>
+              <a class="nav-link" href="../DescubreMéxico/descubreMexico.html" id="discoverlink">DESCUBRE MÉXICO</a>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link" href="../Artesanos/Artesanos.html">CONOCE A LOS ARTESANOS</a>
+              <a class="nav-link" href="../Artesanos/Artesanos.html" id="artisanslink">CONOCE A LOS ARTESANOS</a>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link" href="../Contacto/contact.html">CONTACTO</a>
+              <a class="nav-link" href="../Contacto/contact.html" id="contactlink">CONTACTO</a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link" href="../Huacal/huacal.html">
                 <img width="100" src="../Public/Imagenes/huacal.png" alt="huacal">
@@ -84,7 +99,7 @@
                 </div>
                 <!--IDIOMA-->
                 <div class="btn-idioma">
-                  <a href="#" id="toggleLanguage">
+                  <a id="toggleLanguage" class="change-language" data-lang="es">
                     <img id="languageFlag" width="50" src="../Public/Imagenes/mexico.png" alt="Bandera de México">
                   </a>
                 </div>
@@ -114,7 +129,6 @@
   <br>
   <br>
   <!-- end header section -->
-
   <!-- Formulario -->
   <main>
     <div id="alert-container"></div>
@@ -122,60 +136,118 @@
       <div class="card">
         <div class="card-body">
           <legend class="card-title text-center mt-4">DATOS DEL PRODUCTO</legend>
-          <form class="m-4">
+          <form class="m-4" id="formulario-productos">
             <div class="form-group">
               <label for="nombre-producto">Nombre del producto</label>
               <input type="text" class="form-control" id="nombre-producto" name="nombre-producto"
-                placeholder="Huipil Rosa">
+                placeholder="Huipil Rosa" autocomplete="off" required>
             </div>
             <div class="form-group">
-              <label for="Descripcion-producto">Descripción breve del producto: </label>
-              <textarea type="text" class="form-control" name="descripcion" id="descripcion-producto"
-                placeholder="Huipil de algodon tejido a mano por artesanos indígenas de Michoacan"></textarea>
+              <label for="descripcion-producto">Descripción breve del producto: </label>
+              <textarea type="text" class="form-control" name="descripcion-producto" id="descripcion-producto"
+                placeholder="Huipil de algodon tejido a mano por artesanos indígenas de Michoacan" autocomplete="off" required></textarea>
             </div>
             <div class="form-group">
               <label for="categoria">Categoría: </label>
               <select class="form-select" id="categoria" name="categoria" aria-label="Default select example">
-                <option selected value="Artesania">Artesania</option>
-                <option value="Licor">Licor</option>
-                <option value="Ropa">Ropa</option>
+                <option selected value="Artesania" id="category1">Artesania</option>
+                <option value="Licor" id="category2">Licor</option>
+                <option value="Ropa" id="category3">Ropa</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="talla">Talla: </label>
+              <select class="form-select" id="talla" name="talla" aria-label="Default select example">
+                <option selected value="N/A" id="no-aplica">No aplica</option>
+                <option value="S" id="small-size">S</option>
+                <option value="M" id="medium-size">M</option>
+                <option value="L" id="large-size">L</option>
               </select>
             </div>
             <div class="form-group">
               <label for="artesano">Artesano: </label>
               <input type="text" class="form-control" id="artesano" name="artesano"
-                placeholder="Familia Bernabe"></textarea>
+                placeholder="Familia Bernabe" autocomplete="off" required></textarea>
             </div>
             <div class="form-group">
               <label for="lugar">Lugar de elaboración: </label>
               <select class="form-select" id="lugar" name="lugar" aria-label="Default select example">
-                <option selected value="Michoacan">Michoacán</option>
+                <option selected value="Aguascalientes">Aguascalientes</option>
+                <option value="Baja-California">Baja California</option>
+                <option value="Baja-California-Sur">Baja California Sur</option>
+                <option value="Campeche">Campeche</option>
+                <option value="CDMX">CDMX</option>
+                <option value="Chiapas">Chiapas</option>
+                <option value="Chihuahua">Chihuahua</option>
+                <option value="Coahuila">Coahuila</option>
+                <option value="Colima">Colima</option>
+                <option value="Durango">Durango</option>
+                <option value="EDOMEX">EDO. México</option>
+                <option value="Guanajuato">Guanajuato</option>
+                <option value="Guerrero">Guerrero</option>
+                <option value="Hidalgo">Hidalgo</option>
                 <option value="Jalisco">Jalisco</option>
+                <option value="Michoacan">Michoacan</option>
+                <option value="Morelia">Morelos</option>
+                <option value="Nayarit">Nayarit</option>
+                <option value="Nuevo-Leon">Nuevo León</option>
                 <option value="Oaxaca">Oaxaca</option>
+                <option value="Puebla">Puebla</option>
+                <option value="Queretaro">Querétaro</option>
+                <option value="Quintana-roo">Quintana Roo</option>
+                <option value="Sinaloa">Sinaloa</option>
+                <option value="San-Luis-Potosi">San Luis Potosí</option>
+                <option value="Sonora">Sonora</option>
+                <option value="Tabasco">Tabasco</option>
+                <option value="Tamaulipas">Tamaulipas</option>
+                <option value="Tlaxcala">Tlaxcala</option>
+                <option value="Veracruz">Veracruz</option>
+                <option value="Yucatan">Yucatan</option>
+                <option value="Zacatecas">Zacatecas</option>
+                
               </select>
             </div>
             <div class="form-group">
               <label for="precio">Precio: </label>
-              <input type="text" class="form-control" id="precio" name="precio" placeholder="$100" required>
+              <input type="text" class="form-control" id="precio" name="precio" 
+              placeholder="$100" autocomplete="off" required>
             </div>
             <div class="form-group">
               <label for="imagen-producto">Imagen del producto: </label>
               <br />
               <input type="file" class="form-img" id="imagen-producto" name="imagen-producto"
-                aria-label="Default select example">
+                aria-label="Default select example" required>
             </div>
             <div class="d-flex justify-content-center">
-              <button type="button" onclick="save()" class="btn btn-primary btn-block">Guardar</button>
+              <button type="button" onclick="save(event)" class="btn btn-primary btn-block">Guardar</button>
             </div>
           </form>
+          <div id="error-message" class="alert alert-danger" style="display:none;">
+            Aquí se mostrarán los mensajes de error.
+          </div>
           <div class="text-start mt-4">
-            <a href="#" class="privacy-link">Privacidad</a>
+            <a href="../Politicas/politicasPrivacidad.html"class="privacy-link">Privacidad</a>
           </div>
         </div>
       </div>
     </div>
   </main>
 
+   <!-- Lista de productos agregados -->
+   <main>
+    <div id="alert-container"></div>
+    <div class="d-flex justify-content-center">
+      <div class="card">
+        <div class="card-body">
+          <legend class="card-title text-center mt-4">INVENTARIO DE PRODUCTOS</legend>
+            <div id="inventario-productos" class = "">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
   <!-- INCIO Pie de Página -->
   <footer>
@@ -196,7 +268,7 @@
       <div class="row">
         <div class="col-lg-4 footer-left">
           <ul>
-            <li><a href="..//Terminos/TerminosCondiciones.html" class="footer-link">Términos y condiciones</a></li>
+            <li><a href="../Terminos/TerminosCondiciones.html" class="footer-link">Términos y condiciones</a></li>
             <li><a href="../Contacto/contact.html" class="footer-link">Servicio al cliente</a></li>
             <li><a href="../QuienesSomos/QuienesSomos.html" class="footer-link">Conócenos</a></li>
             <li><a href="../Politicas/politicasPrivacidad.html" class="footer-link">Políticas de privacidad</a></li>

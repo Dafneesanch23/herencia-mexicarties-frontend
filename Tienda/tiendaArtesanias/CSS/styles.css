@@ -136,11 +136,55 @@ body {
     display: none;
 }
 
-.producto:hover .options {
-    display: flex;
-    flex-direction: column;
+@media (max-width: 768px) {
+    .producto {
+        width: calc(50% - 20px);
+    }
 }
 
+.producto:hover .overlay-text {
+    display: block;
+}
+
+.producto .overlay-text {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, .9);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fd0681;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Estilos para el modal */
+.modal-body {
+    text-align: center;
+}
+
+.product-details img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para la imagen en el modal */
+#productModal img {
+    max-width: 100%;
+    height: auto;
+}
+
+.darkmode .modal-content {
+    background-color: #000000;
+    /* Cambiar el color de fondo del modal en modo oscuro */
+    color: #fff;
+    /* Cambiar el color del texto en el modal en modo oscuro */
+}
+
+/*Cartas en modo oscuro*/
 body.darkmode .dark-card {
     background-color: var(--dark-color);
     color: var(--light-color);
