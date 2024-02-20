@@ -3,6 +3,29 @@ function save(event) {
 
     event.preventDefault();
 
+        
+    /*******************************************************/
+    /* Función para mostrar mensaje de error al validar    */
+    /*******************************************************/
+  
+    const showAlert = (message) => {
+        const alertContainer = document.getElementById("alert-container");
+        alertContainer.innerHTML = `<div class="alert alert-danger alert-dismissible fade show justify-content-center" style="text-align: center;" role="alert">
+                                      ${message}
+                                    </div>`;
+    };
+  
+    const clearAlerts = () => {
+        const alertContainer = document.getElementById("alert-container");
+        alertContainer.innerHTML = '';
+    };
+    
+     /**************************************/
+    /* Función para validar formulario    */
+    /**************************************/
+  
+    const dataValidation = () => {
+
     
         let nombre = document.getElementById("nombre-producto").value;
         let descripcion = document.getElementById("descripcion-producto").value;
@@ -11,6 +34,21 @@ function save(event) {
         let artesano = document.getElementById("artesano").value;
         let lugar = document.getElementById("lugar").value;
         let precio = document.getElementById("precio").value;
+
+        const fieldsAreNotEmpty = (nombre, descripcion, artesano, precio) => 
+        nombre.trim() && descripcion.trim() && artesano.trim() && precio.trim();
+  
+        /*********************************************/
+        /* Se ocupan las funciones para validar      */
+        /*********************************************/
+  
+        // Limpia alertas mostradas en pantalla.
+        clearAlerts();
+
+        if (!fieldsAreNotEmpty(nombre, descripcion, artesano, precio)) {
+            showAlert('Por favor, rellene todos los campos.');
+            return;
+        }
 
         //Objeto JSON
         let productoJSON = {
@@ -23,7 +61,8 @@ function save(event) {
             precio: precio
         };
 
-        console.log(JSON.stringify(productoJSON));
+        localStorage.setItem('producto', productoJSON)
+        console.log(productoJSON);
 
 
     
@@ -87,69 +126,5 @@ function save(event) {
     return productoJSON;
 
 }
-
-// var inventario = document.getElementById("lista-de-productos")
-
-// let nuevoProducto = document.createElement("div");
-//     nuevoProducto.classList.add("nuevo-producto");
-//     inventario.appendChild(nuevoProducto);
-
-// function crearElemento(descripcion, valor) {
-//     var spanNombre = document.createElement("span");
-//     var inputNombre = document.createElement("input");
-//     var espacio = document.createElement("br");
-//     spanNombre.textContent = descripcion + ": ";
-//     inputNombre.value = nombre;
-//     elementoLista.appendChild(spanNombre);
-//     elementoLista.appendChild(inputNombre);
-//     elementoLista.appendChild(espacio);
-//     }
-    
-//     crearElemento("Nombre", nombre);
-//     crearElemento("Precio", precio);
-//     crearElemento("Nacionalidad", artesano);
-    
-    
-//     var botonBorrar = document.createElement("button");
-//     botonBorrar.textContent = "Eliminar producto";
-//     botonBorrar.id = "boton-borrar";
-//     var corteLinea = document.createElement("br");
-//     elementoLista.appendChild(corteLinea);
-//     elementoLista.appendChild(botonBorrar);
-    
-//      botonBorrar.onclick = function() {
-//     // this.parentNode.style.display = 'none';
-//     elementoLista.remove();
-      
-//      }
-
-// document.getElementById("formulario-productos").addEventListener("submit", function (crearNuevoProducto)){
-
-//     crearNuevoProducto.preventDefault();
-
-//     let nombreEtiqueta = document.createElement('label');
-//     nombreEtiqueta.textContent = "Nombre del producto: ";
-//     let nombreProducto = document.createElement("p");
-//     nombreProducto = document.textContent = nombre;
-
-//     let descripcionEtiqueta = document.createElement('label');
-//     descripcionEtiqueta.textContent = "Descripción: ";
-    
-//     let categoriaEtiqueta = document.createElement('label');
-//     categoriaEtiqueta.textContent = "Categoria: ";
-
-//     let tallaEtiqueta = document.createElement('label');
-//     tallaEtiqueta.textContent = "Talla: ";
-
-//     let artesanoEtiqueta = document.createElement('label');
-//     artesanoEtiqueta.textContent = "Artesano: ";
-    
-//     let lugarEtiqueta = document.createElement('label');
-//     lugarEtiqueta.textContent = "Lugar de elaboración: ";
-    
-//     let precioEtiqueta = document.createElement('label');
-//     precioEtiqueta.textContent = "Precio: ";
-    
-
-// }
-
+    dataValidation();
+}
