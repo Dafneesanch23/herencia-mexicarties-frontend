@@ -132,14 +132,32 @@
   <br>
 </header>
 
+<!--Contenido-->
+<div class="container">
+  <div class="input-group mb-3">
+      <input type="text" class="form-control" id="searchBar" placeholder="Buscar por lugar, tipo o artesano"
+          oninput="filtrarProductos()">
+  </div>
+
+  <div id="productosContainer" class="row">
+
+  </div>
+  <br>
+  <!-- <div class="text-center">
+      <button class="btn btn-primary btn-mostrar-mas" onclick="mostrarMasProductos()"
+          style="background-color: #ff0646; border: #ffff;">Más</button>
+  </div> -->
+</div>
+
   <div class="container">
   <img src="/Tienda/tiendaLicores/Img/charanda-licores_M.jpeg" alt="" class="special-image">
   </div>
   <div class="container-list">
-  <h1>Vinos y Licores Artesanales Mexicanos</h1>
+  <h1 class="subTitulo-Tienda">Vinos y Licores Artesanales Mexicanos</h1>
   <p class="text-licores">México cuenta con una rica tradición en la producción de licores, muchos de los cuales son conocidos internacionalmente. Herencia Mexicarties ofrece una variedad de licores que reflejan la diversidad cultural y la artesanía destiladora del país. Aquí tienes algunas opciones que podrías encontrar con nosotros:</p>
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4" id="liquor-grid"></div>
   </div>
+
 
 <!-- Modal para mostrar la información detallada del producto -->
 <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
