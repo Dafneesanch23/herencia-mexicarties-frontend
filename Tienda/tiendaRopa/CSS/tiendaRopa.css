@@ -5,7 +5,7 @@
 /*******       LISTADO DE PRODUCTOS   **********/
 /**********************************************/
 
-/* Estilos personalizados para la lista de licores */
+/* Estilos personalizados para la lista de productos */
 #liquor-grid {
     display: flex;
     flex-wrap: wrap;
@@ -46,13 +46,7 @@
         filter: saturate(150%);
       }
 
-  .text-licores {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 18px;
-        line-height: 1.6;
-        color: #000000; 
-        margin-bottom: 20px; 
-      }    
+  
 
   .product-thumbnail {
         margin: 10px;
