@@ -1,5 +1,5 @@
 // Datos de ejemplo de ropa mexicana
-const ropaArtesanal = [
+  const ropaArtesanal = [
   {
     name: 'Blusa bordada chedrón',
     img: '/Inicio/images/blusabordada.png',
@@ -141,12 +141,16 @@ const verMasButton = document.getElementById('verMasButton');
 const productModal = new bootstrap.Modal(document.getElementById('productModal'));
 
 // Agregar evento clic al botón "Ver más" para abrir el modal
-verMasButton.addEventListener('click', () => {
+if (verMasButton){
+  verMasButton.addEventListener('click', () => {
     productModal.show(); // Mostrar el modal al hacer clic en el botón "Ver más"
-});
+})}else{
+  console.log("Bienvenidos");
+};
   
   // Función para agregar un producto a la lista de deseos
   function agregarAListaDeDeseos(nombreProducto) {
     const producto = ropaArtesanal.find(ropa => ropa.name === nombreProducto);
     console.log('Producto añadido a la lista de deseos:', producto);
   }
+
