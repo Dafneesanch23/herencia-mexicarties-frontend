@@ -1,165 +1,139 @@
-/*header*/
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-:root {
-    --texto1: 'Montserrat', sans-serif;
-    --color1: #FF0646;
-    --color2: #04B2D9;
-    --color3: #ffffff;
-    --color4: #F29F05;
-    --color5: #F28705;
-    --color6: #000000;
-    --tam-letra2: 0.75rem;
-    --tam-letra1: 1rem;
-    --tam-letra4: 0.90rem;
-    --tam-letra3: 2rem;
-    --dark-color: #2c2c2c;
-    --dark-icon-color: #ffffff;
-    --light-color: #ffffff;
-    --light-icon-color: #FFDE59;
-}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/**********************************************/
+/*******       LISTADO DE PRODUCTOS   **********/
+/**********************************************/
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
+/* Estilos personalizados para la lista de licores */
+#liquor-grid {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: var(--light-color);
-}
-
-/*contenido*/
-
-#searchBar {
-    margin-bottom: 20px;
-    padding: 10px;
-}
-
-
-.producto {
-    border: 1px solid #ddd;
-    padding: 10px;
-    /*margin: 10px;*/
-    text-align: center;
-    display: inline-block;
-    position: relative;
-}
-
-
-.producto .card .option_container {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ff0646;
-    opacity: 0;
-    visibility: hidden;
-    transition: all .2s;
-    transform: translateY(100%);
-}
-
-.producto:hover .option_container {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.producto .card .options {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.producto .card .options a {
-    margin: 5px 0;
-    padding: 8px 15px;
-    border-radius: 30px;
-    width: 165px;
-    text-align: center;
-    transition: all .3s;
-}
-
-.producto .card .options .option1,
-.producto .card .options .option2 {
-    background-color: transparent;
-    border: 1px solid transparent;
-    color: #ffffff;
-}
-
-.producto .card:hover .options .option1,
-.producto .card:hover .options .option2 {
-    background-color: #ff0646;
-    border: 1px solid #ff0646;
-    color: #ffffff;
-}
-
-.producto .card .options .option1:hover,
-.producto .card .options .option2:hover {
-    background-color: transparent;
-    color: #ff0646;
-}
-
-.producto .card .card-img-top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 215px;
-}
-
-.producto .box .card-img-top img {
-    max-width: 100%;
-    max-height: 160px;
-    transition: all .3s;
-}
-
-.producto .card {
-    text-align: center;
-}
-
-.producto .options {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-}
-
-.producto:hover .options {
-    display: flex;
-    flex-direction: column;
-}
-
-body.darkmode .dark-card {
-    background-color: var(--dark-color);
-    color: var(--light-color);
-    border: 1px solid var(--color1);
-}
-
-body.darkmode .dark-card .option_container {
-    background-color: var(--dark-color);
-}
-
-body.darkmode .dark-card .card-title,
-body.darkmode .dark-card .card-text {
-    color: var(--light-color);
-}
-
-  .btn-mostrar-mas {
-    display: block;
-    margin: 0 auto; 
-    align-items: center;
-    border-color: #ff0646; 
-    color: white;
   }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #000000; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); 
+    font-weight: bold; 
+  }
+
+  .container {
+    text-align: center; 
+  }
+
+  .container-list {
+    text-align: center; 
+  }
+  
+
+  .special-image {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+    }
+
+  .special-image:hover {
+        transform: scale(1.1);
+      }
+      
+  .special-image {
+        filter: saturate(150%);
+      }
+
+  .text-licores {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #000000; 
+        margin-bottom: 20px; 
+      }    
+
+  .product-thumbnail {
+        margin: 10px;
+        cursor: pointer;
+        transition: box-shadow 0.3s;
+        position: relative;
+        overflow: hidden;
+        width: calc(25% - 20px);
+      }
+
+      @media (max-width: 768px) {
+        .product-thumbnail {
+          width: calc(50% - 20px); 
+        }
+      }
+      
+      .product-thumbnail:hover .overlay-text {
+        display: block;
+      }
+      
+      .product-thumbnail .overlay-text {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, .9); 
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: #fd0681; 
+        font-size: 14px;
+        cursor: pointer;
+      }
+      
+
+  .product-thumbnail img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para el modal */
+  .modal-body {
+    text-align: center;
+  }
+  
+  .product-details img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  /* Estilo para la imagen en el modal */
+#productModal img {
+    max-width: 100%; 
+    height: auto; 
+  }
+
+  .darkmode .modal-content {
+    background-color: #000000; /* Cambiar el color de fondo del modal en modo oscuro */
+    color: #fff; /* Cambiar el color del texto en el modal en modo oscuro */
+}
+
+  /* Estilo para los botones */
+  .btn-huacal, .btn btn-primary {
+    font-size: 10px;
+    padding: 8px 90px;
+    white-space: nowrap;
+    text-align: left !important;
+    background-color: #FF0646 !important;  
+}
+  
+  /* Estilo específico para los botones "Echar al huacal" y "Agregar a la lista de deseos" */
+.btn-add-to-cart, .btn-add-to-wishlist {
+    font-size: 10px; 
+    padding: 8px 90px; 
+    white-space: nowrap;
+    text-align: left !important;
+    background-color: #FF0646 !important;
+  }
+
+
