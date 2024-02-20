@@ -297,65 +297,12 @@
   color: #fff;
 }
 
-/***** Pie de pagina ****/
-
-footer {
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  width: 100%;
-}
-
-.footer-left,
-.footer-center,
-.footer-right {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.footer-left ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-left a,
-.footer-right a {
-  text-decoration: none;
-  color: #fff;
-  transition: color 0.3s;
-}
-
-.footer-left a:hover,
-.footer-right a:hover {
-  color: #ff0646;
-}
-
-#subscribeButton {
-  background-color: #fff;
-  color: #000;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-#subscribeButton:hover {
-  background-color: #ff0646;
-}
-
-.bottom-text {
-  font-size: 12px;
-  margin-top: 20px;
-}
-
-.descripcion-section img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 10px;
-  width: 150px;
-  cursor: pointer;
+/***** iconos redes y cv ****/
+.linkedin-icon:hover i,
+.github-icon:hover i,
+.cv-icon:hover i {
+  color: #ff0646; /* Cambia el color al pasar el cursor */
+  transform: scale(1.2); /* Cambia el tamaño al 120% al pasar el cursor */
 }
 
 
