@@ -9,7 +9,7 @@ body.darkmode .artesano-container {
 }
 
 body.darkmode .artesano-description {
-  background-color: var(--color6);
+  background-color: var(--dark-color);
 } 
 
 body.darkmode .artesano-description h2 {
