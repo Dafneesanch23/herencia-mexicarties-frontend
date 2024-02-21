@@ -91,6 +91,14 @@
   }
   
   /* Estilos para el modal */
+  .centered-text {
+    text-align: center; /* Centra horizontalmente */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    height: 100%; /* Ajusta según sea necesario */
+  }
+
   .modal-body {
     text-align: center;
   }
@@ -118,7 +126,7 @@
     padding: 8px 90px;
     white-space: nowrap;
     text-align: left !important;
-    background-color: #FF0646 !important;  
+    color: #FF0646;  
 }
   
   /* Estilo específico para los botones "Echar al huacal" y "Agregar a la lista de deseos" */
@@ -143,3 +151,5 @@
   text-shadow: 2px 2px 4px rgba(255, 252, 252, 0.815); 
   font-weight: bold; 
 }
+
+
