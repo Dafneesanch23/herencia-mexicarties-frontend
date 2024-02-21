@@ -81,33 +81,37 @@ languageButton.addEventListener('click', (e) => {
 /****************************************/
 /* Verificar si está logueado el usuario*/
 /****************************************/
-
 document.addEventListener("DOMContentLoaded", () => {
-  const userData = JSON.parse(localStorage.getItem('User'));
   const btnSignOff = document.getElementById('btn-sign-off');
   const textUser = document.getElementById('textUser');
   const btnRegister = document.getElementById('btn-register');
   const btnLogin = document.getElementById('btn-login');
-  if (!userData){
-    btnSignOff.style.display = 'none';
-    textUser.style.display = 'none';
-    btnRegister.style.display = 'block';
-    btnLogin.style.display = 'block';
-  } else {
-    btnSignOff.style.display = 'block';
-    textUser.style.display = 'block';
-    textUser.textContent = `Bienvenido ${userData.fullname}`;
-    btnRegister.style.display = 'none';
-    btnLogin.style.display = 'none';
+
+  if (btnSignOff) {
+    const userData = JSON.parse(localStorage.getItem('User'));
+
+    if (!userData) {
+      btnSignOff.style.display = 'none';
+      textUser.style.display = 'none';
+      btnRegister.style.display = 'block';
+      btnLogin.style.display = 'block';
+    } else {
+      btnSignOff.style.display = 'block';
+      textUser.style.display = 'block';
+      textUser.textContent = `Bienvenido ${userData.fullname}`;
+      btnRegister.style.display = 'none';
+      btnLogin.style.display = 'none';
+    }
   }
 
   /****************************************/
   /* Botón cerrar sesión                  */
   /****************************************/
-  btnSignOff.addEventListener('click', function() {
-    localStorage.removeItem('User');
-    window.location.href = '/Inicio/inicio.html';
-  });
+  if (btnSignOff) {
+    btnSignOff.addEventListener('click', function () {
+      localStorage.removeItem('User');
+      window.location.href = '/Inicio/inicio.html';
+    });
+  }
 });
-
 

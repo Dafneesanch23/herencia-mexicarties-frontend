@@ -7,127 +7,170 @@
 
 /* Estilos personalizados para la lista de productos */
 #liquor-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2em;
-    color: #000000; 
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); 
-    font-weight: bold; 
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
 
-  .container {
-    text-align: center; 
-  }
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: #000000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
 
-  .container-list {
-    text-align: center; 
-  }
-  
+.container {
+  text-align: center;
+}
 
-  .special-image {
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    margin-bottom: 20px;
-    }
+.container-list {
+  text-align: center;
+}
 
-  .special-image:hover {
-        transform: scale(1.1);
-      }
-      
-  .special-image {
-        filter: saturate(150%);
-      }
 
-  
+.special-image {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
 
+.special-image:hover {
+  transform: scale(1.1);
+}
+
+.special-image {
+  filter: saturate(150%);
+}
+
+
+
+.product-thumbnail {
+  margin: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  width: calc(25% - 20px);
+}
+
+@media (max-width: 768px) {
   .product-thumbnail {
-        margin: 10px;
-        cursor: pointer;
-        transition: box-shadow 0.3s;
-        position: relative;
-        overflow: hidden;
-        width: calc(25% - 20px);
-      }
-
-      @media (max-width: 768px) {
-        .product-thumbnail {
-          width: calc(50% - 20px); 
-        }
-      }
-      
-      .product-thumbnail:hover .overlay-text {
-        display: block;
-      }
-      
-      .product-thumbnail .overlay-text {
-        display: none;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: rgba(0, 0, 0, .9); 
-        padding: 10px 20px;
-        border-radius: 5px;
-        color: #fd0681; 
-        font-size: 14px;
-        cursor: pointer;
-      }
-      
-
-  .product-thumbnail img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px);
   }
-  
-  /* Estilos para el modal */
-  .modal-body {
-    text-align: center;
-  }
-  
-  .product-details img {
-    max-width: 100%;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
+}
 
-  /* Estilo para la imagen en el modal */
+.product-thumbnail:hover .overlay-text {
+  display: block;
+}
+
+.product-thumbnail .overlay-text {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, .9);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fd0681;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+.product-thumbnail img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el modal */
+.centered-text {
+  text-align: center;
+  /* Centra horizontalmente */
+  display: flex;
+  align-items: center;
+  /* Centra verticalmente */
+  justify-content: center;
+  /* Centra horizontalmente */
+  height: 100%;
+  /* Ajusta según sea necesario */
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.product-details img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para la imagen en el modal */
 #productModal img {
-    max-width: 100%; 
-    height: auto; 
-  }
-
-  .darkmode .modal-content {
-    background-color: #000000; /* Cambiar el color de fondo del modal en modo oscuro */
-    color: #fff; /* Cambiar el color del texto en el modal en modo oscuro */
+  max-width: 100%;
+  height: auto;
 }
 
-  /* Estilo para los botones */
-  .btn-huacal, .btn btn-primary {
-    font-size: 10px;
-    padding: 8px 90px;
-    white-space: nowrap;
-    text-align: left !important;
-    background-color: #FF0646 !important;  
+.darkmode .modal-content {
+  background-color: #000000;
+  /* Cambiar el color de fondo del modal en modo oscuro */
+  color: #fff;
+  /* Cambiar el color del texto en el modal en modo oscuro */
 }
-  
-  /* Estilo específico para los botones "Echar al huacal" y "Agregar a la lista de deseos" */
-.btn-add-to-cart, .btn-add-to-wishlist {
-    font-size: 10px; 
-    padding: 8px 90px; 
-    white-space: nowrap;
-    text-align: left !important;
-    background-color: #FF0646 !important;
-  }
 
+.darkmode .container-list {
+  color: #fff;
+}
 
+.darkmode h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: #ffff;
+  text-shadow: 2px 2px 4px rgba(255, 252, 252, 0.815);
+  font-weight: bold;
+}
+
+/*botones echar al huacal y comprar*/
+.btn-primary,
+.btn-secondary {
+  background-color: #fff;
+  /* Color de fondo */
+  color: #000000;
+  /* Color del texto */
+  border: #ff0646 1px solid;
+  padding: 8px 15px;
+  /* Espaciado interno */
+  border-radius: 30px;
+  /* Bordes redondeados */
+  cursor: pointer;
+  /* Cursor al pasar sobre el botón */
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  background-color: #ff0646;
+  /* Cambia el color de fondo al pasar el mouse */
+  color: #fff;
+  /* Cambia el color del texto al pasar el mouse */
+  transition: background-color 0.3s, color 0.3s;
+  /* Agrega transición suave */
+  border: #ff0646 1px solid;
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+  background-color: #ff0646;
+  /* Mantén el fondo rosa al hacer clic */
+  color: #fff;
+  /* Mantén el texto blanco al hacer clic */
+  border: #ff0646 1px solid;
+}

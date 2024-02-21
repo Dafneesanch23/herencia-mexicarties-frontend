@@ -126,8 +126,8 @@ function mostrarDetallesProducto() {
       <img src="${producto.imagen_url}" alt="${producto.nombre}">
       <p>${producto.nombre}</p>
       <p>Precio: $${producto.precio}</p>
-      <button class="btn btn-primary" onclick="echarAlHuacal()">Echar al Huacal</button>
-      <button class="btn btn-secondary">Agregar a Lista de Deseos</button>
+      <button class="btn btn-echar-huacal" onclick="echarAlHuacal()">Echar al Huacal</button>
+      <button class="btn btn-comprar">Comprar</button>
     `;
 
     $('#productModal').modal('show');
