@@ -389,14 +389,26 @@ body.darkmode .heading_container h3::after {
     max-width: 1200px;
     margin:  0 auto;
 }
+
 .descripcion-section {
-    background-color: #1d2a35;
+    background-color: #000;
     color: #fff;
     text-align: center;
     padding: 50px;
     margin-top: 0 rem;
     width: 100%;
 }
+
+.darkmode .descripcion-section {
+  background-color: #1d2a35;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+  margin-top: 0 rem;
+  width: 100%;
+}
+
+
 .descripcion-section img {
     max-width: 100%;
     height: auto;
@@ -426,7 +438,6 @@ body.darkmode .heading_container h3::after {
     }
   
 
-
   .descripcion-section h3::after {
     content: "";
     display: block;
@@ -440,11 +451,19 @@ body.darkmode .heading_container h3::after {
 
 /************** footer ***************/
 footer {
-    background-color: #1d2a35;
+    background-color: #000;
     color: #fff;
     text-align: center;
     padding: 20px;
     width: 100%;
+}
+
+.darkmode footer {
+  background-color: #1d2a35;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
 }
 
 .footer-left,
