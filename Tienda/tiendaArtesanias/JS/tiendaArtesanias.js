@@ -6,7 +6,7 @@ let productosMostrados = 0;
 const productosPorPagina = 15;
 
 async function cargarProductos() {
-    const response = await fetch('/Tienda/tiendaArtesanias/JS/productos.csv');
+    const response = await fetch('../../../Tienda/tiendaArtesanias/JS/productos.csv');
     const csvData = await response.text();
 
     const productos = parseCSV(csvData);
@@ -38,7 +38,7 @@ function parseCSV(csvData) {
 async function filtrarProductos() {
     const searchBar = document.getElementById('searchBar');
     const filtro = searchBar.value.toLowerCase();
-    const response = await fetch('/Tienda/tiendaArtesanias/JS/productos.csv');
+    const response = await fetch('../../../Tienda/tiendaArtesanias/JS/productos.csv');
     const csvData = await response.text();
     const productos = parseCSV(csvData);
 
@@ -83,7 +83,7 @@ function mostrarProductos(productosAMostrar) {
 
 async function mostrarMasProductos() {
     const productosContainer = document.getElementById('productosContainer');
-    const response = await fetch('/Tienda/tiendaArtesanias/JS/productos.csv');
+    const response = await fetch('../../../Tienda/tiendaArtesanias/JS/productos.csv');
     const csvData = await response.text();
     const productos = parseCSV(csvData);
 
@@ -119,7 +119,8 @@ function echarAlHuacal() {
 }
 
 function mostrarDetallesProducto() {
-    const producto = this.dataset.producto;
+    const productoString = this.getAttribute('data-producto');
+    const producto = JSON.parse(productoString);
     const modalBody = document.getElementById('productModalBody');
     modalBody.innerHTML = `
       <h2>${producto.nombre}</h2>
