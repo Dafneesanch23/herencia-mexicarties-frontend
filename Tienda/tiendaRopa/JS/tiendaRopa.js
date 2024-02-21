@@ -72,66 +72,73 @@ const ropaArtesanal = [
     description: 'Una camisa que fusiona la elegancia con la tradición, gracias a sus bordados detallados. Una elección distinguida para quienes aprecian la artesanía mexicana en su vestimenta.',
     price: 765,
   }
+  // Agrega más ropa
+];
 
-    // Agrega más ropa
-  ];
-  
-  // Función para mostrar la ropa artesanal mexicana en miniaturas
-  function mostrarMiniaturasRopaArtesanal() {
-    const grid = document.getElementById('liquor-grid');
-  
-    ropaArtesanal.forEach((ropa, index) => {
-      const productThumbnail = document.createElement('div');
-      productThumbnail.classList.add('product-thumbnail');
-  
-      // Crear la imagen
-      const image = document.createElement('img');
-      image.src = ropa.img;
-      image.alt = ropa.name;
-      image.addEventListener('click', () => mostrarDetallesProducto(licor));
-  
-      // Crear el texto "Ver más"
-      const overlayText = document.createElement('div');
-      overlayText.classList.add('overlay-text');
-      overlayText.textContent = 'Ver más';
-  
-      // Agregar evento click al texto "Ver más"
-      overlayText.addEventListener('click', () => mostrarDetallesProducto(ropa));
-  
-      // Agregar la imagen y el texto "Ver más" al thumbnail del producto
-      productThumbnail.appendChild(image);
-      productThumbnail.appendChild(overlayText);
-  
-      grid.appendChild(productThumbnail);
+// Función para mostrar la ropa artesanal mexicana en miniaturas
+function mostrarMiniaturasRopaArtesanal() {
+  const grid = document.getElementById('liquor-grid');
+
+  ropaArtesanal.forEach((ropa, index) => {
+    const productThumbnail = document.createElement('div');
+    productThumbnail.classList.add('product-thumbnail');
+
+    // Crear la imagen
+    const image = document.createElement('img');
+    image.src = ropa.img;
+    image.alt = ropa.name;
+    image.addEventListener('click', () => mostrarDetallesProducto(ropa));
+
+    // Crear el texto "Ver más"
+    const overlayText = document.createElement('div');
+    overlayText.classList.add('overlay-text');
+    overlayText.textContent = 'Ver más';
+
+    // Agregar estilo al botón "Ver más"
+    overlayText.style.backgroundColor = '#fff'; // Fondo blanco
+    overlayText.style.color = 'black'; // Letras negras
+    overlayText.style.border = '1px solid #ff0646'; // Borde rosa
+    overlayText.style.borderRadius = '30px'; // Bordes redondeados
+    overlayText.style.padding = '8px 15px'; // Espaciado interno
+    overlayText.style.cursor = 'pointer'; // Cursor al pasar sobre el botón
+
+    // Agregar evento hover para cambiar los estilos
+    overlayText.addEventListener('mouseenter', () => {
+      overlayText.style.backgroundColor = '#ff0646'; // Cambia el fondo a rosa
+      overlayText.style.color = '#fff'; // Cambia las letras a blancas
+      overlayText.style.border = '1px solid #fff'; // Cambia el borde a blanco
     });
-  }
-  
 
-  // Función para mostrar los detalles del producto en el modal
-  function mostrarDetallesProducto(producto) {
-    const modalBody = document.getElementById('productModalBody');
-    modalBody.innerHTML = `
-      <h2>${producto.name}</h2>
-      <img src="${producto.img}" alt="${producto.name}">
-      <p>${producto.description}</p>
-      <p>Precio: $${producto.price}</p>
-      <button class="btn btn-primary" onclick="echarAlHuacal('${producto.name}')">Echar al Huacal</button>
-      <button class="btn btn-secondary" onclick="agregarAListaDeDeseos('${producto.name}')">Agregar a Lista de Deseos</button>
-    `;
-  
-    $('#productModal').modal('show');
-  }
-  
-  // Llama a la función para mostrar las miniaturas de los licores artesanales mexicanos
-  mostrarMiniaturasRopaArtesanal();
+    overlayText.addEventListener('mouseleave', () => {
+      // Restaurar los estilos originales al salir del mouse
+      overlayText.style.backgroundColor = '#fff';
+      overlayText.style.color = '#ff0646';
+      overlayText.style.border = '1px solid #ff0646';
+    });
 
-  // Función para agregar un producto a la lista de deseos
-  function echarAlHuacal(nombreProducto) {
-    const producto = ropaArtesanal.find(ropa=> ropa.name === nombreProducto);
-    console.log('Producto añadido al huacal:', producto);
-    // Incrementar el contador de productos en el huacal
-    const huacalNumber = document.getElementById('huacal-number');
-    huacalNumber.textContent = parseInt(huacalNumber.textContent) + 1;
+    // Agregar evento click al texto "Ver más"
+    overlayText.addEventListener('click', () => mostrarDetallesProducto(ropa));
+
+    // Agregar la imagen y el texto "Ver más" al thumbnail del producto
+    productThumbnail.appendChild(image);
+    productThumbnail.appendChild(overlayText);
+
+    grid.appendChild(productThumbnail);
+  });
+}
+
+// Función para mostrar los detalles del producto en el modal
+function mostrarDetallesProducto(producto) {
+  const modalBody = document.getElementById('productModalBody');
+  modalBody.innerHTML = `
+    <h2>${producto.name}</h2>
+    <img src="${producto.img}" alt="${producto.name}">
+    <p>${producto.description}</p>
+    <p>Precio: $${producto.price}</p>
+    <button class="btn btn-primary" onclick="echarAlHuacal('${producto.name}')">Echar al Huacal</button>
+    <button class="btn btn-secondary" onclick="agregarAListaDeDeseos('${producto.name}')">Comprar</button>
+  `;
+  $('#productModal').modal('show');
 }
 
 // Obtener referencia al botón "Ver más"
@@ -141,12 +148,13 @@ const verMasButton = document.getElementById('verMasButton');
 const productModal = new bootstrap.Modal(document.getElementById('productModal'));
 
 // Agregar evento clic al botón "Ver más" para abrir el modal
-verMasButton.addEventListener('click', () => {
+if (verMasButton) {
+  verMasButton.addEventListener('click', () => {
     productModal.show(); // Mostrar el modal al hacer clic en el botón "Ver más"
-});
-  
-  // Función para agregar un producto a la lista de deseos
-  function agregarAListaDeDeseos(nombreProducto) {
-    const producto = ropaArtesanal.find(ropa => ropa.name === nombreProducto);
-    console.log('Producto añadido a la lista de deseos:', producto);
-  }
+  });
+} else {
+  console.log("Bienvenidos");
+}
+
+// Llama a la función para mostrar las miniaturas de la ropa artesanal mexicana
+mostrarMiniaturasRopaArtesanal();
