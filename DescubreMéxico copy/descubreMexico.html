@@ -1,0 +1,2019 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artesanos colaboradores</title>
+  <!--Importacion para Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+    <!--Font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <!--Estilos propios-->
+  <link rel="stylesheet" href="../Public/CSS/main.css">
+  <link rel="stylesheet" href="./CSS/descubreMexico.css">
+</head>
+
+<body>
+
+<!-- --------------------------------------  -->
+<!-- ------BARRA DE NAVEGACIÓN-------------  -->
+<!-- --------------------------------------  -->
+  <header class="estilo-header">
+
+    <div class="container options-user">
+      <span id="greetingText"></span>
+      <button><a class="navbar-brand" id="btn-register" href="../CrearCuenta/crearCuenta.html">Registrarse</a></button>
+      <button><a class="navbar-brand" id="btn-login" href="../Login/login.html">Iniciar sesión</a></button>
+    </div>
+
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+
+        <!--Imagen-->
+        <a class="navbar-brand" href="../Inicio/inicio.html" id="navbarLogo">
+          <img width="150" src="../Public/Imagenes/logo.png" alt="logo">
+        </a>
+
+        <!--Botón de hamburguesa para pantallas más chicas-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggler">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--Contenido de barra de navegacion-->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <ul class="navbar-nav align-items-center justify-content-between">
+
+            <li class="nav-item ">
+              <a class="nav-link" href="../Inicio/inicio.html" id="homelink">INICIO</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                TIENDA
+              </a>
+              <ul class="dropdown-menu estilos-navbar" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="../Tienda/tiendaArtesanias/tiendaArtesanias.html"
+                    id="handicraftslink">ARTESANIAS</a></li>
+                <li><a class="dropdown-item" href="../Tienda/tiendaRopa/tiendaRopa.html" id="clothinglink">ROPA
+                    ARTESANAL</a></li>
+                <li><a class="dropdown-item" href="../Tienda/tiendaLicores/Licores.html" id="liquorslink">LICORES</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../QuienesSomos/QuienesSomos.html" id="aboutlink">QUIENES SOMOS</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../DescubreMéxico/descubreMexico.html" id="discoverlink">DESCUBRE MÉXICO</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../Artesanos/Artesanos.html" id="artisanslink">CONOCE A LOS ARTESANOS</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../Contacto/contact.html" id="contactlink">CONTACTO</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../Huacal/huacal.html">
+                <img width="100" src="../Public/Imagenes/huacal.png" alt="huacal">
+                <div id="huacal-number" class="huacal-number">0</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <div class="btn-options">
+                <!--DARKMODE-->
+                <div class="btn_dark">
+                  <div class="btn__indicator">
+                    <div class="btn__icon-container">
+                      <i class="btn__icon fa-solid"></i>
+                    </div>
+                  </div>
+                </div>
+                <!--IDIOMA-->
+                <div class="btn-idioma">
+                  <a id="toggleLanguage" class="change-language" data-lang="es">
+                    <img id="languageFlag" width="50" src="../Public/Imagenes/mexico.png" alt="Bandera de México">
+                  </a>
+                </div>
+              </div>
+            </li>
+            </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+    <!-- Banner rosa con título -->
+    <section class="inner_page_head">
+      <div class="container_fuild">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="full">
+              <h3>HERENCIA MEXICARTIES</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <br>
+    <br>
+  
+    <!-- Banner con título -->
+    <section class="product_section layout_padding">
+      <div class="container">
+        <div class="heading_container heading_center">
+          <div class="container">
+            <div class="heading_container heading_center">
+              <h4> C O N O C E </h4>
+              <h3> <span>A LOS ARTESANOS</span></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <br>
+    <br>
+
+
+<!-- --------------------------------------  -->
+<!-- -------------CONTENIDO----------------  -->
+<!-- --------------------------------------  -->
+
+
+<section class="w-50 mx-auto text-center product_section layout_padding" >
+  <p class="text-center"></p>
+  </div>
+       </div>
+     <p class="border-top border-3">
+       <br>México es un país con una gran diversidad cultural. 
+       <br>Si bien en nuestro sitio puedes adquirir una amplia variedad de las artesanias de nuestro país,
+       <br>la riqueza artesanal que tenemos no nos hace posible tener aquí todo lo que se produce en México
+       <br>por lo que queremos que te traemos una pequeña exhibición de más de lo que puedes encontrar si te atreves a recorrer y vivir México</p>
+       <br>
+  </div>
+    </section>
+  
+  <!--GALERIA DE FOTOS--> 
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="/DescubreMéxico/imagenes/ARTESANIAS-AGUASCALIENTES.jpg" alt="Aguascalientes" class="img-fluid">
+              <p class="card-text">Aguascalientes</p>
+            </div>
+            <div class="card-back">
+              <img src="/DescubreMéxico/imagenes/ARTESANIAS-AGUASCALIENTES1.jfif" alt="Aguascalientes" class="img-fluid" data-toggle="modal" data-target="#modalAguascalientes" data-card-id="Aguascalientes">
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-2">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img class="img-fluid" src="/DescubreMéxico/imagenes/ARTESANIAS-BC.jpg" alt="Baja California">
+              <p class="card-text">Baja California</p>
+            </div>
+            <div class="card-back">
+              <img class="img-fluid" src="/DescubreMéxico/imagenes/ARTESANIAS-BC1.jpg" alt="Baja California" data-toggle="modal" data-target="#modalBajaCalifornia">
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-2">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img class="img-fluid" src="/DescubreMéxico/imagenes/IMAGENES-BCS.jfif" alt="Baja California Sur">
+              <p class="card-text">Baja California Sur</p>
+            </div>
+            <div class="card-back">
+              <img src="/DescubreMéxico/imagenes/IMAGENES-BCS1.jfif" alt="BCS" class="img-fluid" data-toggle="modal" data-target="#modalBajaCaliforniaSur">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  
+      <div class="col-md-2">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img class="img-fluid" src="/DescubreMéxico/imagenes/ARTESANIAS-CAMPECHE.jfif" alt="Campeche">
+              <p class="card-text">Campeche</p>
+            </div>
+            <div class="card-back">
+              <img src="/DescubreMéxico/imagenes/ARTESANIAS-CAMPECHE1.jfif" alt="Campeche" class="img-fluid" data-toggle="modal" data-target="#modalCampeche"> 
+            </div>
+          </div>
+        </div>
+      </div>
+      
+   
+      <div class="col-md-2">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img class="img-fluid" src="/DescubreMéxico/imagenes/ARTESANIAS-CHIAPAS.jpg" alt="Chiapas">
+              <p class="card-text">Chiapas</p>
+            </div>
+            <div class="card-back">
+              <img src="/DescubreMéxico/imagenes/ARTESANIAS-CHIAPAS1.jfif" alt="Chiapas" class="img-fluid" data-toggle="modal" data-target="#modalChiapas"> 
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-2">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img class="img-fluid" src="./imagenes/ARTESANIAS-CHIH.jpg" alt="Chihuahua">
+              <p class="card-text">Chihuahua</p>
+            </div>
+            <div class="card-back">
+              <img src="/DescubreMéxico/imagenes/ARTESANIAS-CHIH.jfif" alt="Chihuahua" class="img-fluid" data-toggle="modal" data-target="#modalChihuahua"> 
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="my-4"></div>
+   
+      <div class="col-md-2">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img class="img-fluid" src="./imagenes/ARTESANIAS-CDMX.jpg" alt="Ciudad de México">
+              <p class="card-text">Ciudad de México</p>
+            </div>
+            <div class="card-back">
+              <img src="/DescubreMéxico/imagenes/ARTESANIAS-CDMXQ.jfif" alt="Ciudad de México" class="img-fluid" data-toggle="modal" data-target="#modalCiudadDeMexico"> 
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  <div class="col-md-2">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img class="img-fluid" src="./imagenes/ARTESANIAS-COAHUILA-1.jpg" alt="Coahuila">
+          <p class="card-text">Coahuila</p>
+        </div>
+        <div class="card-back">
+          <img src="/DescubreMéxico/imagenes/ARTESANIAS-COAHUILA.jfif" alt="Coahuila" class="img-fluid" data-toggle="modal" data-target="#modalCoahuila"> 
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  <div class="col-md-2">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img class="img-fluid" src="./imagenes/ARTESANIAS-COLIMA.jpg" alt="Colima">
+          <p class="card-text">Colima</p>
+        </div>
+        <div class="card-back">
+          <img src="/DescubreMéxico/imagenes/ARTESANIAS-COLIMA1.jfif" alt="Colima" class="img-fluid" data-toggle="modal" data-target="#modalColima"> 
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-2">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img class="img-fluid" src="./imagenes/ARTESANIAS-DURANGO-4.jpg" alt="Durango">
+          <p class="card-text">Durango</p>
+        </div>
+        <div class="card-back">
+          <img src="/DescubreMéxico/imagenes/ARTESANIAS-DURANGO1.png" alt="Durango" class="img-fluid" data-toggle="modal" data-target="#modalDurango"> 
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-2">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img class="img-fluid" src="./imagenes/ARTESANIAS-EDOMEX.jpg" alt="Estado de México">
+          <p class="card-text">Estado de México</p>
+        </div>
+        <div class="card-back">
+          <img src="/DescubreMéxico/imagenes/ARTESANIAS-EDOMEX1.jpg" alt="Estado de México" class="img-fluid" data-toggle="modal" data-target="#modalEstadoDeMexico"> 
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  <div class="col-md-2">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img class="img-fluid" src="./imagenes/ARTESANIAS-GUANAJUATO-4.jpg" alt="Guanajuato">
+          <p class="card-text">Guanajuato</p>
+        </div>
+        <div class="card-back">
+          <img src="/DescubreMéxico/imagenes/ARTESANIAS-GUANAJUATO.jpg" alt="Guanajuato" class="img-fluid" data-toggle="modal" data-target="#modalGuanajuato"> 
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="my-4"></div>
+  
+    <div class="col-md-2">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img class="img-fluid" src="./imagenes/ARTESANIAS-GUERRERO.jpg" alt="Guerrero">
+            <p class="card-text">Guerrero</p>
+          </div>
+          <div class="card-back">
+            <img src="/DescubreMéxico/imagenes/ARTESANIAS-GUERRERO1.jfif" class="img-fluid" alt="Guerrero Artesanos" data-toggle="modal" data-target="#modalGuerrero"> 
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col-md-2">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img class="img-fluid" src="./imagenes/ARTESANIAS-HGO.jpg" alt="Hidalgo">
+            <p class="card-text">Hidalgo</p>
+          </div>
+          <div class="card-back">
+            <img src="/DescubreMéxico/imagenes/ARTESANIAS-HGO1.jfif" alt="Hidalgo" class="img-fluid" data-toggle="modal" data-target="#modalHidalgo"> 
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-2">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img class="img-fluid" src="./imagenes/ARTESANIAS-JALISCO.jfif" alt="Jalisco">
+            <p class="card-text">Jalisco</p>
+          </div>
+          <div class="card-back">
+            <img src="/DescubreMéxico/imagenes/ARTESANIAS-JALISCO1.jfif" alt="Jalisco" class="img-fluid" data-toggle="modal" data-target="#modalJalisco"> 
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-2">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img class="img-fluid" src="./imagenes/ARTESANIAS-MICH.jpg" alt="Michoacán">
+            <p class="card-text">Michoacán</p>
+          </div>
+          <div class="card-back">
+            <img src="/DescubreMéxico/imagenes/ARTESANIAS-MICH1.jfif" alt="Michoacán" class="img-fluid" data-toggle="modal" data-target="#modalMichoacan"> 
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    
+    <div class="col-md-2">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img class="img-fluid" src="./imagenes/ARTESANIAS-MOR.jpg" alt="Morelos">
+            <p class="card-text">Morelos</p>
+          </div>
+          <div class="card-back">
+            <img src="/DescubreMéxico/imagenes/ARTESANIAS-MOR1.jfif" alt="Morelos" class="img-fluid" data-toggle="modal" data-target="#modalMorelos"> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img class="img-fluid" src="./imagenes/ARTESANIAS-NAY.jpg" alt="Nayarit">
+            <p class="card-text">Nayarit</p>
+          </div>
+          <div class="card-back">
+            <img src="/DescubreMéxico/imagenes/ARTESANIAS-NAY1.jfif" alt="Nayarit" class="img-fluid" data-toggle="modal" data-target="#modalNayarit"> 
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="my-4"></div>
+  
+    <div class="row">
+      <div class="col-md-2">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img class="img-fluid" src="./imagenes/ARTESANIAS-NL.jpg" alt="Nuevo León">
+              <p class="card-text">Nuevo León</p>
+            </div>
+            <div class="card-back">
+              <img src="/DescubreMéxico/imagenes/ARTESANIAS-NL1.jfif" alt="Nuevo León" class="img-fluid" data-toggle="modal" data-target="#modalNuevoLeon"> 
+            </div>
+          </div>
+        </div>
+      </div>
+     
+    <div class="col-md-2">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img class="img-fluid" src="./imagenes/ARTESANIAS-OAXACA-4-1024x680.jpg" alt="Oaxaca">
+            <p class="card-text">Oaxaca</p>
+          </div>
+          <div class="card-back">
+            <img src="/DescubreMéxico/imagenes/ARTESANIAS-OAXACA1.jfif" alt="Oaxaca" class="img-fluid" data-toggle="modal" data-target="#modalOaxaca"> 
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-2">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img class="img-fluid" src="./imagenes/ARTESANIAS-PUEBLA-5.jpg" alt="Puebla">
+            <p class="card-text">Puebla</p>
+          </div>
+          <div class="card-back">
+            <img src="/DescubreMéxico/imagenes/ARTESANIAS-PUEBLA1.jfif" alt="Puebla" class="img-fluid" data-toggle="modal" data-target="#modalPuebla"> 
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <!-- Tarjeta Querétaro -->
+  <div class="col-md-2">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img class="img-fluid" src="./imagenes/ARTESANIAS-QRO.jpg" alt="Querétaro">
+          <p class="card-text">Querétaro</p>
+        </div>
+        <div class="card-back">
+          <img src="/DescubreMéxico/imagenes/ARTESANIAS-QRO1.jfif" alt="Querétaro" class="img-fluid" data-toggle="modal" data-target="#modalQueretaro"> 
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  <!-- Tarjeta Quintana Roo -->
+  <div class="col-md-2">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img class="img-fluid" src="./imagenes/ART-QROO.jpg" alt="Quintana Roo">
+          <p class="card-text">Quintana Roo</p>
+        </div>
+        <div class="card-back">
+          <img src="/DescubreMéxico/imagenes/ARTESANIAS-QROO1.jfif" alt="Quintana Roo" class="img-fluid" data-toggle="modal" data-target="#modalQuintanaRoo"> 
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Tarjeta San Luis Potosí -->
+  <div class="col-md-2">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img class="img-fluid" src="./imagenes/ARTESANIAS-SLP.jfif" alt="San Luis Potosí">
+          <p class="card-text">San Luis Potosí</p>
+        </div>
+        <div class="card-back">
+          <img src="/DescubreMéxico/imagenes/ARTESANIAS-SLP1.jfif" alt="Ciudad de los Tecolotes" class="img-fluid" data-toggle="modal" data-target="#modalSanLuisPotosi"> 
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+    <div class="my-4"></div>
+  
+  <!-- Tarjeta Sinaloa -->
+  <div class="col-md-2">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img class="img-fluid" src="./imagenes/ARTESANIAS-SIN.jpg" alt="Sinaloa">
+          <p class="card-text">Sinaloa</p>
+        </div>
+        <div class="card-back">
+          <img src="/DescubreMéxico/imagenes/ARTESANIAS-SIN1.jfif" alt="Artesanias Sinaloa" class="img-fluid" data-toggle="modal" data-target="#modalSinaloa"> 
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Tarjeta Sonora -->
+  <div class="col-md-2">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img class="img-fluid" src="./imagenes/ARTESANIAS-SONORA-1024x680.jpg" alt="Sonora">
+          <p class="card-text">Sonora</p>
+        </div>
+        <div class="card-back">
+          <img src="/DescubreMéxico/imagenes/ARTESANIAS-SONORA1.jpg" alt="Sonora" class="img-fluid" data-toggle="modal" data-target="#modalSonora"> 
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Tarjeta Tabasco -->
+  <div class="col-md-2">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img class="img-fluid" src="./imagenes/ARTESANIAS-TABASCO-1024x680.jpg" alt="Tabasco">
+          <p class="card-text">Tabasco</p>
+        </div>
+        <div class="card-back">
+          <img src="/DescubreMéxico/imagenes/ARTESANIAS-TABASCO1.jfif" alt="Tabasco" class="img-fluid" data-toggle="modal" data-target="#modalTabasco"> 
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Tarjeta Tamaulipas -->
+  <div class="col-md-2">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img class="img-fluid" src="./imagenes/ARTESANIAS-TAMAULIPAS-1024x680.jpg" alt="Tamaulipas">
+          <p class="card-text">Tamaulipas</p>
+        </div>
+        <div class="card-back">
+          <img src="/DescubreMéxico/imagenes/ARTESANIAS-TAM1.jfif" alt="Tamaulipas" class="img-fluid" data-toggle="modal" data-target="#modalTamaulipas"> 
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Tarjeta Tlaxcala -->
+  <div class="col-md-2">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img class="img-fluid" src="./imagenes/ARTESANIAS-TLAXCALA-2-1024x680.jpg" alt="Tlaxcala">
+          <p class="card-text">Tlaxcala</p>
+        </div>
+        <div class="card-back">
+          <img src="/DescubreMéxico/imagenes/ARTESANIAS-TLAXCALA1.jfif" alt="Tlaxcala" class="img-fluid" data-toggle="modal" data-target="#modalTlaxcala"> 
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Tarjeta Veracruz -->
+  <div class="col-md-2">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img class="img-fluid" src="./imagenes/ARTESANIAS-VERACRUZ-1024x680.jpg" alt="Veracruz">
+          <p class="card-text">Veracruz</p>
+        </div>
+        <div class="card-back">
+          <img src="/DescubreMéxico/imagenes/ARTESANIAS-VERACRUZ1.jfif" alt="Veracruz" class="img-fluid" data-toggle="modal" data-target="#modalVeracruz"> 
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <div class="my-4"></div>
+  
+    <div class="col-md-2">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img class="img-fluid" src="./imagenes/ARTESANIAS-YUC.jpg" alt="Yucatán">
+            <p class="card-text">Yucatán</p>
+          </div>
+          <div class="card-back">
+            <img src="/DescubreMéxico/imagenes/ARTESANIAS-YUC1.jfif" alt="Yucatán" class="img-fluid" data-toggle="modal" data-target="#modalYucatan"> 
+          </div>
+        </div>
+      </div>
+    </div>
+    
+     
+  <!-- Tarjeta Zacatecas -->
+  <div class="col-md-2">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img class="img-fluid" src="./imagenes/ARTESANIAS-ZAC.jpg" alt="Zacatecas">
+          <p class="card-text">Zacatecas</p>
+        </div>
+        <div class="card-back">
+          <img src="/DescubreMéxico/imagenes/ARTESANIAS-ZAC1.jfif" alt="Zacatecas" class="img-fluid" data-toggle="modal" data-target="#modalZacatecas"> 
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <!--modales-->
+        <!-- Modal específico para Aguascalientes -->
+        <div class="modal fade" id="modalAguascalientes" tabindex="-1" role="dialog" aria-labelledby="modalAguascalientesLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalAguascalientesLabel" style="text-align: center;">AGUASCALIENTES</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <!-- Contenido del modal-->
+                <p> Aguascalientes es uno de los estados más pequeños de México, pero a pesar de su tamaño, es reconocido por su dinámica vida cultural y sus festivales. Combina la modernidad con la preservación de su patrimonio histórico. El estado es conocido por su clima templado, su arquitectura colonial y su hospitalidad. La cultura en Aguascalientes es diversa y refleja la mezcla de influencias indígenas y españolas. La música y la danza desempeñan un papel importante en las celebraciones locales, donde se pueden disfrutar de bailes folklóricos y música tradicional. Además, el estado alberga eventos culturales, como la Feria Nacional de San Marcos, que es una de las ferias más grandes y antiguas de México.
+                  <br>
+                  <br>
+    
+                  ARTESANIAS
+                  <br>
+                  Las artesanías en Aguascalientes son expresiones artísticas que reflejan la identidad y la creatividad de la región. Algunas de las artesanías más destacadas incluyen:
+                  <br>
+                  -Cerámica
+                  <br>
+                  Los alfares en Aguascalientes producen cerámica de alta calidad con diseños únicos y coloridos.
+                  <br>
+                  -Textiles
+                  <br> Se elaboran textiles tradicionales como sarapes y bordados que incorporan técnicas antiguas y diseños autóctonos.
+                  <br>
+                  -Trabajo en metal
+                  <br>
+                  Los artesanos trabajan el metal para crear piezas decorativas, como lámparas y figuras esculpidas.
+                  <br>
+                  -Alfarería
+                  <br>
+                   La alfarería es una tradición arraigada en Aguascalientes, y los alfares producen una variedad de piezas utilitarias y decorativas.</p>
+    
+                 </div>
+            </div>
+          </div>
+        </div>
+    
+  
+        <!---->
+        <!-- Modal para Baja California -->
+  <div class="modal fade" id="modalBajaCalifornia" tabindex="-1" role="dialog" aria-labelledby="modalBajaCaliforniaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalBajaCaliforniaLabel" style="text-align: center;">Baja California</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para Baja California -->
+          <p>
+            Baja California es un estado mexicano que se extiende a lo largo de la frontera con los Estados Unidos y el océano Pacífico. La región combina paisajes desérticos, playas espectaculares y una rica oferta gastronómica.
+            <br>
+            <br>
+            Turismo y Naturaleza
+             <br> 
+            Baja California es hogar de destinos turísticos populares como Tijuana, Rosarito y Ensenada. Su Península ofrece una variada gama de paisajes, desde el árido Desierto de Vizcaíno hasta la belleza costera del Golfo de California. La observación de ballenas en la bahía de Magdalena es una experiencia única.
+          <br>
+          <br>
+            Gastronomía
+            <br>
+            La gastronomía baja californiana destaca por su cocina fresca y deliciosa. Los mariscos son una especialidad, y la región es conocida por su cocina de fusión que combina ingredientes locales con influencias mediterráneas y asiáticas. El vino también es destacado, especialmente en el Valle de Guadalupe, conocido como la "Napa mexicana".
+            <br>
+            <br>
+            Cultura y Arte
+            <br>
+            La cultura en Baja California se nutre de su diversidad y proximidad a la frontera. La región alberga festivales culturales, eventos artísticos y una escena musical vibrante. Tijuana es reconocida por su escena artística y sus galerías, atrayendo a artistas y amantes del arte de todo el mundo.
+      <br>
+            <br>
+            Artesanías
+            <br>
+            Las artesanías de Baja California reflejan la creatividad y la herencia cultural de la región. Algunas de las más destacadas incluyen:
+            <br>
+            -Cestería: Canastas y objetos tejidos con fibras naturales.
+            <br>
+           - Artes de cuero: Artículos como cinturones y bolsos elaborados con habilidades tradicionales en cuero.
+            <br>
+            -Arte Huichol: La influencia de la cultura Huichol se refleja en coloridas piezas de arte con chaquira y textiles.
+            <br>
+            -Cerámica: Alfareros locales producen cerámica con diseños únicos y formas tradicionales.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal para Baja California Sur -->
+  <div class="modal fade" id="modalBajaCaliforniaSur" tabindex="-1" role="dialog" aria-labelledby="modalBajaCaliforniaSurLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalBajaCaliforniaSurLabel" style="text-align: center;">Baja California Sur</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para Baja California Sur -->
+          <p>Baja California Sur es un estado mexicano que se encuentra en la península de Baja California, al sur de Baja California. Con una mezcla de bellezas naturales y una rica herencia cultural, BCS se destaca como un destino turístico popular en México.
+  <br>
+  <br>
+            Turismo y Naturaleza
+            <br>
+            BCS es conocido por sus impresionantes paisajes, playas prístinas y parques naturales. Cabo San Lucas y La Paz son destinos turísticos clave, atraídos por sus aguas cristalinas y actividades como el avistamiento de ballenas y el buceo en el Mar de Cortés. El Parque Nacional Sierra de La Laguna ofrece exuberante vegetación y senderos para los amantes de la naturaleza.
+            <br>
+            <br>
+            Gastronomía
+            <br>
+            La gastronomía de BCS destaca por sus sabores frescos y mariscos. La región es famosa por sus ceviches, tacos de pescado y mariscos preparados de diversas maneras. Además, los oasis en el desierto de Baja California Sur contribuyen a la producción de productos frescos y vinos locales.
+            <br>
+            <br>
+            Cultura y Arte
+            <br>
+            BCS alberga una rica herencia cultural que combina las influencias indígenas, españolas y mestizas. La ciudad de La Paz es conocida por sus eventos culturales, festivales y su escena artística emergente. El arte local se inspira en los colores y paisajes del entorno natural.
+            <br>
+            <br>
+            Artesanías
+            <br>
+            Las artesanías de Baja California Sur reflejan la creatividad y tradiciones locales. Algunas de las más destacadas incluyen:
+            <br>
+            -Cestería Seri: Cestas elaboradas por la comunidad indígena Seri, utilizando técnicas tradicionales y materiales locales.
+            <br>
+            -Arte Huichol: Obras de arte con chaquira y textiles, influencia de la cultura Huichol.
+            <br>
+            -Cerámica: Alfareros locales producen cerámica con diseños únicos y motivos inspirados en la naturaleza.
+            <br>
+            -Joyas de Perlas: Joyería elaborada con perlas cultivadas de las aguas de Baja California Sur.</p>
+         </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Modal para Campeche -->
+  <div class="modal fade" id="modalCampeche" tabindex="-1" role="dialog" aria-labelledby="modalCampecheLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalCampecheLabel" style="text-align: center;">Campeche</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para Campeche -->
+          <p>
+            Campeche, ubicado en la península de Yucatán, es un estado mexicano con una rica historia, arquitectura colonial y una biodiversidad única, que ofrece una mezcla de tradición, cultura y belleza natural.
+            <br>
+            <br>
+            Historia y Arquitectura
+            <br>
+            Campeche es conocido por su bien conservado centro histórico, declarado Patrimonio de la Humanidad por la UNESCO. La ciudad de Campeche cuenta con una arquitectura colonial única, con calles empedradas y coloridas fachadas. Las murallas antiguas, como parte de la Fortificación de Campeche, son testigos de su pasado militar.
+            <br>
+            <br>
+            Turismo y Naturaleza
+            <br>
+            La región tiene atractivos naturales, como la Reserva de la Biosfera de Calakmul, hogar de la antigua ciudad maya de Calakmul y una gran diversidad de flora y fauna. Las playas vírgenes, como Playa Bonita, ofrecen entornos tranquilos y hermosos.
+            <br>
+            <br>
+            Gastronomía
+            <br>
+            La cocina campechana destaca por sus sabores auténticos. Platillos como el pescado tikinxic, los tamales colados y el pan de cazón son populares. La combinación de mariscos frescos y técnicas tradicionales mayas caracteriza la gastronomía de la región.
+            <br>
+            <br>
+            Cultura y Tradiciones
+            <br>
+            Campeche conserva sus tradiciones culturales a través de eventos como la Feria de San Román, donde se celebran actividades culturales y religiosas. Las danzas folklóricas y las festividades religiosas son expresiones vibrantes de la identidad local.
+            <br>
+            <br>
+            Artesanías
+            <br>
+            Las artesanías en Campeche reflejan la destreza manual y la rica herencia cultural. Algunas de las más destacadas incluyen:
+            <br>
+            -Alfarería: Cerámica pintada a mano con diseños tradicionales y motivos mayas.
+            <br>
+            -Textiles: Bordados elaborados con hilos coloridos, representando la herencia indígena.
+            <br>
+            -Muebles de Madera Tallada: Artesanos locales crean muebles tallados a mano con detalles artísticos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Modal para Chiapas -->
+  <div class="modal fade" id="modalChiapas" tabindex="-1" role="dialog" aria-labelledby="modalChiapasLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalChiapasLabel" style="text-align: center;">Chiapas</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para Chiapas -->
+          <p>Chiapas, situado en el sureste de México, destaca por su rica cultura y tradiciones arraigadas en comunidades indígenas. Con impresionantes paisajes naturales que van desde selvas hasta montañas, Chiapas ofrece una experiencia única.
+  <br>
+  <br>
+            Cultura y Tradiciones
+            <br>
+            Chiapas alberga diversas comunidades indígenas con tradiciones ancestrales evidentes en música, danza y festividades como la Fiesta Grande de Chiapa de Corzo.
+            <br>
+            <br>
+            Paisajes Naturales
+            <br>
+            Desde el Cañón del Sumidero hasta las Cascadas de Agua Azul, Chiapas ofrece una belleza natural extraordinaria.
+            <br>
+            <br>
+            Gastronomía
+            <br>
+            La cocina chiapaneca, con platillos como el cochito horneado y el tamal de chipilín, es conocida por sus sabores auténticos y el renombrado café chiapaneco.
+            <br>
+            <br>
+            Artesanías
+            <br>
+            Las artesanías chiapanecas son expresiones vibrantes de identidad cultural, destacando en textiles, bordados y cerámica.
+            <br>
+            <br>
+            -Textiles
+            <br>
+  
+            *Tzotzil y Tzeltal: Estos grupos indígenas elaboran textiles con técnicas antiguas de tejido en telares de cintura. Los huipiles, rebozos y vestimentas tradicionales reflejan patrones simbólicos y colores vibrantes.
+            <br>
+            <br>
+            -Bordados
+            <br>
+            *Chiapa de Corzo: Este estilo de bordado es característico de la región. Se realiza con puntadas finas y detalles geométricos, representando la riqueza cultural de Chiapas.
+            <br>
+            <br>
+            -Cerámica
+            <br>
+            *Amatenango del Valle: Conocido por sus figuras de barro policromado, este pueblo produce cerámica que representa escenas cotidianas, figuras religiosas y animales estilizados.
+            <br>
+            <br>
+            -Madera Tallada
+            <br>
+            *San Juan Chamula y Zinacantán: Los artesanos tallan madera para crear máscaras, figurillas y muebles decorativos. Las piezas a menudo están adornadas con colores brillantes y detalles intrincados.
+            <br>
+            <br>
+            -Juguetería de Madera
+            <br>
+            *Zinacantán: La elaboración de juguetes de madera pintados a mano es una tradición en esta comunidad, incluyendo figuras de animales y muñecas.
+            <br>
+            <br>
+            -Orfebrería
+            <br>
+            *Chiapas de Corzo: La orfebrería chiapaneca destaca por sus joyas elaboradas con filigrana de plata. Los artesanos crean finas piezas de joyería con motivos culturales.
+            <br>
+            <br>
+            -Marimbas
+            <br>
+            *Tuxtla Gutiérrez: La marimba, instrumento musical de percusión, es fabricada con madera tropical y es un elemento esencial en la música tradicional chiapaneca.
+            Estas artesanías no solo son productos materiales, sino también portadoras de historias, creencias y tradiciones que han sido transmitidas de generación en generación. La diversidad y calidad de las artesanías de Chiapas contribuyen significativamente a la riqueza cultural de México.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Modal para Chihuahua -->
+  <div class="modal fade" id="modalChihuahua" tabindex="-1" role="dialog" aria-labelledby="modalChihuahuaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalChihuahuaLabel" style="text-align: center;">Chihuahua</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para Chihuahua -->
+          <p>
+            Chihuahua destaca por su variada tradición artesanal, influenciada por comunidades indígenas y mestizas.
+            <br>
+            <br>
+  
+            Cerámica (Mata Ortiz)
+            <br>
+            Con renombrados alfares, la cerámica de Mata Ortiz se distingue por su elegancia y técnicas contemporáneas.
+  <br>
+  <br>
+  Textiles (Tarahumaras)
+  <br>
+  La producción textil, especialmente tapetes y cobijas, exhibe habilidades con telares manuales y el uso de tintes naturales.
+  <br>
+  <br>
+  Cestería (Rarámuris)
+  <br> Los Rarámuris destacan en la creación de cestas y objetos utilitarios, empleando fibras naturales y patrones geométricos.
+  <br>
+  <br>
+  Tallado en Madera (Tarahumaras)
+  <br>La madera de ocote se transforma en figuras rituales y decorativas, reflejando la conexión espiritual con la naturaleza.
+  <br>
+  <br>
+  Pirotecnia Artística (Tultepec)
+  <br>Aunque Tultepec está en el Estado de México, es conocido por contribuir a la producción de cohetes y fuegos artificiales.
+  <br>
+  <br>
+  Trabajo en Cuero (Casas Grandes)
+  <br>La habilidad en la creación de productos vaqueros, como sillas de montar y cinturones, resalta la destreza artesanal.
+  <br>
+  <br>
+  Esculturas en Metal (Ciudad Juárez)
+  <br> Ciudad Juárez aporta a la escena artística con esculturas contemporáneas y abstractas, fusionando la cultura local con expresiones modernas.
+  <br>
+  <br>
+  Chihuahua no solo exhibe destrezas artesanales, sino que estas expresiones se entrelazan con su vasta riqueza cultural. La diversidad y autenticidad de las artesanías chihuahuenses contribuyen significativamente al patrimonio cultural de México.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!---->
+  <div class="modal fade" id="modalCiudadDeMexico" tabindex="-1" role="dialog" aria-labelledby="modalCiudadDeMexicoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalCiudadDeMexicoLabel" style="text-align: center;">Ciudad de México</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para Ciudad de México -->
+          <p>
+            La Ciudad de México (CDMX) se destaca por su rica cultura y variadas artesanías que reflejan la diversidad de la región. Además de tener gran oferta cultural con sus muchos museos y exhibiciones, la riqueza cultural que ofrece es muy amplia. Algunos aspectos destacados incluyen:
+  <br>
+  <br>
+  Alebrijes
+  <br>
+  Coloridas esculturas de animales imaginarios talladas en madera, originarias de la Ciudad de México y Oaxaca, exhiben la creatividad y destreza artesanal.
+  <br>
+  <br>
+  Textiles Tradicionales
+  <br>
+  La ciudad ofrece una variedad de tejidos tradicionales, como sarapes, rebozos y bordados, que incorporan técnicas antiguas y diseños autóctonos.
+  <br>
+  <br>
+  Cerámica
+  <br>
+  Los alfares producen cerámica de alta calidad con diseños vibrantes, desde platos hasta jarrones, que reflejan motivos tradicionales y contemporáneos.
+  <br>
+  <br>
+  Joyería
+  <br>
+  Los joyeros crean piezas únicas que fusionan técnicas antiguas con un enfoque moderno, utilizando gemas y metales preciosos.
+  <br>
+  <br>
+  Papel Picado
+  <br>Arte tradicional con papel, donde los artesanos cortan intrincados diseños en papel de colores para crear guirnaldas festivas.
+  <br>
+  <br>
+  Máscaras
+  <br>
+  Talladas a mano, las máscaras forman parte de la tradición cultural y folklórica de la ciudad, utilizadas en danzas y representaciones teatrales.
+  <br>
+  <br>
+  Esculturas de Barro
+  <br> La alfarería, con piezas utilitarias y decorativas, demuestra la habilidad artesanal con detalles impresionantes.
+  <br>
+  <br>
+  
+  Los mercados tradicionales, como el Mercado de La Ciudadela, son tesoros culturales que ofrecen estas artesanías auténticas. La Ciudad de México, con su patrimonio cultural y artístico, invita a los visitantes a explorar y apreciar la riqueza de sus tradiciones.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal para Coahuila -->
+  <div class="modal fade" id="modalCoahuila" tabindex="-1" role="dialog" aria-labelledby="modalCoahuilaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalCoahuilaLabel" style="text-align: center;">Coahuila</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        
+  Coahuila, estado del norte de México, presenta una riqueza cultural y artesanal única que refleja la identidad de la región. Algunos aspectos destacados incluyen:
+  
+  <br>
+  <br>
+  Sarapes y Textiles
+  <br>
+  La tradición textil de Coahuila se manifiesta en la elaboración de sarapes y textiles que incorporan colores vibrantes y diseños autóctonos.
+  <br>
+  <br>
+  Cerámica
+  <br>
+  Los alfares en Coahuila producen cerámica de alta calidad, incluyendo piezas decorativas y utilitarias, con motivos que reflejan la historia y la cultura local.
+  <br>
+  <br>
+  Artesanías de Cuero
+  <br>
+  La habilidad artesanal se evidencia en la creación de productos de cuero, como cinturones y artículos decorativos, que exhiben técnicas tradicionales de trabajo con piel.
+  <br>
+  <br>
+  Trabajo en Madera
+  <br>
+   Esculturas y mobiliario de madera reflejan la destreza artesanal local, con representaciones de motivos culturales y elementos naturales.
+  <br>
+  <br>
+  Huichol
+  <br>
+  La influencia de la cultura huichol se refleja en la creación de arte con chaquira (chaquiras), incluyendo intrincadas figuras y objetos decorativos.
+  <br>
+  <br>
+  Cestería
+  <br>
+  La cestería tradicional se mantiene viva en Coahuila, con la creación de cestas y canastas tejidas a mano, que son tanto funcionales como artísticas.
+  <br>
+  <br>
+  
+  Arte Popular
+  <br>
+  Coahuila alberga diversas expresiones de arte popular, como las representativas muñecas artesanales "Perritos de Río Grande," hechas con materiales naturales.
+  <br>
+  <br>
+  
+  La combinación de estas artesanías resalta la diversidad y el arraigo cultural de Coahuila, invitando a los visitantes a apreciar la maestría artesanal y la autenticidad de las tradiciones locales.
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal para Colima -->
+  <div class="modal fade" id="modalColima" tabindex="-1" role="dialog" aria-labelledby="modalColimaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalColimaLabel" style="text-align: center;">Colima</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para Colima -->
+          <p>Colima, ubicado en la costa oeste de México, es un estado que destaca por su riqueza cultural y artesanal. Algunos elementos significativos incluyen:
+  <br>
+  <br>
+            Artesanías en Barro
+            <br>
+            La alfarería en Colima es excepcional, con la creación de piezas de barro como cazuelas, platos y esculturas que reflejan la herencia indígena de la región.
+            <br>
+            <br>
+            Esculturas de Volcán de Fuego
+            <br>
+            Las esculturas de barro, especialmente aquellas representando al Volcán de Fuego, son emblemáticas de Colima y capturan la conexión del estado con su entorno geográfico.
+            <br>
+            <br>
+            Música y Baile
+            <br>
+            La música y la danza desempeñan un papel vital en la cultura colimense. El son arribeño y otras formas musicales tradicionales son apreciadas durante festivales y celebraciones.
+            <br>
+            <br>
+            Fiestas Tradicionales
+            <br>
+            Eventos como la Feria de Todos los Santos muestran la riqueza cultural de Colima con presentaciones artísticas, danzas folklóricas y actividades que resaltan las tradiciones locales.
+            <br>
+            <br>
+            Gastronomía
+            <br>
+             La cocina colimense es conocida por sus platillos auténticos, como el pozole, tamales y la carne en su jugo, que incorporan sabores locales y técnicas tradicionales.
+            <br>
+            <br>
+            Arquitectura Colonial
+            <br>
+            Colima presenta una arquitectura colonial notable, con iglesias y edificios históricos que reflejan la influencia española en el diseño y la construcción.
+            <br>
+            <br>
+            Palma Tejida
+            <br>
+            La cestería con palma es una artesanía popular en Colima, creando productos como sombreros y canastas con técnicas transmitidas de generación en generación.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <!-- Modal para Durango -->
+  <div class="modal fade" id="modalDurango" tabindex="-1" role="dialog" aria-labelledby="modalDurangoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalDurangoLabel" style="text-align: center;">Durango</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para Durango -->
+          <p>Durango es un estado en el norte de México conocido por su rica historia y paisajes naturales impresionantes.
+            
+  Las artesanías de Durango reflejan la rica tradición cultural del estado y la habilidad artesanal de sus habitantes. Entre las artesanías más destacadas se encuentran la alfarería y cerámica, conocidas por sus diseños detallados y colores vivos. Los alfares locales producen una amplia variedad de piezas, desde utensilios de cocina hasta decorativas, cada una única en su estilo.
+  
+  Los textiles también ocupan un lugar importante en la artesanía duranguense, con tejidos y bordados que incorporan técnicas ancestrales y motivos autóctonos. Estos textiles no solo son expresiones artísticas, sino también símbolos de la identidad cultural de la región.
+  
+  
+  <br>
+  Además de las artesanías, la cultura de Durango se manifiesta en eventos como la Feria Nacional Durango, donde la música, la danza y la gastronomía local se fusionan para crear una experiencia vibrante. La arquitectura colonial, como la Catedral Basílica Menor, añade un toque histórico a la región.
+  
+  Las artesanías de Durango representan la destreza y creatividad de sus artesanos, mientras que la cultura del estado se vive plenamente a través de eventos y manifestaciones artísticas que enriquecen la vida cotidiana de sus habitantes.
+          </p>
+  
+          <!-- Puedes agregar más contenido específico para Durango aquí -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal para Estado de México -->
+  <div class="modal fade" id="modalEstadoDeMexico" tabindex="-1" role="dialog" aria-labelledby="modalEstadoDeMexicoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalEstadoDeMexicoLabel" style="text-align: center;">Estado de México</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para Estado de México -->
+          <p>El Estado de México, con su rica herencia cultural, ofrece una amplia gama de artesanías que reflejan la diversidad y la creatividad de sus comunidades. Entre las artesanías más destacadas se encuentran:
+  <br>
+  <br>
+            Artesanía en Textiles
+            <br>
+            El estado es conocido por la producción de textiles tradicionales, como sarapes, rebozos y bordados. Estos textiles suelen incorporar colores brillantes y diseños intrincados que reflejan la identidad cultural de la región.
+            <br>
+            <br>
+            Trabajo en Talavera
+            <br>
+            La talavera es una forma de cerámica decorativa que ha florecido en el Estado de México. Los alfares producen piezas únicas, desde azulejos hasta vajillas, con diseños coloridos y patrones tradicionales.
+            <br>
+            <br>
+            Trabajo en Madera
+            <br>
+            Los artesanos mexiquenses también son conocidos por su habilidad en el trabajo de la madera. Tallan figuras decorativas, muebles y objetos utilitarios con detalles finos y artísticos.
+            <br>
+            <br>
+            Alfarería
+            <br>
+            La alfarería es una tradición arraigada en la región, con alfares que producen una variedad de utensilios de cocina y objetos decorativos. Las piezas suelen ser elaboradas a mano y decoradas con motivos locales.
+            <br>
+            <br>
+            La cultura del Estado de México se manifiesta en festivales, danzas y eventos tradicionales que celebran su rica historia. Lugares emblemáticos como la Catedral de Toluca y las zonas arqueológicas como Teotihuacán son testigos de la profunda conexión del estado con su pasado.</p>
+  
+          <!-- Puedes agregar más contenido específico para el Estado de México aquí -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal para Guanajuato -->
+  <div class="modal fade" id="modalGuanajuato" tabindex="-1" role="dialog" aria-labelledby="modalGuanajuatoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalGuanajuatoLabel" style="text-align: center;">Guanajuato</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para Guanajuato -->
+          <p>
+            Guanajuato, reconocido por su belleza arquitectónica y riqueza cultural, presenta una variedad de artesanías que reflejan la creatividad y la tradición de la región. Entre las manifestaciones artesanales más destacadas se encuentran:
+  <br>
+  <br>
+  Cera y Papel Maché
+  <br>
+  La producción de artículos elaborados con cera y papel maché es emblemática en Guanajuato. Se crean coloridas catrinas, máscaras, y otras figuras decorativas que reflejan la influencia de festividades como el Día de los Muertos.
+  <br>
+  <br>
+  Trabajo en Plata
+  <br>La joyería de plata es otra faceta importante de la artesanía guanajuatense. Los artesanos crean piezas únicas, desde aretes hasta pulseras, utilizando técnicas tradicionales de trabajo en plata.
+  <br>
+  <br>
+  Bordados y Textiles
+  <br>
+  La región es conocida por sus bordados finos y textiles de alta calidad. Las prendas y textiles tradicionales de Guanajuato a menudo incorporan diseños intrincados y coloridos que reflejan la identidad cultural local.
+  <br>
+  <br>
+  
+  Talla de Madera
+  <br>
+   La talla de madera es una tradición artesanal que perdura en Guanajuato. Los artesanos crean esculturas detalladas, muebles y objetos decorativos utilizando madera de la región.
+  <br>
+  <br>
+  Culturalmente, Guanajuato alberga el famoso Festival Internacional Cervantino, uno de los eventos artísticos más importantes de América Latina. La ciudad de Guanajuato, con su arquitectura colonial y callejones pintorescos, sirve como escenario perfecto para eventos culturales y festividades que resaltan la rica historia del estado.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+    <!-- Modal para Guerrero -->
+    <div class="modal fade" id="modalGuerrero" tabindex="-1" role="dialog" aria-labelledby="modalGuerreroLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalGuerreroLabel" style="text-align: center;">Guerrero</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Contenido del modal para Guerrero -->
+  <p>
+    Guerrero, en la costa sur de México, alberga una cultura diversa y rica que se manifiesta en diversas expresiones artísticas y tradiciones. Aquí se destacan algunos aspectos culturales significativos:
+  <br>
+  Guerrero es conocido por sus danzas tradicionales, como la danza de los diablos y la danza de los chilenos. Estas manifestaciones artísticas representan la conexión profunda con las raíces indígenas y las celebraciones locales.
+  <br>La cocina guerrerense es una fusión de ingredientes locales y técnicas tradicionales. Platillos como el pozole, los tamales y el mole reflejan la diversidad de sabores y la herencia culinaria de la región.
+  <br>Guerrero celebra festivales vibrantes y eventos culturales a lo largo del año. La Feria de San Mateo en Chilpancingo y las festividades en Acapulco son momentos clave para experimentar la alegría, la música y la danza que caracterizan la cultura local.
+  <br>
+  <br>Textiles y Bordados
+  <br>Guerrero es conocido por sus textiles elaborados con técnicas tradicionales y decorados con vibrantes bordados. Las prendas reflejan la rica herencia cultural de las comunidades indígenas locales.
+  <br>
+  <br>
+  Cerámica
+  <br>La alfarería guerrerense es distintiva, produciendo piezas únicas que van desde vistosos platos hasta figuras ceremoniales. La cerámica de barro es una parte integral de la identidad artesanal del estado.
+  <br>
+  <br>
+  Trabajo en Oro
+  <br>La orfebrería guerrerense destaca por sus elaboradas piezas de joyería en oro. Los orfebres locales crean diseños que fusionan elementos prehispánicos con técnicas contemporáneas.
+  </p>
+            <!-- Puedes agregar más contenido específico para Guerrero aquí -->
+          </div>
+        </div>
+      </div>
+    </div>
+  
+      
+    <!-- Modal para Hidalgo -->
+    <div class="modal fade" id="modalHidalgo" tabindex="-1" role="dialog" aria-labelledby="modalHidalgoLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalHidalgoLabel" style="text-align: center;">Hidalgo</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Contenido del modal para Hidalgo -->
+            <p>
+              Hidalgo se distingue por sus auténticas artesanías, como los vibrantes bordados otomíes, cerámica de alta calidad, tejidos tradicionales y juguetes de madera. Estos reflejan la destreza y riqueza cultural de la región.
+  <br>
+  <br>
+  Cultura y Tradiciones
+  <br>
+  
+  La herencia cultural de Hidalgo se manifiesta en su arquitectura colonial, festividades religiosas y exquisita gastronomía. Festivales como la Feria San Francisco y platillos como el zacahuil son ejemplos de cómo la comunidad preserva y celebra su identidad única.
+  
+  
+  
+  
+  
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- Modal para Jalisco -->
+  <div class="modal fade" id="modalJalisco" tabindex="-1" role="dialog" aria-labelledby="modalJaliscoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalJaliscoLabel" style="text-align: center;">Jalisco</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para Jalisco -->
+          <p>Jalisco, joya cultural y artística de México, alberga una variedad de tesoros artesanales que reflejan la destreza y la creatividad de sus habitantes. 
+            <br>En la ciudad de Tlaquepaque, reconocida por su vitalidad artística, los talleres de alfarería exhiben cerámicas finamente detalladas, desde vistosas cazuelas hasta delicadas figuras. Cada rincón de Tlaquepaque respira arte, con sus calles adoquinadas llenas de galerías y tiendas de artesanías.
+  
+            <br>
+            La región es famosa por sus piñatas elaboradas a mano en diversas formas y colores, mientras que en Tonala, otro enclave artesanal, la alfarería se distingue por sus diseños únicos y vibrantes.
+            <br> En los mercados y plazas de Guadalajara, la capital de Jalisco, la danza de los mariachis complementa la escena cultural, ofreciendo una experiencia auténtica y llena de tradición.
+            
+            Además, Jalisco es la cuna del tequila, y en la región de Tequila, los campos de agave azul salpican el paisaje. Las destilerías ofrecen tours que desvelan los secretos de esta bebida emblemática, desde el cultivo del agave hasta la elaboración de tequila de alta calidad.
+          </p>
+      </div>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Modal para Michoacán -->
+    <div class="modal fade" id="modalMichoacan" tabindex="-1" role="dialog" aria-labelledby="modalMichoacanLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalMichoacanLabel" style="text-align: center;">Michoacán</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Contenido del modal para Michoacán -->
+            <p>
+              Michoacán, tierra de contrastes y vibrante cultura, se destaca por sus ricas tradiciones artesanales que capturan la esencia de la región.
+              <br>
+               En el corazón de Morelia, la capital, la catedral y las plazas históricas ofrecen un telón de fondo impresionante para la rica vida cultural.
+              <br>
+              Las artesanías michoacanas son un deleite para los sentidos. Las esculturas de madera conocidas como "alebrijes" son creaciones imaginativas llenas de colores vivos, representando la conexión entre lo terrenal y lo espiritual. En Pátzcuaro, los talleres de alfarería dan vida a piezas únicas, desde vajillas elegantes hasta intrincadas figuras de barro.
+              <br>
+              La tradición textil se manifiesta en los famosos "rebozos" de la región, tejidos a mano con habilidad y dedicación. Michoacán también es conocido por sus festivales, como la Noche de los Muertos en Pátzcuaro, donde las artesanías se mezclan con rituales ancestrales en una celebración única.
+              <br>La riqueza cultural de Michoacán se refleja en su gastronomía, donde platillos como la "carnitas" y las "corundas" deleitan los paladares. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- Modal para Morelos -->
+      <div class="modal fade" id="modalMorelos" tabindex="-1" role="dialog" aria-labelledby="modalMorelosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalMorelosLabel" style="text-align: center;">Morelos</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- Contenido del modal para Morelos -->
+              <p>Morelos, un estado pintoresco en el corazón de México, ofrece una mezcla encantadora de naturaleza exuberante y rica herencia cultural. Rodeado por majestuosas montañas, el estado se convierte en un oasis de serenidad y tradición.
+  
+                <br>
+                La artesanía en Morelos es un testimonio vivo de la destreza y creatividad de su gente. Los talleres de alfarería producen piezas únicas, desde vistosos platos hasta figuras simbólicas. Las "catrinas" y las "muñecas otomíes" son expresiones artísticas que reflejan la conexión con las raíces indígenas.
+              <br>
+                 La cultura en Morelos se celebra en festivales vibrantes y coloridos, como la Feria de la Cecina en Yecapixtla, donde la música y la danza se entrelazan con la gastronomía local. La historia se revela en las pirámides de Xochicalco y las haciendas coloniales que narran el pasado del estado.
+                <br>
+                La gastronomía morelense cautiva con platillos como el "guaxmole" y los "chiles en nogada". Morelos, tierra de contrastes, invita a los visitantes a explorar su riqueza cultural, donde la naturaleza y la historia convergen en una armonía única.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+    <!-- Modal para Nayarit -->
+    <div class="modal fade" id="modalNayarit" tabindex="-1" role="dialog" aria-labelledby="modalNayaritLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalNayaritLabel" style="text-align: center;">Nayarit</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Contenido del modal para Nayarit -->
+            <p>
+              Nayarit, un estado en la costa del Pacífico de México, ofrece una rica mezcla de cultura, historia y artesanía. Nayarit alberga diversas comunidades indígenas, como los coras, huicholes y tepehuanos, que conservan sus tradiciones, arte y lenguas ancestrales.
+             <br>
+             <br>
+              Arte rupestre
+              <br>
+              El estado cuenta con importantes sitios arqueológicos, como Altavista y Los Toriles, que muestran el arte rupestre y las estructuras prehispánicas de las antiguas culturas que poblaron la región.
+              <br>
+              <br>
+              Fiestas y tradiciones
+              <br>
+              Nayarit celebra diversas festividades religiosas y culturales a lo largo del año, como la Fiesta de la Virgen de Guadalupe y la Danza de los Tecuanes, que combinan elementos indígenas y católicos.
+              <br>
+              <br>
+              Artesanal
+              <br>
+              Artesanías huicholes
+              <br>
+              <br>
+              Los huicholes son conocidos por su arte colorido y simbólico, que incluye chaquiras (objetos decorativos hechos con cuentas de colores), máscaras, textiles y obras de arte votivas.
+              <br>
+              <br>
+              Trabajo en madera
+              <br>
+              Los artesanos de Nayarit producen hermosas piezas de arte talladas en madera, como máscaras ceremoniales, muebles y figuras decorativas.
+              <br>
+              <br>
+              Textiles
+              <br>La producción textil en Nayarit es variada, con comunidades que elaboran sarapes, tapetes y prendas de vestir tradicionales con diseños y técnicas propias de la región.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+     
+    <!-- Modal para Nuevo León -->
+    <div class="modal fade" id="modalNuevoLeon" tabindex="-1" role="dialog" aria-labelledby="modalNuevoLeonLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalNuevoLeonLabel" style="text-align: center;">Nuevo León</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Contenido del modal para Nuevo León -->
+            <p>
+              Nuevo León, en el noreste de México, no solo se destaca por su desarrollo económico e industrial, sino también por su rica tradición artesanal, que refleja la creatividad y habilidad de sus artesanos. Aquí hay un resumen más detallado sobre el aspecto artesanal:
+  <br>
+  <br>
+  Artesanal
+  <br>
+  
+  Cerámica de Mata Ortiz
+  <br>
+   Aunque la cerámica de Mata Ortiz es más conocida en el estado de Chihuahua, en Nuevo León también se practica este arte. Los ceramistas locales crean piezas únicas con técnicas tradicionales y contemporáneas, fusionando la herencia cultural con la innovación.
+  <br>
+  <br>
+  Arte en vidrio soplado
+  <br>La tradición del vidrio soplado en Monterrey es notable. Los artesanos transforman el vidrio fundido en elegantes piezas, desde vasos hasta esculturas, exhibiendo habilidades artesanales refinadas.
+  <br>
+  <br>
+  Trabajo en cuero
+  <br>Los artesanos de Nuevo León son conocidos por sus habilidades en el trabajo en cuero, creando productos como cinturones, carteras y calzado de alta calidad. La tradición del trabajo en cuero refleja la herencia vaquera de la región.
+  <br>
+  <br>
+  Artesanías textiles
+  <br>La producción textil incluye la elaboración de sarapes, tapetes y prendas de vestir con diseños regionales y técnicas tradicionales. Los colores vibrantes y los patrones intrincados son característicos de la artesanía textil en la región.
+  <br>
+  <br>
+  Arte popular en madera
+  <br>Los artesanos de Nuevo León también trabajan la madera para crear piezas de arte popular, como máscaras, juguetes y esculturas talladas, mostrando la destreza y la creatividad que caracterizan a la tradición artesanal de la región.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Modal para Oaxaca -->
+    <div class="modal fade" id="modalOaxaca" tabindex="-1" role="dialog" aria-labelledby="modalOaxacaLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalOaxacaLabel" style="text-align: center;">Oaxaca</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Contenido del modal para Oaxaca -->
+            <p>
+              Oaxaca, ubicado en el sur de México, es un estado que se destaca por su rica diversidad cultural, tradiciones arraigadas y una notable escena artesanal.  Oaxaca es hogar de diversas comunidades indígenas, como los zapotecas y mixtecos, que han conservado sus lenguas, tradiciones y costumbres a lo largo de los siglos.
+              <br>
+              <br>
+              Patrimonio arquitectónico
+              <br>
+              La ciudad de Oaxaca de Juárez cuenta con una arquitectura colonial impresionante, con edificios históricos como la Catedral de Santo Domingo y el Templo de Santo Domingo de Guzmán.
+              <br>
+              <br>
+              Fiestas y celebraciones
+              <br> Oaxaca es conocida por sus festivales vibrantes, como la Guelaguetza, que celebra la diversidad cultural a través de danzas y trajes tradicionales. También se destacan celebraciones como el Día de los Muertos, con sus coloridas ofrendas y procesiones.
+              <br> 
+              <br> 
+              Alebrijes
+              <br>
+              Oaxaca es famosa por la creación de alebrijes, esculturas talladas y pintadas a mano en madera, representando criaturas imaginarias y coloridas. El pueblo de San Martín Tilcajete es especialmente conocido por esta artesanía.
+              <br>
+              <br>
+              Textiles
+              <br>
+              Los textiles oaxaqueños son renombrados por su calidad y diseño. Las comunidades como Teotitlán del Valle son conocidas por sus tapetes y tejidos, mientras que las mujeres zapotecas crean intrincados huipiles y bordados.
+              <br>
+              <br>
+              Cerámica
+              <br>Los alfareros de Oaxaca producen cerámica única y distintiva. La región de San Bartolo Coyotepec es famosa por sus piezas de barro negro, mientras que en Santa María Atzompa se crean cerámicas verdes y vidriadas.
+              <br>
+              <br>
+              Gastronomía
+              <br> Aunque no es estrictamente artesanal, la gastronomía oaxaqueña es una forma de expresión cultural. Destacan platillos como el mole, tlayudas y chapulines (saltamontes), ofreciendo una experiencia culinaria auténtica y diversa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- Modal para Puebla -->
+  <div class="modal fade" id="modalPuebla" tabindex="-1" role="dialog" aria-labelledby="modalPueblaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalPueblaLabel" style="text-align: center;">PUEBLA</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para Puebla -->
+          <p>Puebla, ubicada en el centro de México, es un estado que combina una rica historia, arquitectura colonial impresionante y una vibrante tradición artesanal. 
+  La ciudad de Puebla es conocida por su arquitectura colonial, con numerosas iglesias, conventos y edificios históricos. El Centro Histórico de Puebla es reconocido como Patrimonio de la Humanidad por la UNESCO.
+            <br>
+            <br>
+            Cocina poblana
+            <br>
+            La gastronomía de Puebla es famosa por sus platillos tradicionales, como el mole poblano, los chiles en nogada y los tacos árabes. Estos sabores únicos reflejan la fusión de influencias indígenas y españolas.
+            <br>
+            <br>
+            Talavera
+            <br>Puebla es conocida por su cerámica de talavera, un arte que se remonta al periodo colonial. Los artesanos crean hermosas piezas de cerámica decorativa, como azulejos, platos y vasijas, utilizando técnicas tradicionales.
+            <br>
+            <br>
+            Artesanal
+            <br>
+            Talavera poblana
+            <br>La talavera es una forma distintiva de cerámica en Puebla, caracterizada por sus vibrantes colores y patrones geométricos. Los centros de producción, como Atlixco y Cholula, son famosos por sus piezas únicas y de alta calidad.
+            <br>
+            <br>  
+            Bordados
+            <br>
+            Las comunidades indígenas de Puebla, como los mazatecos y mixtecos, son conocidas por sus bordados detallados en ropa y textiles. Cada diseño cuenta una historia cultural y simboliza la identidad de la comunidad.
+            <br>
+            <br>
+            Máscaras de Tecuanes
+            <br>
+            En la región de la Mixteca, las máscaras de Tecuanes son parte de las festividades tradicionales. Estas máscaras, talladas en madera, representan animales y figuras mitológicas y son utilizadas en danzas ceremoniales.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal para Querétaro -->
+  <div class="modal fade" id="modalQueretaro" tabindex="-1" role="dialog" aria-labelledby="modalQueretaroLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalQueretaroLabel" style="text-align: center;">QUERÉTARO</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para Querétaro -->
+          <p>Querétaro, situado en el centro de México, es un estado que destaca por su rica historia, arquitectura colonial y una variada tradición artesanal. 
+            La ciudad cuenta con un Centro Histórico declarado Patrimonio de la Humanidad por la UNESCO. En este sitio, se encuentran iglesias, conventos y edificios que reflejan la arquitectura colonial, como el Acueducto de Querétaro.
+            Querétaro alberga diversos eventos culturales, como la Feria Internacional Ganadera, Agrícola e Industrial, que combina tradiciones agrícolas con entretenimiento. También se celebran festivales de música, teatro y danza a lo largo del año.
+            <br>
+            <br>
+            Bordados de San Miguel de Allende
+            <br>
+            San Miguel de Allende, ubicado en el estado de Guanajuato pero cercano a Querétaro, es conocido por sus hermosos bordados. Los artesanos locales crean prendas y textiles con intrincados diseños y colores vibrantes.
+            <br>
+            <br>
+            Cerámica de Santa Rosa
+            <br>
+            La comunidad de Santa Rosa Jauregui en Querétaro es reconocida por su producción de cerámica. Los alfareros locales elaboran piezas únicas, desde vajillas hasta esculturas, utilizando técnicas tradicionales y diseños autóctonos.
+            <br>
+            <br>
+            Trabajos en ónix
+            <br>La región de Tequisquiapan en Querétaro es famosa por sus trabajos en ónix. Los artesanos esculpen y tallan esta piedra natural para crear lámparas, joyería y otros objetos decorativos.
+            <br>
+            <br>
+            Tradiciones textiles en Amealco
+            <br>
+            En la localidad de Amealco, se lleva a cabo la producción de textiles tradicionales, como sarapes y tapetes, utilizando telares manuales. Estas piezas reflejan la herencia cultural y la destreza artesanal de la región.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Modal para Quintana Roo -->
+  <div class="modal fade" id="modalQuintanaRoo" tabindex="-1" role="dialog" aria-labelledby="modalQuintanaRooLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalQuintanaRooLabel" style="text-align: center;">QUINTANA ROO</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para Quintana Roo -->
+          <p>Quintana Roo, ubicado en la península de Yucatán en el sureste de México, es conocido por sus hermosas playas, su rica biodiversidad y su fascinante historia cultural. Alberga importantes sitios arqueológicos de la civilización maya, como Tulum y Cobá. Estos vestigios arqueológicos ofrecen una visión única de la rica historia y la arquitectura avanzada de esta antigua civilización. La región cuenta con una red de cenotes, pozos naturales de agua dulce, considerados sagrados por los antiguos mayas. Estos cenotes son ideales para explorar y disfrutar de actividades acuáticas únicas.
+          <br>
+          Con playas de aguas cristalinas y resorts de clase mundial, Cancún y la Riviera Maya son destinos turísticos icónicos en Quintana Roo. Ofrecen una amplia gama de actividades, desde deportes acuáticos hasta exploración de arrecifes de coral.
+            <br>
+            <br>
+            Arte maya contemporáneo
+            <br>
+            Los artistas locales en Quintana Roo han integrado elementos de la iconografía maya en su arte contemporáneo. Pinturas, esculturas y artesanías reflejan la conexión continua con la rica herencia cultural de la región.
+            <br>
+            <br>
+            Artesanías textiles
+            <br>
+             Los artesanos de Quintana Roo producen hermosas artesanías textiles, como bordados y prendas de vestir tradicionales. Estos reflejan la influencia de la cultura maya y a menudo incorporan diseños autóctonos y colores vibrantes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal para San Luis Potosí -->
+  <div class="modal fade" id="modalSanLuisPotosi" tabindex="-1" role="dialog" aria-labelledby="modalSanLuisPotosiLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalSanLuisPotosiLabel" style="text-align: center;">SAN LUIS POTOSÍ</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para San Luis Potosí -->
+          <p>
+            San Luis Potosí, situado en el centro-norte de México, es un estado que combina una rica historia, hermosos paisajes naturales y una variada tradición artesanal. Aquí tienes un resumen de algunos aspectos clave:
+            La capital cuenta con un Centro Histórico que alberga numerosos edificios coloniales, plazas y monumentos, como la Catedral de San Luis Potosí y el Palacio de Gobierno. Estos reflejan la arquitectura y la historia de la región.
+            La explotación minera fue una parte fundamental de la historia de San Luis Potosí. La ciudad de Real de Catorce, una antigua ciudad minera, es ahora un pueblo mágico que preserva la arquitectura y la historia de la época colonial.
+            
+            En esta region se ubica la Huesteca Potosina, que ofrece paisajes impresionantes con cascadas, ríos y grutas. Lugares como Tamul y Puente de Dios son destinos populares para actividades acuáticas y senderismo.
+           <br>
+           <br>
+            
+            Rebozos
+            <br>San Luis Potosí es conocido por la producción de rebozos, elegantes prendas de vestir femeninas. Los rebozos potosinos a menudo presentan tejidos intrincados y colores vibrantes, reflejando la habilidad artesanal de la región.
+            <br>
+            <br>
+            Cerámica de Metepec
+            <br>
+            Aunque Metepec se encuentra en el estado de México, la cerámica de este lugar es apreciada en San Luis Potosí. Las artesanías de barro, como los famosos "árboles de la vida", son populares y se presentan en ferias y mercados locales.
+            <br>
+            <br>
+            Máscaras y juguetes tradicionales
+            <br>
+            Algunas comunidades en San Luis Potosí, como la de Ciudad Valles, son conocidas por la fabricación de máscaras y juguetes tradicionales de madera. Estas piezas reflejan la cultura y las tradiciones locales.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal para Sinaloa -->
+  <div class="modal fade" id="modalSinaloa" tabindex="-1" role="dialog" aria-labelledby="modalSinaloaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalSinaloaLabel" style="text-align: center;">SINALOA</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para Sinaloa -->
+          <p>Sinaloa, ubicado en la costa del Pacífico en el noroeste de México, es un estado conocido por su rica tradición cultural, su influencia en la música regional y su diversidad geográfica. Es cuna de géneros musicales como el corrido y la banda. La música tradicional mexicana, especialmente la de banda sinaloense, ha influido no solo en la región sino a nivel nacional e internacional.
+            <br>
+            <br>
+            La celebración del Carnaval de Mazatlán es uno de los eventos más destacados, atrayendo a visitantes con desfiles coloridos, música en vivo y actividades culturales. Además, la Semana de la Moto en Mazatlán es famosa entre los entusiastas de las motocicletas.
+             Sinaloa cuenta con hermosas playas a lo largo de su costa, como las de Mazatlán y Topolobampo. Además, su diversidad geográfica incluye montañas, valles y áreas de selva tropical.
+            La gastronomía sinaloense es conocida por sus mariscos frescos y platos tradicionales como el aguachile, el ceviche y el tamal de elote. La mezcla de sabores refleja la influencia del entorno marino y la riqueza agrícola de la región.
+            <br>
+            <br>
+            En sus artesanias destacan:
+            <br>
+            <br>
+            Arte huichol
+            <br>
+            Aunque más asociado con el estado de Nayarit, la presencia del pueblo huichol se extiende hasta Sinaloa. Las coloridas obras de arte huichol, que utilizan chaquiras para crear diseños y figuras simbólicas, son apreciadas en la región.
+            <br>
+            <br>
+            Alfarería
+            <br> 
+            La alfarería en Sinaloa se manifiesta en la creación de objetos de barro, como ollas y platos decorativos. Los artesanos locales a menudo emplean técnicas tradicionales que han sido transmitidas de generación en generación.
+            <br>
+            <br>
+            Arte popular
+            <br>
+             Se encuentran artesanías diversas, desde talla de madera hasta objetos decorativos hechos con materiales locales. En la ciudad de El Fuerte, se pueden encontrar artículos de cuero, cestería y textiles representativos de la creatividad artesanal de la región.</p>
+       
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Modal para Sonora -->
+  <div class="modal fade" id="modalSonora" tabindex="-1" role="dialog" aria-labelledby="modalSonoraLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalSonoraLabel" style="text-align: center;">SONORA</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para Sonora -->
+          <p>
+            La herencia cultural de Sonorase caracteriza por una diversidad única que fusiona influencias indígenas, históricas y geográficas. Las comunidades yaquis y seris aportan tradiciones ancestrales, idiomas autóctonos y rituales que reflejan su profunda conexión con la tierra. 
+            <br>
+            <br>
+            La ciudad de Alamos preserva la arquitectura colonial, testimonio de la influencia española en la región. La gastronomía sonorense, con sus sabores auténticos como la carne asada y el bacanora, revela la fusión de influencias culinarias. La música y danza, especialmente los géneros de corrido y las expresiones artísticas yaquis, celebran la identidad cultural. 
+            <br>
+            <br>
+            Las artesanías, como las cestas seri y las máscaras yaquis, son manifestaciones de habilidades tradicionales y una conexión profunda con la naturaleza. La geografía desértica, con el Desierto de Sonora como protagonista, influye en las tradiciones locales, y la naturaleza desempeña un papel crucial en la identidad y la espiritualidad de las comunidades sonorenses, creando una herencia cultural vibrante y diversa en el estado.
+          <br>
+        <br>
+      
+  Las artesanías Seri se destacan por su cestería, donde la comunidad crea cestas y objetos decorativos intrincados utilizando técnicas tradicionales con materiales locales como carrizo y palma, resaltando la sostenibilidad y su adaptación a los recursos naturales. Estas piezas no solo incorporan motivos naturales, sino que también reflejan la conexión espiritual con el entorno desértico, capturando la esencia del desierto y su flora única. 
+  <br>
+  <br>
+  Por otro lado, el arte Yaqui se expresa a través de danzas tradicionales vibrantes, donde los yaquis utilizan vestimentas coloridas y máscaras elaboradas para transmitir historias y celebrar eventos significativos. Estas máscaras, talladas a mano y pintadas con colores vibrantes, son verdaderas obras de arte con propósitos específicos en ceremonias, preservando la identidad cultural yaqui y contribuyendo a expresiones artísticas arraigadas en su rica herencia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Modal para Tabasco -->
+  <div class="modal fade" id="modalTabasco" tabindex="-1" role="dialog" aria-labelledby="modalTabascoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTabascoLabel" style="text-align: center;">TABASCO</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para Tabasco -->
+          <p>
+            Tabasco, situado en el sureste de México, es un estado conocido por su rica herencia cultural, biodiversidad y vínculos históricos significativos.
+            <br>
+            <br>
+             Con una influencia maya y olmeca palpable en sus ruinas arqueológicas como La Venta y Comalcalco, Tabasco ofrece un rico panorama histórico. Su paisaje está dominado por exuberantes selvas, ríos serpenteantes y extensos pantanos, hogar de una variada fauna y flora. La agricultura, con cultivos como el cacao y el plátano, es una parte integral de su economía, mientras que la cocina tabasqueña, destacada por platos como el pejelagarto y el tamal de chipilín, refleja su identidad gastronómica única. Las artesanías, como los tenates y las hamacas, muestran la destreza artesanal local y la conexión con la naturaleza. En resumen, Tabasco es un crisol cultural y natural que cautiva con su historia, paisajes y tradiciones arraigadas.
+        <br>
+        <br>
+        Las artesanías en Tabasco reflejan la rica diversidad cultural y la conexión del estado con su entorno natural. Destacan las producciones de tenates, cestos de palma, y las coloridas hamacas, manifestaciones de habilidades artesanales transmitidas de generación en generación. Estos elementos, junto con la elaboración de piezas de barro y cerámica, contribuyen a la identidad artística local. 
+        <br>
+        <br>
+        Además, la presencia de la cultura olmeca y maya se refleja en algunas de las artesanías, proporcionando a los productos locales un carácter histórico y cultural distintivo. Las artesanías en Tabasco no solo son expresiones estéticas, sino también testimonios de la conexión entre la población tabasqueña y su entorno, ya que muchos de estos objetos están hechos con materiales autóctonos, resaltando la sostenibilidad y la relación armoniosa con la naturaleza.
+          </p>
+          </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Modal para Tamaulipas -->
+  <div class="modal fade" id="modalTamaulipas" tabindex="-1" role="dialog" aria-labelledby="modalTamaulipasLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTamaulipasLabel" style="text-align: center;">TAMAULIPAS</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para Tamaulipas -->
+          <p>Tamaulipas, ubicado en el noreste de México, es un estado con una rica diversidad cultural, una historia significativa y una variada geografía que abarca desde las costas del Golfo de México hasta las áreas montañosas. 
+            <br>
+            <br>
+      Con una herencia que incluye la influencia de diversas culturas indígenas y coloniales, Tamaulipas se destaca por sus tradiciones arraigadas y una mezcla única de paisajes naturales. Desde la ciudad histórica de Tampico hasta las zonas rurales que destacan en la producción de cítricos y ganadería, el estado ofrece una amplia gama de experiencias. Además, la artesanía local, como los bordados y las piezas de cerámica, refleja la habilidad artística de sus habitantes. En resumen, Tamaulipas es un estado que combina historia, diversidad geográfica y una rica herencia cultural, ofreciendo a los visitantes una experiencia única en el noreste de México.
+       <br>
+      <br>
+  Las artesanías de Tamaulipas reflejan la diversidad cultural y la creatividad de la región. Entre las manifestaciones artísticas más destacadas se encuentran los bordados, que son elaborados con gran destreza y suelen incorporar motivos tradicionales y coloridos. 
+  <br>
+  <br>
+  La cerámica también juega un papel importante en la escena artesanal, con artículos que van desde utensilios cotidianos hasta decorativos. La tradición alfarera se ha transmitido de generación en generación, evidenciando la habilidad artística y el arraigo cultural de la comunidad. Estas artesanías no solo representan expresiones estéticas, sino que también son testigos de la identidad local y la conexión con las tradiciones que han perdurado a lo largo del tiempo en Tamaulipas. </p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal para Tlaxcala -->
+  <div class="modal fade" id="modalTlaxcala" tabindex="-1" role="dialog" aria-labelledby="modalTlaxcalaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTlaxcalaLabel" style="text-align: center;">TLAXCALA</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+    
+          <p>Tlaxcala, el estado más pequeño de México, se destaca por su rica herencia histórica y cultural. Como cuna de la civilización tlaxcalteca, jugó un papel crucial en la caída del Imperio Azteca.
+            <br>
+            <br>
+             La ciudad de Tlaxcala exhibe una arquitectura colonial con su catedral y edificaciones históricas. 
+             <br>
+             <br>
+             La artesanía tlaxcalteca es una expresión vibrante de la creatividad local, destacando la producción de textiles finos con intrincados bordados a mano que reflejan la rica herencia cultural de la región. 
+             <br>
+             <br>
+             La cerámica tlaxcalteca, con influencias prehispánicas y coloniales, es otra forma destacada de artesanía, con piezas utilitarias y decorativas que incorporan motivos florales y estilizados.
+             <br>
+             <br>
+              La elaboración de figuras de papel maché, conocidas como "alebrijes", es única en Tlaxcala, mostrando figuras coloridas y fantásticas. Estas artesanías no solo son expresiones estéticas, sino también testimonios de la identidad cultural y la destreza artística arraigada en la historia tlaxcalteca. 
+              <br>
+              <br>
+               Tlaxcala ofrece una experiencia cultural única, fusionando su patrimonio histórico con una vibrante tradición artesanal.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal para Veracruz -->
+  <div class="modal fade" id="modalVeracruz" tabindex="-1" role="dialog" aria-labelledby="modalVeracruzLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalVeracruzLabel" style="text-align: center;">VERACRUZ</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para Veracruz -->
+          <p>
+            Veracruz, ubicado en la costa este de México, es un estado con una rica diversidad cultural, histórica y geográfica. Su identidad se forja a través de la fusión de influencias indígenas, coloniales y afrodescendientes, lo que se refleja en sus tradiciones, música y danzas. 
+            <br>
+            <br>
+            La ciudad de Veracruz es un importante puerto marítimo con una arquitectura colonial destacada, mientras que la región montañosa de Xalapa ofrece un entorno más fresco y verde. La gastronomía veracruzana es conocida por platillos como el mole, los tamales y el café. Las artesanías de Veracruz son diversas y reflejan la creatividad local. La talavera, cerámica vidriada de origen colonial, se produce en Puebla y también en algunos municipios de Veracruz. 
+            <br>
+            <br>
+            Los tejidos de palma y carrizo son populares, con cestas, sombreros y bolsos que exhiben la habilidad artesanal. Además, las esculturas de madera, como las figuras de animales, son representativas de la tradición artística de la región.
+            <br>
+            <br>
+            Veracruz ofrece una combinación única de historia, cultura, paisajes variados y artesanías que capturan la esencia vibrante de este estado mexicano.</p>
+          <!-- Agrega aquí el contenido específico para Veracruz -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal para Yucatán -->
+  <div class="modal fade" id="modalYucatan" tabindex="-1" role="dialog" aria-labelledby="modalYucatanLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalYucatanLabel" style="text-align: center;">YUCATÁN</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para Yucatán -->
+          <p>Yucatán, situado en la península de Yucatán en el sureste de México, es un estado que fusiona una rica herencia histórica con una vibrante cultura contemporánea. 
+            <br>
+            <br>
+             La ciudad de Mérida, con su arquitectura colonial y coloridas calles, es el epicentro cultural y económico de la región. Yucatán es conocido por su legado maya, con importantes sitios arqueológicos como Chichén Itzá y Uxmal, que atraen a visitantes de todo el mundo. 
+             <br>
+             <br>
+             La gastronomía yucateca destaca por platillos como la cochinita pibil y los panuchos, que reflejan la fusión de ingredientes indígenas y europeos. 
+             <br>
+             <br>
+             Las artesanías yucatecas incluyen bordados tradicionales, hamacas tejidas a mano y la producción de henequén, una fibra vegetal utilizada para crear productos como bolsas y sombreros. Yucatán también es reconocido por sus cenotes, formaciones geológicas únicas que sirven como lugares sagrados y atracciones turísticas. En resumen, Yucatán ofrece una experiencia que combina su rica herencia maya, la calidez de su cultura contemporánea, la deliciosa gastronomía y la artesanía única de la región.</p>
+          <!-- Agrega aquí el contenido específico para Yucatán -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal para Zacatecas -->
+  <div class="modal fade" id="modalZacatecas" tabindex="-1" role="dialog" aria-labelledby="modalZacatecasLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalZacatecasLabel" style="text-align: center;">ZACATECAS</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del modal para Zacatecas -->
+          <p>
+            Zacatecas, ubicado en el norte de México, es un estado con una rica herencia histórica, arquitectura colonial y una destacada tradición minera. 
+            <br>
+            <br>La ciudad de Zacatecas es famosa por su centro histórico, declarado Patrimonio de la Humanidad, que presenta calles empedradas y majestuosos edificios coloniales. El estado también es conocido por sus festivales culturales y eventos artísticos.
+            <br>
+            <br>
+            Artesanías en Zacatecas
+            <br>
+  
+            Zacatecas es reconocido por su diversa y rica tradición artesanal, que abarca desde la platería hasta la cerámica y la textilería. Entre las artesanías más destacadas se encuentran:
+            <br>
+            <br>
+            Platería
+            <br>La platería zacatecana es renombrada por su calidad y creatividad. Los orfebres locales elaboran joyería fina y objetos decorativos utilizando técnicas tradicionales y diseños únicos.
+            <br>
+            <br>
+            Cerámica
+            <br>La cerámica es otra expresión artística importante en Zacatecas. Los alfareros locales crean piezas únicas, desde vajillas hasta objetos decorativos, utilizando técnicas ancestrales y reflejando la identidad cultural de la región.
+            <br>
+            <br>
+            Textiles
+            <br>La textilería en Zacatecas destaca por sus tapetes, sarapes y mantas. Los artesanos emplean métodos tradicionales de tejido y teñido para producir textiles de alta calidad con diseños coloridos y patrones representativos de la cultura local.
+            <br>
+            <br>
+            Estas artesanías no solo son productos visuales, sino también portadoras de la rica historia y la identidad de Zacatecas. Los visitantes pueden explorar los mercados y talleres locales para apreciar la maestría artesanal y llevar consigo piezas únicas que capturan la esencia cultural y creativa de este estado mexicano</p>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="my-4"></div>
+  
+
+
+  <!-- --------------------------------------  -->
+  <!-- --------------FOOTER------------------  -->
+  <!-- --------------------------------------  -->
+  <footer>
+    <!-- Sección de Descripción -->
+    <div class="descripcion-section">
+      <div class="descripcion-content container">
+        <h4 id="textfooter1"> Tejemos historias de tradición y pasión </h4>
+        <div class="container">
+          <h3 class="text-center" id="textfooter2"> Descubre la autenticidad de México en cada detalle</h3>
+        </div>
+        <a href="#top">
+          <img src="../Public/Imagenes/logo.png" alt="México" class="img-fluid mt-2">
+        </a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 footer-left">
+          <ul>
+            <li><a href="../Terminos/TerminosCondiciones.html" class="footer-link" id="footerlink1">Términos y
+                condiciones</a></li>
+            <li><a href="../Contacto/contact.html" class="footer-link" id="footerlink2">Servicio al cliente</a></li>
+            <li><a href="../QuienesSomos/QuienesSomos.html" class="footer-link" id="footerlink3">Conócenos</a></li>
+            <li><a href="../Politicas/politicasPrivacidad.html" class="footer-link" id="footerlink4">Políticas de
+                privacidad</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 footer-center">
+          <p id="textfooter3">Recibe información exclusiva y promociones vía email</p>
+
+          <a href="../CrearCuenta/crearCuenta.html">
+            <button id="subscribeButton">Registrate</button>
+          </a>
+
+        </div>
+        <div class="col-lg-4 footer-right">
+          <a href="../ProcesoCompra/ProcesoCompra.html" class="footer-link" id="textfooter4">Métodos de pago</a>
+          <div class="img-pagos-container">
+            <img class="img-pagos" src="../Public/Imagenes/pagos.jpg" alt="logo-mercado-pago">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 bottom-text">
+          <p>&copy; 2024 Herencia Mexicarties</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- FINAL del Pie de Página -->
+
+
+  <!--Funcionalidad con JS-->
+  <!--Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+    
+  <!--Globales-->
+  <script src="../Public/JS/main.js"></script>
+  <!--Propios-->
+  <script src="./JS/descubreMexico.js"></script>
+</body>
+
+</html>

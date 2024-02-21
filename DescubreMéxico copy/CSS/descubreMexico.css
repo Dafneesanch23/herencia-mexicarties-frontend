@@ -1,0 +1,89 @@
+  /***********************
+//*TARJETAS DE IMAGENES
+***********************
+***********************/
+.card {
+  width: 100%;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  transform-origin: center;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: x-small;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotateY(180deg);
+  border-radius: 5px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.p {
+  color: #000000;
+}
+
+.card-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #ffffff;
+  z-index: 1;
+  font-size: 14px;
+  font-family: "Montserrat";
+  background-color: #FF0646;
+  padding: 2.5px;
+  border-radius: 5px;
+}
+  /* Estilo personalizado para el modal */
+  .modal-content {
+    border: 2px solid #ff0646;
+    background-color: #ffffff;
+    text-align: justify;
+  }
+
+  .modal-header {
+    background-color: #ff0646;
+    color: #ffffff;
+    border-bottom: 2px solid #ff0646;
+
+  }
+
+  .modal-footer {
+    background-color: #ff0646;
+    border-top: 2px solid #ff0646;
+  }
+.modal-title {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
