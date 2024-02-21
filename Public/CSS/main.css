@@ -424,7 +424,6 @@ body.darkmode .heading_container h3::after {
     }
   
 
-
   .descripcion-section h3::after {
     content: "";
     display: block;
