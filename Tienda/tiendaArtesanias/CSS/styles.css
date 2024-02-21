@@ -277,8 +277,8 @@ body.darkmode .dark-card .card-text {
     color: #fff;
 }
 
-.btn-primary,
-.btn-secondary {
+.btn-echar-huacal,
+.btn-comprar {
     background-color: #fff;
     color: #000;
     padding: 8px 15px;
@@ -287,15 +287,15 @@ body.darkmode .dark-card .card-text {
     cursor: pointer;
 }
 
-.btn-primary:hover,
-.btn-secondary:hover {
+.btn-echar-huacal:hover,
+.btn-comprar:hover {
     background-color: #ff0646;
     color: #fff;
 }
 
 /* Darkmode para los botones Echar al huacal y Comprar */
-.darkmode .btn-primary,
-.darkmode .btn-secondary {
+.darkmode .btn-echar-huacal,
+.darkmode .btn-comprar {
     background-color: #1d2a35;
     color: #fff;
     padding: 8px 15px;
@@ -304,8 +304,8 @@ body.darkmode .dark-card .card-text {
     cursor: pointer;
 }
 
-.darkmode .btn-primary:hover,
-.darkmode .btn-secondary:hover {
+.darkmode .btn-echar-huacal:hover,
+.darkmode .btn-comprar:hover {
     background-color: #ff0646;
     color: #fff;
 }
