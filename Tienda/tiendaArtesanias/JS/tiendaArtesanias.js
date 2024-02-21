@@ -127,7 +127,7 @@ function mostrarDetallesProducto() {
       <p>${producto.nombre}</p>
       <p>Precio: $${producto.precio}</p>
       <button class="btn btn-primary" onclick="echarAlHuacal()">Echar al Huacal</button>
-      <button class="btn btn-secondary">Agregar a Lista de Deseos</button>
+      <button class="btn btn-secondary">Comprar</button>
     `;
 
     $('#productModal').modal('show');

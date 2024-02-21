@@ -78,6 +78,8 @@ h1 {
     line-height: 1.6;
     color: #000000;
     margin-bottom: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
 }
 
 #searchBar {
@@ -194,12 +196,20 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, .9);
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: #fd0681;
+    background-color: #fff;
+    color: black;
+    padding: 8px 15px;
+    border: 1px solid #ff0646;
+    border-radius: 30px;
     font-size: 14px;
     cursor: pointer;
+}
+
+.producto .overlay-text:hover {
+    background-color: #ff0646;
+    color: #fff;
+    padding: 8px 15px;
+    border: 1px solid #fff;
 }
 
 /* Estilos para el modal */
@@ -248,4 +258,54 @@ body.darkmode .dark-card .option_container {
 body.darkmode .dark-card .card-title,
 body.darkmode .dark-card .card-text {
     color: var(--light-color);
+}
+
+.darkmode .container-list {
+    color: #fff;
+}
+
+.darkmode h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #ffff;
+    text-shadow: 2px 2px 4px rgba(255, 252, 252, 0.815);
+    font-weight: bold;
+}
+
+.darkmode .text-artesanias {
+    color: #fff;
+}
+
+.btn-primary,
+.btn-secondary {
+    background-color: #fff;
+    color: #000;
+    padding: 8px 15px;
+    border: 1px solid #ff0646;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    background-color: #ff0646;
+    color: #fff;
+}
+
+/* Darkmode para los botones Echar al huacal y Comprar */
+.darkmode .btn-primary,
+.darkmode .btn-secondary {
+    background-color: #1d2a35;
+    color: #fff;
+    padding: 8px 15px;
+    border: 1px solid #ff0646;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.darkmode .btn-primary:hover,
+.darkmode .btn-secondary:hover {
+    background-color: #ff0646;
+    color: #fff;
 }
