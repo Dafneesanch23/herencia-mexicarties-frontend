@@ -13,8 +13,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Estilos propios -->
-  <link rel="stylesheet" href="/DescubreMéxico/CSS/descubreMexico.css">
-  <link rel="stylesheet" href="/Public/CSS/main.css">
+  <link rel="stylesheet" href="../../DescubreMéxico/CSS/descubreMexico.css">
+  <link rel="stylesheet" href="../../Public/CSS/main.css">
 
   <!-- Bootstrap JS (Versión 5.3.2) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
@@ -23,12 +23,9 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous" defer></script>
 
 
-  <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="/Public/CSS/main.css">
-
   <!-- Scripts personalizados -->
-  <script src="/Public/JS/main.js" defer></script>
-  <script src="/DescubreMéxico/JS/descubreMexico.js" defer></script>
+  <script src="../../Public/JS/main.js" defer></script>
+  <script src="../../DescubreMéxico/JS/descubreMexico.js" defer></script>
 
   <!---->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -40,82 +37,103 @@
 <body>
   <!-- Barra de navegación -->
   <header class="estilo-header">
+
     <div class="container options-user">
-      <span></span>
-      <button><a href="/CrearCuenta/crearCuenta.html" style="text-decoration: none; color: #ff0646;"></a>Registrarse</button>
-      <button><a href="/Login/login.html" style="text-decoration: none; color: #ff0646;">Iniciar sesión</a></button>
+       <span id="textUser"></span>
+       <button id="btn-sign-off"><a class="navbar-brand" id="txt-sign-off">Cerrar sesión</a></button>
+       <button id="btn-register"><a class="navbar-brand" id="txt-register"
+             href="../../CrearCuenta/crearCuenta.html">Registrarse</a></button>
+       <button id="btn-login"><a class="navbar-brand" id="txt-login" href="../Login/login.html">Iniciar
+             sesión</a></button>
     </div>
+
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <!--Imagen-->
-        <a class="navbar-brand" href="/Inicio/inicio.html">
-          <img width="150" src="/Public/Imagenes/logo.png" alt="logo">
-        </a>
-        <!--Botón de hamburguesa para pantallas más chicas-->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!--Contenido de barra de navegacion-->
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-          <ul class="navbar-nav align-items-center justify-content-between">
-            <li class="nav-item active">
-              <a class="nav-link" href="/Inicio/inicio.html">INICIO</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                TIENDA
-              </a>
-              <ul class="dropdown-menu estilos-navbar" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="/Tienda/tiendaArtesanias/">ARTESANIAS</a></li>
-                <li><a class="dropdown-item" href="/Tienda/tiendaRopa/">ROPA ARTESANAL</a></li>
-                <li><a class="dropdown-item" href="/Tienda/tiendaLicores/">LICORES</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/QuienesSomos/QuienesSomos.html">QUIENES SOMOS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/DescubreMéxico/descubreMexico.html">DESCUBRE MÉXICO</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/artesanos/Artesanos.html">CONOCE A LOS ARTESANOS</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Contacto/contact.html">CONTACTO</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Huacal/huacal.html">
-                <img width="100" src="/Public/Imagenes/huacal.png" alt="huacal">
-                <div id="huacal-number" class="huacal-number">0</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <div class="btn-options">
-       <!--DARKMODE-->   
-          <div class="btn_dark">
-            <div class="btn__indicator">
-             <div class="btn__icon-container">
-            <i class="btn__icon fa-solid"></i>
-             </div>
-           </div>
-         </div>
-            <!--IDIOMA-->
-            <div class="btn-idioma">
-              <a href="#" id="toggleLanguage">
-                <img id="languageFlag" width="50" src="/Public/Imagenes/mexico.png" alt="Bandera de México">
-              </a>
-            </div>
+       <nav class="navbar navbar-expand-lg navbar-light">
+
+          <!--Imagen-->
+          <a class="navbar-brand" href="../../Inicio/inicio.html" id="navbarLogo">
+             <img width="150" src="../../Public/Imagenes/logo.png" alt="logo">
+          </a>
+
+          <!--Botón de hamburguesa para pantallas más chicas-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
+             id="navbarToggler">
+             <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!--Contenido de barra de navegacion-->
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+             <ul class="navbar-nav align-items-center justify-content-between">
+
+                <li class="nav-item ">
+                   <a class="nav-link" href="../../Inicio/inicio.html" id="homelink">INICIO</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      TIENDA
+                   </a>
+                   <ul class="dropdown-menu estilos-navbar" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="../../Tienda/tiendaArtesanias/tiendaArtesanias.html"
+                            id="handicraftslink">ARTESANIAS</a></li>
+                      <li><a class="dropdown-item" href="../../Tienda/tiendaRopa/tiendaRopa.html" id="clothinglink">ROPA
+                            ARTESANAL</a></li>
+                      <li><a class="dropdown-item" href="../../Tienda/tiendaLicores/Licores.html"
+                            id="liquorslink">LICORES</a></li>
+                   </ul>
+                </li>
+
+                <li class="nav-item">
+                   <a class="nav-link" href="../../QuienesSomos/QuienesSomos.html" id="aboutlink">QUIENES SOMOS</a>
+                </li>
+
+                <li class="nav-item">
+                   <a class="nav-link" href="../../DescubreMéxico/descubreMexico.html" id="discoverlink">DESCUBRE
+                      MÉXICO</a>
+                </li>
+
+                <li class="nav-item">
+                   <a class="nav-link" href="../../Artesanos/Artesanos.html" id="artisanslink">CONOCE A LOS ARTESANOS</a>
+                </li>
+
+                <li class="nav-item">
+                   <a class="nav-link" href="../../Contacto/contact.html" id="contactlink">CONTACTO</a>
+                </li>
+
+                <li class="nav-item">
+                   <a class="nav-link" href="../../Huacal/huacal.html">
+                      <img width="100" src="../../Public/Imagenes/huacal.png" alt="huacal">
+                      <div id="huacal-number" class="huacal-number">0</div>
+                   </a>
+                </li>
+                <li class="nav-item">
+                   <div class="btn-options">
+                      <!--DARKMODE-->
+                      <div class="btn_dark">
+                         <div class="btn__indicator">
+                            <div class="btn__icon-container">
+                               <i class="btn__icon fa-solid"></i>
+                            </div>
+                         </div>
+                      </div>
+                      <!--IDIOMA-->
+                      <div class="btn-idioma">
+                         <a id="toggleLanguage" class="change-language" data-lang="es">
+                            <img id="languageFlag" width="50" src="../../Public/Imagenes/mexico.png"
+                               alt="Bandera de México">
+                         </a>
+                      </div>
+                   </div>
+                </li>
+                </a>
+                </li>
+             </ul>
           </div>
-        </li>
-        </a>
-        </li>
-        </ul>
-        </div>
-        </nav>
-        </div>
-        </header>
+       </nav>
+    </div>
+ </header>
 
   <!-- Banner rosa con título -->
   <section class="inner_page_head">
@@ -167,11 +185,11 @@
       <div class="card">
         <div class="card-inner">
           <div class="card-front">
-            <img src="/DescubreMéxico/imagenes/ARTESANIAS-AGUASCALIENTES.jpg" alt="Aguascalientes" class="img-fluid">
+            <img src="../../DescubreMéxico/imagenes/ARTESANIAS-AGUASCALIENTES.jpg" alt="Aguascalientes" class="img-fluid">
             <p class="card-text">Aguascalientes</p>
           </div>
           <div class="card-back">
-            <img src="/DescubreMéxico/imagenes/ARTESANIAS-AGUASCALIENTES1.jfif" alt="Aguascalientes" class="img-fluid" data-toggle="modal" data-target="#modalAguascalientes" data-card-id="Aguascalientes">
+            <img src="../../DescubreMéxico/imagenes/ARTESANIAS-AGUASCALIENTES1.jfif" alt="Aguascalientes" class="img-fluid" data-toggle="modal" data-target="#modalAguascalientes" data-card-id="Aguascalientes">
           </div>
         </div>
       </div>
@@ -181,11 +199,11 @@
       <div class="card">
         <div class="card-inner">
           <div class="card-front">
-            <img class="img-fluid" src="/DescubreMéxico/imagenes/ARTESANIAS-BC.jpg" alt="Baja California">
+            <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-BC.jpg" alt="Baja California">
             <p class="card-text">Baja California</p>
           </div>
           <div class="card-back">
-            <img class="img-fluid" src="/DescubreMéxico/imagenes/ARTESANIAS-BC1.jpg" alt="Baja California" data-toggle="modal" data-target="#modalBajaCalifornia">
+            <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-BC1.jpg" alt="Baja California" data-toggle="modal" data-target="#modalBajaCalifornia">
           </div>
         </div>
       </div>
@@ -195,11 +213,11 @@
       <div class="card">
         <div class="card-inner">
           <div class="card-front">
-            <img class="img-fluid" src="/DescubreMéxico/imagenes/IMAGENES-BCS.jfif" alt="Baja California Sur">
+            <img class="img-fluid" src="../DescubreMéxico/imagenes/IMAGENES-BCS.jfif" alt="Baja California Sur">
             <p class="card-text">Baja California Sur</p>
           </div>
           <div class="card-back">
-            <img src="/DescubreMéxico/imagenes/IMAGENES-BCS1.jfif" alt="BCS" class="img-fluid" data-toggle="modal" data-target="#modalBajaCaliforniaSur">
+            <img src="../DescubreMéxico/imagenes/IMAGENES-BCS1.jfif" alt="BCS" class="img-fluid" data-toggle="modal" data-target="#modalBajaCaliforniaSur">
           </div>
         </div>
       </div>
@@ -210,11 +228,11 @@
       <div class="card">
         <div class="card-inner">
           <div class="card-front">
-            <img class="img-fluid" src="/DescubreMéxico/imagenes/ARTESANIAS-CAMPECHE.jfif" alt="Campeche">
+            <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-CAMPECHE.jfif" alt="Campeche">
             <p class="card-text">Campeche</p>
           </div>
           <div class="card-back">
-            <img src="/DescubreMéxico/imagenes/ARTESANIAS-CAMPECHE1.jfif" alt="Campeche" class="img-fluid" data-toggle="modal" data-target="#modalCampeche"> 
+            <img src="../DescubreMéxico/imagenes/ARTESANIAS-CAMPECHE1.jfif" alt="Campeche" class="img-fluid" data-toggle="modal" data-target="#modalCampeche"> 
           </div>
         </div>
       </div>
@@ -225,11 +243,11 @@
       <div class="card">
         <div class="card-inner">
           <div class="card-front">
-            <img class="img-fluid" src="/DescubreMéxico/imagenes/ARTESANIAS-CHIAPAS.jpg" alt="Chiapas">
+            <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-CHIAPAS.jpg" alt="Chiapas">
             <p class="card-text">Chiapas</p>
           </div>
           <div class="card-back">
-            <img src="/DescubreMéxico/imagenes/ARTESANIAS-CHIAPAS1.jfif" alt="Chiapas" class="img-fluid" data-toggle="modal" data-target="#modalChiapas"> 
+            <img src="../DescubreMéxico/imagenes/ARTESANIAS-CHIAPAS1.jfif" alt="Chiapas" class="img-fluid" data-toggle="modal" data-target="#modalChiapas"> 
           </div>
         </div>
       </div>
@@ -239,11 +257,11 @@
       <div class="card">
         <div class="card-inner">
           <div class="card-front">
-            <img class="img-fluid" src="./imagenes/ARTESANIAS-CHIH.jpg" alt="Chihuahua">
+            <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-CHIH.jpg" alt="Chihuahua">
             <p class="card-text">Chihuahua</p>
           </div>
           <div class="card-back">
-            <img src="/DescubreMéxico/imagenes/ARTESANIAS-CHIH.jfif" alt="Chihuahua" class="img-fluid" data-toggle="modal" data-target="#modalChihuahua"> 
+            <img src="../DescubreMéxico/imagenes/ARTESANIAS-CHIH.jfif" alt="Chihuahua" class="img-fluid" data-toggle="modal" data-target="#modalChihuahua"> 
           </div>
         </div>
       </div>
@@ -255,11 +273,11 @@
       <div class="card">
         <div class="card-inner">
           <div class="card-front">
-            <img class="img-fluid" src="./imagenes/ARTESANIAS-CDMX.jpg" alt="Ciudad de México">
+            <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-CDMX.jpg" alt="Ciudad de México">
             <p class="card-text">Ciudad de México</p>
           </div>
           <div class="card-back">
-            <img src="/DescubreMéxico/imagenes/ARTESANIAS-CDMXQ.jfif" alt="Ciudad de México" class="img-fluid" data-toggle="modal" data-target="#modalCiudadDeMexico"> 
+            <img src="../DescubreMéxico/imagenes/ARTESANIAS-CDMXQ.jfif" alt="Ciudad de México" class="img-fluid" data-toggle="modal" data-target="#modalCiudadDeMexico"> 
           </div>
         </div>
       </div>
@@ -269,11 +287,11 @@
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <img class="img-fluid" src="./imagenes/ARTESANIAS-COAHUILA-1.jpg" alt="Coahuila">
+        <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-COAHUILA-1.jpg" alt="Coahuila">
         <p class="card-text">Coahuila</p>
       </div>
       <div class="card-back">
-        <img src="/DescubreMéxico/imagenes/ARTESANIAS-COAHUILA.jfif" alt="Coahuila" class="img-fluid" data-toggle="modal" data-target="#modalCoahuila"> 
+        <img src="../DescubreMéxico/imagenes/ARTESANIAS-COAHUILA.jfif" alt="Coahuila" class="img-fluid" data-toggle="modal" data-target="#modalCoahuila"> 
       </div>
     </div>
   </div>
@@ -283,11 +301,11 @@
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <img class="img-fluid" src="./imagenes/ARTESANIAS-COLIMA.jpg" alt="Colima">
+        <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-COLIMA.jpg" alt="Colima">
         <p class="card-text">Colima</p>
       </div>
       <div class="card-back">
-        <img src="/DescubreMéxico/imagenes/ARTESANIAS-COLIMA1.jfif" alt="Colima" class="img-fluid" data-toggle="modal" data-target="#modalColima"> 
+        <img src="../DescubreMéxico/imagenes/ARTESANIAS-COLIMA1.jfif" alt="Colima" class="img-fluid" data-toggle="modal" data-target="#modalColima"> 
       </div>
     </div>
   </div>
@@ -297,11 +315,11 @@
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <img class="img-fluid" src="./imagenes/ARTESANIAS-DURANGO-4.jpg" alt="Durango">
+        <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-DURANGO-4.jpg" alt="Durango">
         <p class="card-text">Durango</p>
       </div>
       <div class="card-back">
-        <img src="/DescubreMéxico/imagenes/ARTESANIAS-DURANGO1.png" alt="Durango" class="img-fluid" data-toggle="modal" data-target="#modalDurango"> 
+        <img src="../DescubreMéxico/imagenes/ARTESANIAS-DURANGO1.png" alt="Durango" class="img-fluid" data-toggle="modal" data-target="#modalDurango"> 
       </div>
     </div>
   </div>
@@ -311,11 +329,11 @@
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <img class="img-fluid" src="./imagenes/ARTESANIAS-EDOMEX.jpg" alt="Estado de México">
+        <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-EDOMEX.jpg" alt="Estado de México">
         <p class="card-text">Estado de México</p>
       </div>
       <div class="card-back">
-        <img src="/DescubreMéxico/imagenes/ARTESANIAS-EDOMEX1.jpg" alt="Estado de México" class="img-fluid" data-toggle="modal" data-target="#modalEstadoDeMexico"> 
+        <img src="../DescubreMéxico/imagenes/ARTESANIAS-EDOMEX1.jpg" alt="Estado de México" class="img-fluid" data-toggle="modal" data-target="#modalEstadoDeMexico"> 
       </div>
     </div>
   </div>
@@ -325,11 +343,11 @@
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <img class="img-fluid" src="./imagenes/ARTESANIAS-GUANAJUATO-4.jpg" alt="Guanajuato">
+        <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-GUANAJUATO-4.jpg" alt="Guanajuato">
         <p class="card-text">Guanajuato</p>
       </div>
       <div class="card-back">
-        <img src="/DescubreMéxico/imagenes/ARTESANIAS-GUANAJUATO.jpg" alt="Guanajuato" class="img-fluid" data-toggle="modal" data-target="#modalGuanajuato"> 
+        <img src="../DescubreMéxico/imagenes/ARTESANIAS-GUANAJUATO.jpg" alt="Guanajuato" class="img-fluid" data-toggle="modal" data-target="#modalGuanajuato"> 
       </div>
     </div>
   </div>
@@ -341,11 +359,11 @@
     <div class="card">
       <div class="card-inner">
         <div class="card-front">
-          <img class="img-fluid" src="./imagenes/ARTESANIAS-GUERRERO.jpg" alt="Guerrero">
+          <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-GUERRERO.jpg" alt="Guerrero">
           <p class="card-text">Guerrero</p>
         </div>
         <div class="card-back">
-          <img src="/DescubreMéxico/imagenes/ARTESANIAS-GUERRERO1.jfif" class="img-fluid" alt="Guerrero Artesanos" data-toggle="modal" data-target="#modalGuerrero"> 
+          <img src="../DescubreMéxico/imagenes/ARTESANIAS-GUERRERO1.jfif" class="img-fluid" alt="Guerrero Artesanos" data-toggle="modal" data-target="#modalGuerrero"> 
         </div>
       </div>
     </div>
@@ -356,11 +374,11 @@
     <div class="card">
       <div class="card-inner">
         <div class="card-front">
-          <img class="img-fluid" src="./imagenes/ARTESANIAS-HGO.jpg" alt="Hidalgo">
+          <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-HGO.jpg" alt="Hidalgo">
           <p class="card-text">Hidalgo</p>
         </div>
         <div class="card-back">
-          <img src="/DescubreMéxico/imagenes/ARTESANIAS-HGO1.jfif" alt="Hidalgo" class="img-fluid" data-toggle="modal" data-target="#modalHidalgo"> 
+          <img src="../DescubreMéxico/imagenes/ARTESANIAS-HGO1.jfif" alt="Hidalgo" class="img-fluid" data-toggle="modal" data-target="#modalHidalgo"> 
         </div>
       </div>
     </div>
@@ -370,11 +388,11 @@
     <div class="card">
       <div class="card-inner">
         <div class="card-front">
-          <img class="img-fluid" src="./imagenes/ARTESANIAS-JALISCO.jfif" alt="Jalisco">
+          <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-JALISCO.jfif" alt="Jalisco">
           <p class="card-text">Jalisco</p>
         </div>
         <div class="card-back">
-          <img src="/DescubreMéxico/imagenes/ARTESANIAS-JALISCO1.jfif" alt="Jalisco" class="img-fluid" data-toggle="modal" data-target="#modalJalisco"> 
+          <img src="../DescubreMéxico/imagenes/ARTESANIAS-JALISCO1.jfif" alt="Jalisco" class="img-fluid" data-toggle="modal" data-target="#modalJalisco"> 
         </div>
       </div>
     </div>
@@ -384,11 +402,11 @@
     <div class="card">
       <div class="card-inner">
         <div class="card-front">
-          <img class="img-fluid" src="./imagenes/ARTESANIAS-MICH.jpg" alt="Michoacán">
+          <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-MICH.jpg" alt="Michoacán">
           <p class="card-text">Michoacán</p>
         </div>
         <div class="card-back">
-          <img src="/DescubreMéxico/imagenes/ARTESANIAS-MICH1.jfif" alt="Michoacán" class="img-fluid" data-toggle="modal" data-target="#modalMichoacan"> 
+          <img src="../DescubreMéxico/imagenes/ARTESANIAS-MICH1.jfif" alt="Michoacán" class="img-fluid" data-toggle="modal" data-target="#modalMichoacan"> 
         </div>
       </div>
     </div>
@@ -399,11 +417,11 @@
     <div class="card">
       <div class="card-inner">
         <div class="card-front">
-          <img class="img-fluid" src="./imagenes/ARTESANIAS-MOR.jpg" alt="Morelos">
+          <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-MOR.jpg" alt="Morelos">
           <p class="card-text">Morelos</p>
         </div>
         <div class="card-back">
-          <img src="/DescubreMéxico/imagenes/ARTESANIAS-MOR1.jfif" alt="Morelos" class="img-fluid" data-toggle="modal" data-target="#modalMorelos"> 
+          <img src="../DescubreMéxico/imagenes/ARTESANIAS-MOR1.jfif" alt="Morelos" class="img-fluid" data-toggle="modal" data-target="#modalMorelos"> 
         </div>
       </div>
     </div>
@@ -412,11 +430,11 @@
     <div class="card">
       <div class="card-inner">
         <div class="card-front">
-          <img class="img-fluid" src="./imagenes/ARTESANIAS-NAY.jpg" alt="Nayarit">
+          <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-NAY.jpg" alt="Nayarit">
           <p class="card-text">Nayarit</p>
         </div>
         <div class="card-back">
-          <img src="/DescubreMéxico/imagenes/ARTESANIAS-NAY1.jfif" alt="Nayarit" class="img-fluid" data-toggle="modal" data-target="#modalNayarit"> 
+          <img src="../DescubreMéxico/imagenes/ARTESANIAS-NAY1.jfif" alt="Nayarit" class="img-fluid" data-toggle="modal" data-target="#modalNayarit"> 
         </div>
       </div>
     </div>
@@ -429,11 +447,11 @@
       <div class="card">
         <div class="card-inner">
           <div class="card-front">
-            <img class="img-fluid" src="./imagenes/ARTESANIAS-NL.jpg" alt="Nuevo León">
+            <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-NL.jpg" alt="Nuevo León">
             <p class="card-text">Nuevo León</p>
           </div>
           <div class="card-back">
-            <img src="/DescubreMéxico/imagenes/ARTESANIAS-NL1.jfif" alt="Nuevo León" class="img-fluid" data-toggle="modal" data-target="#modalNuevoLeon"> 
+            <img src="../DescubreMéxico/imagenes/ARTESANIAS-NL1.jfif" alt="Nuevo León" class="img-fluid" data-toggle="modal" data-target="#modalNuevoLeon"> 
           </div>
         </div>
       </div>
@@ -443,11 +461,11 @@
     <div class="card">
       <div class="card-inner">
         <div class="card-front">
-          <img class="img-fluid" src="./imagenes/ARTESANIAS-OAXACA-4-1024x680.jpg" alt="Oaxaca">
+          <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-OAXACA-4-1024x680.jpg" alt="Oaxaca">
           <p class="card-text">Oaxaca</p>
         </div>
         <div class="card-back">
-          <img src="/DescubreMéxico/imagenes/ARTESANIAS-OAXACA1.jfif" alt="Oaxaca" class="img-fluid" data-toggle="modal" data-target="#modalOaxaca"> 
+          <img src="../DescubreMéxico/imagenes/ARTESANIAS-OAXACA1.jfif" alt="Oaxaca" class="img-fluid" data-toggle="modal" data-target="#modalOaxaca"> 
         </div>
       </div>
     </div>
@@ -457,11 +475,11 @@
     <div class="card">
       <div class="card-inner">
         <div class="card-front">
-          <img class="img-fluid" src="./imagenes/ARTESANIAS-PUEBLA-5.jpg" alt="Puebla">
+          <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-PUEBLA-5.jpg" alt="Puebla">
           <p class="card-text">Puebla</p>
         </div>
         <div class="card-back">
-          <img src="/DescubreMéxico/imagenes/ARTESANIAS-PUEBLA1.jfif" alt="Puebla" class="img-fluid" data-toggle="modal" data-target="#modalPuebla"> 
+          <img src="../DescubreMéxico/imagenes/ARTESANIAS-PUEBLA1.jfif" alt="Puebla" class="img-fluid" data-toggle="modal" data-target="#modalPuebla"> 
         </div>
       </div>
     </div>
@@ -472,11 +490,11 @@
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <img class="img-fluid" src="./imagenes/ARTESANIAS-QRO.jpg" alt="Querétaro">
+        <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-QRO.jpg" alt="Querétaro">
         <p class="card-text">Querétaro</p>
       </div>
       <div class="card-back">
-        <img src="/DescubreMéxico/imagenes/ARTESANIAS-QRO1.jfif" alt="Querétaro" class="img-fluid" data-toggle="modal" data-target="#modalQueretaro"> 
+        <img src="../DescubreMéxico/imagenes/ARTESANIAS-QRO1.jfif" alt="Querétaro" class="img-fluid" data-toggle="modal" data-target="#modalQueretaro"> 
       </div>
     </div>
   </div>
@@ -487,11 +505,11 @@
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <img class="img-fluid" src="./imagenes/ART-QROO.jpg" alt="Quintana Roo">
+        <img class="img-fluid" src="../DescubreMéxico/imagenes/ART-QROO.jpg" alt="Quintana Roo">
         <p class="card-text">Quintana Roo</p>
       </div>
       <div class="card-back">
-        <img src="/DescubreMéxico/imagenes/ARTESANIAS-QROO1.jfif" alt="Quintana Roo" class="img-fluid" data-toggle="modal" data-target="#modalQuintanaRoo"> 
+        <img src="../DescubreMéxico/imagenes/ARTESANIAS-QROO1.jfif" alt="Quintana Roo" class="img-fluid" data-toggle="modal" data-target="#modalQuintanaRoo"> 
       </div>
     </div>
   </div>
@@ -502,11 +520,11 @@
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <img class="img-fluid" src="./imagenes/ARTESANIAS-SLP.jfif" alt="San Luis Potosí">
+        <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-SLP.jfif" alt="San Luis Potosí">
         <p class="card-text">San Luis Potosí</p>
       </div>
       <div class="card-back">
-        <img src="/DescubreMéxico/imagenes/ARTESANIAS-SLP1.jfif" alt="Ciudad de los Tecolotes" class="img-fluid" data-toggle="modal" data-target="#modalSanLuisPotosi"> 
+        <img src="../DescubreMéxico/imagenes/ARTESANIAS-SLP1.jfif" alt="Ciudad de los Tecolotes" class="img-fluid" data-toggle="modal" data-target="#modalSanLuisPotosi"> 
       </div>
     </div>
   </div>
@@ -521,11 +539,11 @@
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <img class="img-fluid" src="./imagenes/ARTESANIAS-SIN.jpg" alt="Sinaloa">
+        <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-SIN.jpg" alt="Sinaloa">
         <p class="card-text">Sinaloa</p>
       </div>
       <div class="card-back">
-        <img src="/DescubreMéxico/imagenes/ARTESANIAS-SIN1.jfif" alt="Artesanias Sinaloa" class="img-fluid" data-toggle="modal" data-target="#modalSinaloa"> 
+        <img src="../DescubreMéxico/imagenes/ARTESANIAS-SIN1.jfif" alt="Artesanias Sinaloa" class="img-fluid" data-toggle="modal" data-target="#modalSinaloa"> 
       </div>
     </div>
   </div>
@@ -536,11 +554,11 @@
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <img class="img-fluid" src="./imagenes/ARTESANIAS-SONORA-1024x680.jpg" alt="Sonora">
+        <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-SONORA-1024x680.jpg" alt="Sonora">
         <p class="card-text">Sonora</p>
       </div>
       <div class="card-back">
-        <img src="/DescubreMéxico/imagenes/ARTESANIAS-SONORA1.jpg" alt="Sonora" class="img-fluid" data-toggle="modal" data-target="#modalSonora"> 
+        <img src="../DescubreMéxico/imagenes/ARTESANIAS-SONORA1.jpg" alt="Sonora" class="img-fluid" data-toggle="modal" data-target="#modalSonora"> 
       </div>
     </div>
   </div>
@@ -551,11 +569,11 @@
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <img class="img-fluid" src="./imagenes/ARTESANIAS-TABASCO-1024x680.jpg" alt="Tabasco">
+        <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-TABASCO-1024x680.jpg" alt="Tabasco">
         <p class="card-text">Tabasco</p>
       </div>
       <div class="card-back">
-        <img src="/DescubreMéxico/imagenes/ARTESANIAS-TABASCO1.jfif" alt="Tabasco" class="img-fluid" data-toggle="modal" data-target="#modalTabasco"> 
+        <img src="../DescubreMéxico/imagenes/ARTESANIAS-TABASCO1.jfif" alt="Tabasco" class="img-fluid" data-toggle="modal" data-target="#modalTabasco"> 
       </div>
     </div>
   </div>
@@ -566,11 +584,11 @@
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <img class="img-fluid" src="./imagenes/ARTESANIAS-TAMAULIPAS-1024x680.jpg" alt="Tamaulipas">
+        <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-TAMAULIPAS-1024x680.jpg" alt="Tamaulipas">
         <p class="card-text">Tamaulipas</p>
       </div>
       <div class="card-back">
-        <img src="/DescubreMéxico/imagenes/ARTESANIAS-TAM1.jfif" alt="Tamaulipas" class="img-fluid" data-toggle="modal" data-target="#modalTamaulipas"> 
+        <img src="../DescubreMéxico/imagenes/ARTESANIAS-TAM1.jfif" alt="Tamaulipas" class="img-fluid" data-toggle="modal" data-target="#modalTamaulipas"> 
       </div>
     </div>
   </div>
@@ -580,11 +598,11 @@
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <img class="img-fluid" src="./imagenes/ARTESANIAS-TLAXCALA-2-1024x680.jpg" alt="Tlaxcala">
+        <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-TLAXCALA-2-1024x680.jpg" alt="Tlaxcala">
         <p class="card-text">Tlaxcala</p>
       </div>
       <div class="card-back">
-        <img src="/DescubreMéxico/imagenes/ARTESANIAS-TLAXCALA1.jfif" alt="Tlaxcala" class="img-fluid" data-toggle="modal" data-target="#modalTlaxcala"> 
+        <img src="../DescubreMéxico/imagenes/ARTESANIAS-TLAXCALA1.jfif" alt="Tlaxcala" class="img-fluid" data-toggle="modal" data-target="#modalTlaxcala"> 
       </div>
     </div>
   </div>
@@ -596,11 +614,11 @@
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <img class="img-fluid" src="./imagenes/ARTESANIAS-VERACRUZ-1024x680.jpg" alt="Veracruz">
+        <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-VERACRUZ-1024x680.jpg" alt="Veracruz">
         <p class="card-text">Veracruz</p>
       </div>
       <div class="card-back">
-        <img src="/DescubreMéxico/imagenes/ARTESANIAS-VERACRUZ1.jfif" alt="Veracruz" class="img-fluid" data-toggle="modal" data-target="#modalVeracruz"> 
+        <img src="../DescubreMéxico/imagenes/ARTESANIAS-VERACRUZ1.jfif" alt="Veracruz" class="img-fluid" data-toggle="modal" data-target="#modalVeracruz"> 
       </div>
     </div>
   </div>
@@ -612,11 +630,11 @@
     <div class="card">
       <div class="card-inner">
         <div class="card-front">
-          <img class="img-fluid" src="./imagenes/ARTESANIAS-YUC.jpg" alt="Yucatán">
+          <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-YUC.jpg" alt="Yucatán">
           <p class="card-text">Yucatán</p>
         </div>
         <div class="card-back">
-          <img src="/DescubreMéxico/imagenes/ARTESANIAS-YUC1.jfif" alt="Yucatán" class="img-fluid" data-toggle="modal" data-target="#modalYucatan"> 
+          <img src="../DescubreMéxico/imagenes/ARTESANIAS-YUC1.jfif" alt="Yucatán" class="img-fluid" data-toggle="modal" data-target="#modalYucatan"> 
         </div>
       </div>
     </div>
@@ -628,11 +646,11 @@
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <img class="img-fluid" src="./imagenes/ARTESANIAS-ZAC.jpg" alt="Zacatecas">
+        <img class="img-fluid" src="../DescubreMéxico/imagenes/ARTESANIAS-ZAC.jpg" alt="Zacatecas">
         <p class="card-text">Zacatecas</p>
       </div>
       <div class="card-back">
-        <img src="/DescubreMéxico/imagenes/ARTESANIAS-ZAC1.jfif" alt="Zacatecas" class="img-fluid" data-toggle="modal" data-target="#modalZacatecas"> 
+        <img src="../DescubreMéxico/imagenes/ARTESANIAS-ZAC1.jfif" alt="Zacatecas" class="img-fluid" data-toggle="modal" data-target="#modalZacatecas"> 
       </div>
     </div>
   </div>
@@ -1953,7 +1971,7 @@ La cerámica también juega un papel importante en la escena artesanal, con art�
               <h3 class="text-center"> Descubre la autenticidad de México en cada detalle</h3>
           </div>
           <a href="#top">
-              <img src="/Public/Imagenes/logo.png" alt="México" class="img-fluid mt-2">
+              <img src="../../Public/Imagenes/logo.png" alt="México" class="img-fluid mt-2">
           </a>
       </div>
   </div>
@@ -1962,16 +1980,16 @@ La cerámica también juega un papel importante en la escena artesanal, con art�
       <div class="row">
           <div class="col-lg-4 footer-left">
               <ul>
-                  <li><a href="/Terminos/TerminosCondiciones.html" class="footer-link">Términos y condiciones</a></li>
-                  <li><a href="/Contacto/contact.html" class="footer-link">Servicio al cliente</a></li>
-                  <li><a href="/QuienesSomos/QuienesSomos.html" class="footer-link">Conócenos</a></li>
-                  <li><a href="/Politicas/politicasPrivacidad.html" class="footer-link">Políticas de privacidad</a></li>
+                  <li><a href="../../Terminos/TerminosCondiciones.html" class="footer-link">Términos y condiciones</a></li>
+                  <li><a href="../../Contacto/contact.html" class="footer-link">Servicio al cliente</a></li>
+                  <li><a href="../../QuienesSomos/QuienesSomos.html" class="footer-link">Conócenos</a></li>
+                  <li><a href="../../Politicas/politicasPrivacidad.html" class="footer-link">Políticas de privacidad</a></li>
               </ul>
           </div>
           <div class="col-lg-4 footer-center">
               <p>Recibe información exclusiva y promociones vía email</p>
 
-              <a href="/Login/login.html">
+              <a href="../../Login/login.html">
                   <button id="subscribeButton">Suscríbete</button>
               </a>
 
@@ -1979,7 +1997,7 @@ La cerámica también juega un papel importante en la escena artesanal, con art�
           <div class="col-lg-4 footer-right">
               <a href="#" class="footer-link">Métodos de pago</a>
               <div class= "img-pagos-container">
-              <img class="img-pagos" src="/Public/Imagenes/pagos.jpg" alt="logo-mercado-pago">
+              <img class="img-pagos" src="../../Public/Imagenes/pagos.jpg" alt="logo-mercado-pago">
               </div>
           </div>
       </div>
