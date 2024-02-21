@@ -206,8 +206,7 @@
   }
 
 /* Simplify slider styles */
-
-.slider_section {
+/* .slider_section {
   display: flex;
   flex: 1;
   align-items: center;
@@ -275,7 +274,7 @@
   width: 20px;
   height: 20px;
   background-color: #f7444e;
-}
+} */
 
  .darkmode {
   color: #fff;
