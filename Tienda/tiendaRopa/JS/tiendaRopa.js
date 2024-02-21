@@ -72,8 +72,7 @@ const ropaArtesanal = [
     description: 'Una camisa que fusiona la elegancia con la tradición, gracias a sus bordados detallados. Una elección distinguida para quienes aprecian la artesanía mexicana en su vestimenta.',
     price: 765,
   }
-
-    // Agrega más ropa
+  // Agrega más ropa
 ];
 
 // Función para mostrar la ropa artesanal mexicana en miniaturas
@@ -97,25 +96,25 @@ function mostrarMiniaturasRopaArtesanal() {
 
     // Agregar estilo al botón "Ver más"
     overlayText.style.backgroundColor = '#fff'; // Fondo blanco
-    overlayText.style.color = 'black'; // 
+    overlayText.style.color = 'black'; // Letras negras
     overlayText.style.border = '1px solid #ff0646'; // Borde rosa
     overlayText.style.borderRadius = '30px'; // Bordes redondeados
-    overlayText.style.padding = '8px15px'; // Espaciado interno
+    overlayText.style.padding = '8px 15px'; // Espaciado interno
     overlayText.style.cursor = 'pointer'; // Cursor al pasar sobre el botón
 
-        // Agregar evento hover para cambiar los estilos
-        overlayText.addEventListener('mouseenter', () => {
-          overlayText.style.backgroundColor = '#ff0646'; // Cambia el fondo a rosa
-          overlayText.style.color = '#fff'; // Cambia las letras a blancas
-          overlayText.style.border = '1px solid #fff'; // Cambia el borde a blanco
-        });
-    
-        overlayText.addEventListener('mouseleave', () => {
-          // Restaurar los estilos originales al salir del mouse
-          overlayText.style.backgroundColor = '#fff';
-          overlayText.style.color = '#ff0646';
-          overlayText.style.border = '1px solid #ff0646';
-        });
+    // Agregar evento hover para cambiar los estilos
+    overlayText.addEventListener('mouseenter', () => {
+      overlayText.style.backgroundColor = '#ff0646'; // Cambia el fondo a rosa
+      overlayText.style.color = '#fff'; // Cambia las letras a blancas
+      overlayText.style.border = '1px solid #fff'; // Cambia el borde a blanco
+    });
+
+    overlayText.addEventListener('mouseleave', () => {
+      // Restaurar los estilos originales al salir del mouse
+      overlayText.style.backgroundColor = '#fff';
+      overlayText.style.color = '#ff0646';
+      overlayText.style.border = '1px solid #ff0646';
+    });
 
     // Agregar evento click al texto "Ver más"
     overlayText.addEventListener('click', () => mostrarDetallesProducto(ropa));
@@ -137,22 +136,9 @@ function mostrarDetallesProducto(producto) {
     <p>${producto.description}</p>
     <p>Precio: $${producto.price}</p>
     <button class="btn btn-primary" onclick="echarAlHuacal('${producto.name}')">Echar al Huacal</button>
-    <button class="btn btn-secondary" onclick="agregarAListaDeDeseos('${producto.name}')">Agregar a Lista de Deseos</button>
+    <button class="btn btn-secondary" onclick="agregarAListaDeDeseos('${producto.name}')">Comprar</button>
   `;
-
   $('#productModal').modal('show');
-}
-
-// Llama a la función para mostrar las miniaturas de los licores artesanales mexicanos
-mostrarMiniaturasRopaArtesanal();
-
-// Función para agregar un producto a la lista de deseos
-function echarAlHuacal(nombreProducto) {
-  const producto = ropaArtesanal.find(ropa => ropa.name === nombreProducto);
-  console.log('Producto añadido al huacal:', producto);
-  // Incrementar el contador de productos en el huacal
-  const huacalNumber = document.getElementById('huacal-number');
-  huacalNumber.textContent = parseInt(huacalNumber.textContent) + 1;
 }
 
 // Obtener referencia al botón "Ver más"
@@ -170,8 +156,5 @@ if (verMasButton) {
   console.log("Bienvenidos");
 }
 
-// Función para agregar un producto a la lista de deseos
-function agregarAListaDeDeseos(nombreProducto) {
-  const producto = ropaArtesanal.find(ropa => ropa.name === nombreProducto);
-  console.log('Producto añadido a la lista de deseos:', producto);
-}
+// Llama a la función para mostrar las miniaturas de la ropa artesanal mexicana
+mostrarMiniaturasRopaArtesanal();

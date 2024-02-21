@@ -120,25 +120,6 @@
     color: #fff; /* Cambiar el color del texto en el modal en modo oscuro */
 }
 
-  /* Estilo para los botones */
-  .btn-huacal, .btn btn-primary {
-    font-size: 10px;
-    padding: 8px 90px;
-    white-space: nowrap;
-    text-align: left !important;
-    color: #FF0646;  
-}
-  
-  /* Estilo específico para los botones "Echar al huacal" y "Agregar a la lista de deseos" */
-.btn-add-to-cart, .btn-add-to-wishlist {
-    font-size: 10px; 
-    padding: 8px 90px; 
-    white-space: nowrap;
-    text-align: left !important;
-    background-color: #FF0646 !important;
-  }
-
-
 .darkmode .container-list{
   color: #fff;
 }
@@ -152,4 +133,25 @@
   font-weight: bold; 
 }
 
+/*botones echar al huacal y comprar*/
+.btn-primary, .btn-secondary {
+  background-color: #fff; /* Color de fondo */
+  color: #000000; /* Color del texto */
+  border: #ff0646 1px solid; 
+  padding: 8px 15px; /* Espaciado interno */
+  border-radius: 30px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor al pasar sobre el botón */
+}
 
+.btn-primary:hover, .btn-secondary:hover {
+  background-color: #ff0646; /* Cambia el color de fondo al pasar el mouse */
+  color: #fff; /* Cambia el color del texto al pasar el mouse */
+  transition: background-color 0.3s, color 0.3s; /* Agrega transición suave */
+  border: #ff0646 1px solid;
+}
+
+.btn-primary:active, .btn-secondary:active {
+  background-color: #ff0646; /* Mantén el fondo rosa al hacer clic */
+  color: #fff; /* Mantén el texto blanco al hacer clic */
+  border: #ff0646 1px solid;
+}
