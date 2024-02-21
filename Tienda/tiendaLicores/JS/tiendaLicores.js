@@ -91,7 +91,6 @@ const licoresMexicanos = [
       price: 399,
     },
 
-
     // Agrega más licores mexicanos según sea necesario
   ];
   
@@ -113,6 +112,7 @@ const licoresMexicanos = [
       const overlayText = document.createElement('div');
       overlayText.classList.add('overlay-text');
       overlayText.textContent = 'Ver más';
+      overlayText.addEventListener('click', () => mostrarDetallesProducto(licor));
   
       // Agregar la imagen y el texto "Ver más" al thumbnail del producto
       productThumbnail.appendChild(image);
@@ -134,16 +134,15 @@ const licoresMexicanos = [
       <p>${producto.description}</p>
       <p>Precio: $${producto.price}</p>
       <button class="btn btn-primary" onclick="echarAlHuacal('${producto.name}')">Echar al Huacal</button>
-      <button class="btn btn-secondary" onclick="agregarAListaDeDeseos('${producto.name}')">Agregar a Lista de Deseos</button>
+      <button class="btn btn-secondary" onclick="comprar('${producto.name}')">Comprar</button>
     `;
-  
     productModal.show();
   }
   
   // Llama a la función para mostrar las miniaturas de los licores artesanales mexicanos
   mostrarMiniaturasLicoresMexicanos();
 
-  // Función para agregar un producto a la lista de deseos
+  // Función para agregar un producto al huacal
   function echarAlHuacal(nombreProducto) {
     const producto = licoresMexicanos.find(licor => licor.name === nombreProducto);
     console.log('Producto añadido al huacal:', producto);
@@ -152,8 +151,9 @@ const licoresMexicanos = [
     huacalNumber.textContent = parseInt(huacalNumber.textContent) + 1;
 }
 
-  // Función para agregar un producto a la lista de deseos
-  // function agregarAListaDeDeseos(nombreProducto) {
-  //   const producto = licoresMexicanos.find(licor => licor.name === nombreProducto);
-  //   console.log('Producto añadido a la lista de deseos:', producto);
-  // }
+  // Función para boton comprar
+   function comprar(nombreProducto) {
+     const producto = licoresMexicanos.find(licor => licor.name === nombreProducto);
+     console.log('Producto añadido al huacal:', producto);
+   }
+

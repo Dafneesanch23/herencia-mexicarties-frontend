@@ -14,6 +14,7 @@
   }
   
   h1 {
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     margin-bottom: 30px;
     font-size: 2em;
@@ -61,6 +62,7 @@
         margin-bottom: 20px; 
       }
   .darkmode .subTitulo-Tienda {
+    font-family: 'Montserrat', sans-serif;
     color: #fff;
   }          
 
@@ -89,15 +91,56 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: rgba(0, 0, 0, .9); 
-        padding: 10px 20px;
-        border-radius: 5px;
-        color: #fd0681; 
+        background-color: rgb(253, 253, 253); 
+        padding: 8px 15px; 
+        border: 1px solid #ff0646;
+        border-radius: 30px;
+        color: #000;
+        cursor: pointer;   
         font-size: 14px;
         cursor: pointer;
       }
-      
 
+
+      .overlay-text:hover {
+        background-color: #ff0646; 
+        color: #fff; 
+      }    
+  
+  /* Estilos personalizados para los botones Echar al huacal y Comprar */
+.btn-primary,
+.btn-secondary {
+  background-color: #fff;
+  color: #000;
+  padding: 8px 15px; 
+  border: 1px solid #ff0646;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  background-color: #ff0646; 
+  color: #fff; 
+}   
+
+  /* Darkmode para los botones Echar al huacal y Comprar */
+  .darkmode .btn-primary,
+  .darkmode .btn-secondary {
+    background-color: #1d2a35;
+    color: #fff;
+    padding: 8px 15px; 
+    border: 1px solid #ff0646;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  .darkmode .btn-primary:hover,
+  .darkmode .btn-secondary:hover {
+    background-color: #ff0646; 
+    color: #fff; 
+  }
+      
   .product-thumbnail img {
     width: 200px;
     height: 200px;
@@ -124,26 +167,10 @@
   }
 
   .darkmode .modal-content {
-    background-color: #1d2a35; /* Cambiar el color de fondo del modal en modo oscuro */
-    color: #fff; /* Cambiar el color del texto en el modal en modo oscuro */
+    background-color: #1d2a35; 
+    color: #fff; 
 }
 
-  /* Estilo para los botones */
-  .btn-huacal, .btn btn-primary {
-    font-size: 10px;
-    padding: 8px 90px;
-    white-space: nowrap;
-    text-align: left !important;
-    background-color: #FF0646 !important;  
-}
-  
-  /* Estilo específico para los botones "Echar al huacal" y "Agregar a la lista de deseos" */
-.btn-add-to-cart, .btn-add-to-wishlist {
-    font-size: 10px; 
-    padding: 8px 90px; 
-    white-space: nowrap;
-    text-align: left !important;
-    background-color: #FF0646 !important;
-  }
+
 
 
