@@ -119,7 +119,8 @@ function echarAlHuacal() {
 }
 
 function mostrarDetallesProducto() {
-    const producto = this.dataset.producto;
+    const productoString = this.getAttribute('data-producto');
+    const producto = JSON.parse(productoString);
     const modalBody = document.getElementById('productModalBody');
     modalBody.innerHTML = `
       <h2>${producto.nombre}</h2>
