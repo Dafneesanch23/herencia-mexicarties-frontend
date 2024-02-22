@@ -61,7 +61,7 @@ function mostrarProductos(productosAMostrar) {
         const productoCard = `
     <div class="col-md-3 producto dark-card">
         <div class="card option_container" id="${producto.id}" data-producto='${JSON.stringify(producto)}' onclick="mostrarDetallesProducto.call(this)"">
-            <img src="${producto.imagen_url}" class="card-img-top" alt="${producto.imagen_alt}">
+            <img src="${producto.imagen_url}" class="card-img-top" alt="${producto.nombre}">
             <div class="card-body">
                 <h5 class="card-title">${producto.nombre}</h5>
                 <p class="card-text">Precio: ${producto.precio} USD</p>
@@ -91,7 +91,7 @@ async function mostrarMasProductos() {
         const productoCard = `
         <div class="col-md-3 producto dark-card">
         <div class="card option_container" id="${producto.id}" data-producto='${JSON.stringify(producto)}' onclick="mostrarDetallesProducto.call(this)">
-            <img src="${producto.imagen_url}" class="card-img-top" alt="${producto.imagen_alt}">
+            <img src="${producto.imagen_url}" class="card-img-top" alt="${producto.nombre}">
             <div class="card-body">
                 <h5 class="card-title">${producto.nombre}</h5>
                 <p class="card-text">Precio: ${producto.precio} USD</p>
@@ -125,7 +125,7 @@ function mostrarDetallesProducto() {
     modalBody.innerHTML = `
       <h2>${producto.nombre}</h2>
       <img src="${producto.imagen_url}" alt="${producto.nombre}">
-      <p>${producto.nombre}</p>
+      <p>${producto.descripcion}</p>
       <p>Precio: $${producto.precio}</p>
       <button class="btn btn-echar-huacal" onclick="echarAlHuacal()">Echar al Huacal</button>
       <button class="btn btn-comprar">Comprar</button>
