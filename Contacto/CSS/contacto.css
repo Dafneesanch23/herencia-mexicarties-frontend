@@ -4,12 +4,13 @@
 
 main {
   margin: 2rem 0;
+  
 }
 
 .card {
   border-color: black;
   border-width: 2px;
-  width: 40rem;
+  width: 35rem;
   transition: 0.5s;
 }
 
@@ -42,13 +43,14 @@ main {
 .btn-primary {
   width: 40%; 
   margin: 0 auto; 
-  background-color: white;
+  background-color: var(--color6);
   border-radius: 30px;
-  border: 1px solid #FF0646;
-  size: 26px;
-  color: black;
+  border: 1px solid var(--color6);
+  color: white;
   padding: 0.375rem 0.75rem;
+  size: var(--tam-letra3);
   justify-content: center;
+  transition-duration: 250ms;
 }
 
 .btn-primary:hover {
