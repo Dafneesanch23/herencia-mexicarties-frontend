@@ -111,6 +111,41 @@ padding-top: 50px;
   font-size: var(--tam-letra3);
   font-weight: bold;
   padding-top: 50px;
+  
 
 }
 
+.darkmode .FAQS {
+  color: white;
+  background-color: #1d2a35;
+}
+
+.darkmode .accordion {
+  color: white;
+  background-color: #1d2a35;
+  
+}
+
+.darkmode .accordion-item{
+  color: white;
+  background-color: #1d2a35;
+}
+
+.darkmode .px-2{
+  color: white;
+  background-color: #1d2a35;
+} 
+
+.darkmode .accordion-button{
+  color: white;
+  background-color: #1d2a35;
+}
+
+/* .darkmode .card{
+  color: white;
+  background-color: #1d2a35;
+} */
+
+.darkmode .card:hover {
+  box-shadow: 5px 5px 5px white;
+}
