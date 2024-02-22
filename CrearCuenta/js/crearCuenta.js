@@ -122,9 +122,9 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem('User', JSON.stringify(userData));
 
         if (userData.typeUser === 1){
-            window.location.href = '/Inicio/inicio.html';
+            window.location.href = '../Inicio/inicio.html';
         } else {
-            window.location.href = '/formularioProductos/FormularioProd.html';
+            window.location.href = '../formularioProductos/FormularioProd.html';
         }
         
 
