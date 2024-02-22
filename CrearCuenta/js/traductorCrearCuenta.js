@@ -9,11 +9,11 @@ document.getElementById('toggleLanguage').addEventListener('click', (e) => {
 
   // Si se tiene la imagen de México cambia a la de EUA.
   if (languageFlag.src.includes('mexico.png')) {
-    languageFlag.src = '/Public/Imagenes/eu.png';
+    languageFlag.src = '../Public/Imagenes/eu.png';
     languageFlag.alt = 'Bandera de Estados Unidos de América';
     newLang = 'en';
   } else {
-    languageFlag.src = '/Public/Imagenes/mexico.png';
+    languageFlag.src = '../Public/Imagenes/mexico.png';
     languageFlag.alt = 'Bandera de México';
     newLang = 'es';
   }
@@ -36,7 +36,7 @@ const translations = {
       "artisanslink": "CONOCE A LOS ARTESANOS",
       "contactlink": "CONTACTO",
       // PÁGINA
-      "title": "Registrarse",
+      "title": "REGISTRARSE",
       "btn-create": "Crear cuenta",
       "questionAccount": "¿Ya tienes una cuenta? Inicia sesión",
       "privacylink": "Privacidad",
@@ -70,7 +70,7 @@ const translations = {
       "artisanslink": "MEET THE ARTISANS",
       "contactlink": "CONTACT",
       // PÁGINA
-      "title": "Register",
+      "title": "REGISTER",
       "btn-create": "Create acount",
       "questionAccount": "Do you already have an account? Log in",
       "privacylink": "Privacy",
@@ -119,10 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Se asegura de que la bandera coincida con el idioma
   const languageFlag = document.getElementById('languageFlag');
   if (selectedLanguage === 'en') {
-      languageFlag.src = '/Public/Imagenes/eu.png';
+      languageFlag.src = '../Public/Imagenes/eu.png';
       languageFlag.alt = 'Bandera de Estados Unidos';
   } else {
-      languageFlag.src = '/Public/Imagenes/mexico.png';
+      languageFlag.src = '../Public/Imagenes/mexico.png';
       languageFlag.alt = 'Bandera de México';
   }
 });
