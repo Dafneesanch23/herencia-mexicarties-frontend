@@ -64,7 +64,7 @@ function mostrarProductos(productosAMostrar) {
             <img src="${producto.imagen_url}" class="card-img-top" alt="${producto.imagen_alt}">
             <div class="card-body">
                 <h5 class="card-title">${producto.nombre}</h5>
-                <p class="card-text">Precio: ${producto.precio} USD</p>
+                <p class="card-text">Precio: $ ${producto.precio} </p>
             </div>
             <div class="overlay-text" onclick="mostrarDetallesProducto()">
                 Ver más
@@ -94,7 +94,7 @@ async function mostrarMasProductos() {
             <img src="${producto.imagen_url}" class="card-img-top" alt="${producto.imagen_alt}">
             <div class="card-body">
                 <h5 class="card-title">${producto.nombre}</h5>
-                <p class="card-text">Precio: ${producto.precio} USD</p>
+                <p class="card-text">Precio: $ ${producto.precio}</p>
             </div>
             <div class="overlay-text" onclick="mostrarDetallesProducto()">
                 Ver más
