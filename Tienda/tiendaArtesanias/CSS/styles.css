@@ -70,6 +70,10 @@ h1 {
 
 .special-image {
     filter: saturate(150%);
+        max-width: 100%;
+        height: auto; /* Esto asegura que la altura se ajuste automáticamente según el ancho */
+        display: block; /* Esto elimina el espacio extra que puede aparecer debajo de la imagen */
+        margin: 0 auto; /* Esto centra la imagen en su contenedor */
 }
 
 .text-artesanias {
