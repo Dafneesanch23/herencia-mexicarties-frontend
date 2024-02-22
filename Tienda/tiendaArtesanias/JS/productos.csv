@@ -1,4 +1,4 @@
-id,nombre,tipo,artesano,imagen_url,imagen_alt,precio,lugar_fabricacion,descripcion
+id,nombre,tipo,artesano,imagen_url,imagen_alt,precio,lugar_fabricacion,descripcion,
 1,"Vajilla de barro artesanal","Vajilla","Familia Bernabe",./Imagenes/VajillaColorida.png,"Vajilla de Barro",200,"Mexico","Conjunto de vajilla artesanal pintada a mano"
 2,"Taza de Alebrije Colorido","Taza","Artesano2",./Imagenes/TazaAlebrije.png,"Alebrije Colorido",150,"Mexico","Taza de alebrije tallada y pintada a mano"
 3,"Talavera Mexicana","Ceramica","Artesano3",./Imagenes/talavera.jfif,"Talavera Mexicana",80,"Mexico","Piezas de cerámica de talavera con diseños tradicionales"
