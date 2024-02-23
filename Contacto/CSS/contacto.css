@@ -1,17 +1,19 @@
 
 /*******    FORMULARIO     **********/
 
-
-main {
-  margin: 2rem 0;
-  
+.card-container{
+  padding-bottom: 20%;
+  padding-top: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .card {
   border-color: black;
   border-width: 2px;
-  width: 35rem;
+  width: 40rem;
   transition: 0.5s;
+  
 }
 
 .card:hover {
@@ -19,8 +21,8 @@ main {
 }
 
 .card-body {
-  padding: 1rem;
   font-size: var(--tam-letra1);
+  width: 100%;
 }
 
 .card-title {
@@ -34,6 +36,7 @@ main {
   margin-bottom: 1.5rem;
   font-size: var(--tam-letra1);
   font-family: var(--texto1), sans-serif;
+  width: 100%;
 }
 
 .btn-block {
@@ -69,15 +72,6 @@ main {
   color: #6c757d;
 }
 
-.titulo-color{
-  font-family: var(--texto1), sans-serif;
-  font-size: var(--tam-letra1);
-  color: #000;
-  padding-top: 10px;
-  padding-left: 10px;
-  align-items: center;
-  
-}
 
 label {
   font-family: var(--texto1), sans-serif;
@@ -88,7 +82,7 @@ label {
 
 .form-select {
   font-family: var(--texto1), sans-serif;
-  font-size: var(--tam-letra1);
+  font-size: 1vw;
   color: #545759;
   cursor:pointer;  
 }
@@ -96,11 +90,11 @@ label {
 
 /*******  ACORDEON PREGUNTAS  ********/
 
+
+
 .accordion-item{
   font-family: montserrat;
-  
 }
-
 
 .accordion {
 padding-top: 50px;
