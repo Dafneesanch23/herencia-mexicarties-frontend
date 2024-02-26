@@ -1,176 +1,315 @@
+/*header*/
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-/**********************************************/
-/*******       LISTADO DE PRODUCTOS   **********/
-/**********************************************/
-
-/* Estilos personalizados para la lista de productos */
-#liquor-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
+:root {
+    --texto1: 'Montserrat', sans-serif;
+    --color1: #FF0646;
+    --color2: #04B2D9;
+    --color3: #ffffff;
+    --color4: #F29F05;
+    --color5: #F28705;
+    --color6: #000000;
+    --tam-letra2: 0.75rem;
+    --tam-letra1: 1rem;
+    --tam-letra4: 0.90rem;
+    --tam-letra3: 2rem;
+    --dark-color: #2c2c2c;
+    --dark-icon-color: #ffffff;
+    --light-color: #ffffff;
+    --light-icon-color: #FFDE59;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--light-color);
+}
+
+/*contenido*/
 h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2em;
-  color: #000000;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
 }
 
-.container {
-  text-align: center;
+.container1 {
+    text-align: center;
 }
 
 .container-list {
-  text-align: center;
+    text-align: center;
 }
 
 
 .special-image {
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  margin-bottom: 20px;
+    width: 900px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
 }
 
 .special-image:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .special-image {
-  filter: saturate(150%);
+    filter: saturate(150%);
+        max-width: 100%;
+        height: auto; /* Esto asegura que la altura se ajuste automáticamente según el ancho */
+        display: block; /* Esto elimina el espacio extra que puede aparecer debajo de la imagen */
+        margin: 0 auto; /* Esto centra la imagen en su contenedor */
+}
+
+.text-artesanias {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000000;
+    margin-bottom: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+#searchBar {
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
 
+.producto {
+    border: 1px solid #ddd;
+    padding: 10px;
+    /*margin: 10px;*/
+    text-align: center;
+    display: inline-block;
+    position: relative;
+}
 
-.product-thumbnail {
-  margin: 10px;
-  cursor: pointer;
-  transition: box-shadow 0.3s;
-  position: relative;
-  overflow: hidden;
-  width: calc(25% - 20px);
+
+.producto .card .option_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff0646;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s;
+    transform: translateY(100%);
+}
+
+.producto:hover .option_container {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.producto .card .options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.producto .card .options a {
+    margin: 5px 0;
+    padding: 8px 15px;
+    border-radius: 30px;
+    width: 165px;
+    text-align: center;
+    transition: all .3s;
+}
+
+.producto .card .options .option1,
+.producto .card .options .option2 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: #ffffff;
+}
+
+.producto .card:hover .options .option1,
+.producto .card:hover .options .option2 {
+    background-color: #ff0646;
+    border: 1px solid #ff0646;
+    color: #ffffff;
+}
+
+.producto .card .options .option1:hover,
+.producto .card .options .option2:hover {
+    background-color: transparent;
+    color: #ff0646;
+}
+
+.producto .card .card-img-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 215px;
+}
+
+.producto .box .card-img-top img {
+    max-width: 100%;
+    max-height: 160px;
+    transition: all .3s;
+}
+
+.producto .card {
+    text-align: center;
+}
+
+.producto .options {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
 }
 
 @media (max-width: 768px) {
-  .product-thumbnail {
-    width: calc(50% - 20px);
-  }
+    .producto {
+        width: calc(50% - 20px);
+    }
 }
 
-.product-thumbnail:hover .overlay-text {
-  display: block;
+.producto:hover .overlay-text {
+    display: block;
 }
 
-.product-thumbnail .overlay-text {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, .9);
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: #fd0681;
-  font-size: 14px;
-  cursor: pointer;
+.producto .overlay-text {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    color: black;
+    padding: 8px 15px;
+    border: 1px solid #ff0646;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
 }
 
-
-.product-thumbnail img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.producto .overlay-text:hover {
+    background-color: #ff0646;
+    color: #fff;
+    padding: 8px 15px;
+    border: 1px solid #fff;
 }
 
 /* Estilos para el modal */
-.centered-text {
-  text-align: center;
-  /* Centra horizontalmente */
-  display: flex;
-  align-items: center;
-  /* Centra verticalmente */
-  justify-content: center;
-  /* Centra horizontalmente */
-  height: 100%;
-  /* Ajusta según sea necesario */
-}
-
 .modal-body {
-  text-align: center;
+    text-align: center;
 }
 
 .product-details img {
-  max-width: 100%;
-  border-radius: 5px;
-  margin-bottom: 20px;
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 /* Estilo para la imagen en el modal */
 #productModal img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .darkmode .modal-content {
-  background-color: #000000;
-  /* Cambiar el color de fondo del modal en modo oscuro */
-  color: #fff;
-  /* Cambiar el color del texto en el modal en modo oscuro */
+    background-color: #000000;
+    /* Cambiar el color de fondo del modal en modo oscuro */
+    color: #fff;
+    /* Cambiar el color del texto en el modal en modo oscuro */
+}
+
+.btn-mostrar-mas {
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+    border-color: #ff0646;
+    color: white;
+}
+
+/*Cartas en modo oscuro*/
+body.darkmode .dark-card {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    border: 1px solid var(--color1);
+}
+
+body.darkmode .dark-card .option_container {
+    background-color: var(--dark-color);
+}
+
+body.darkmode .dark-card .card-title,
+body.darkmode .dark-card .card-text {
+    color: var(--light-color);
 }
 
 .darkmode .container-list {
-  color: #fff;
+    color: #fff;
 }
 
 .darkmode h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2em;
-  color: #ffff;
-  text-shadow: 2px 2px 4px rgba(255, 252, 252, 0.815);
-  font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #ffff;
+    text-shadow: 2px 2px 4px rgba(255, 252, 252, 0.815);
+    font-weight: bold;
 }
 
-/*botones echar al huacal y comprar*/
-.btn-primary,
-.btn-secondary {
-  background-color: #fff;
-  /* Color de fondo */
-  color: #000000;
-  /* Color del texto */
-  border: #ff0646 1px solid;
-  padding: 8px 15px;
-  /* Espaciado interno */
-  border-radius: 30px;
-  /* Bordes redondeados */
-  cursor: pointer;
-  /* Cursor al pasar sobre el botón */
+.darkmode .text-artesanias {
+    color: #fff;
 }
 
-.btn-primary:hover,
-.btn-secondary:hover {
-  background-color: #ff0646;
-  /* Cambia el color de fondo al pasar el mouse */
-  color: #fff;
-  /* Cambia el color del texto al pasar el mouse */
-  transition: background-color 0.3s, color 0.3s;
-  /* Agrega transición suave */
-  border: #ff0646 1px solid;
+.btn-echar-huacal,
+.btn-comprar {
+    background-color: #fff !important;
+    color: #000 !important;
+    padding: 8px 15px !important;
+    border: 1px solid #ff0646 !important;
+    border-radius: 30px !important;
+    cursor: pointer !important;
 }
 
-.btn-primary:active,
-.btn-secondary:active {
-  background-color: #ff0646;
-  /* Mantén el fondo rosa al hacer clic */
-  color: #fff;
-  /* Mantén el texto blanco al hacer clic */
-  border: #ff0646 1px solid;
+.btn-echar-huacal:hover,
+.btn-comprar:hover {
+    background-color: #ff0646 !important;
+    color: #fff !important;
+}
+
+/* Darkmode para los botones Echar al huacal y Comprar */
+.darkmode .btn-echar-huacal,
+.darkmode .btn-comprar {
+    background-color: #1d2a35 !important;
+    color: #fff !important;
+    padding: 8px 15px !important;
+    border: 1px solid #ff0646 !important;
+    border-radius: 30px !important;
+    cursor: pointer !important;
+}
+
+.darkmode .btn-echar-huacal:hover,
+.darkmode .btn-comprar:hover {
+    background-color: #ff0646 !important;
+    color: #fff !important;
 }
