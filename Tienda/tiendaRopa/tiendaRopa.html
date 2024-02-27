@@ -189,19 +189,37 @@
 <br>
 <br>
     <!-- Modal para mostrar la información detallada del producto -->
-    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="productModalLabel">Detalles del Producto</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel">Detalles del Producto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="productModalBody">
+                <h2>Nombre del Producto</h2>
+                <img src="ruta_imagen" alt="Nombre del Producto">
+                <p>Precio: $precio</p>
+                <p>Lugar de origen: lugar</p>
+                <p>Artesano: artesano</p>
+                <p>Descripción: descripción del producto</p>
+
+                <!-- Lista desplegable para la talla -->
+                <div class="form-group">
+                    <label for="tallaDropdown">Seleccionar Talla:</label>
+                    <select class="form-control" id="tallaDropdown">
+                        <option value="S">Pequeña</option>
+                        <option value="M">Mediana</option>
+                        <option value="L">Grande</option>
+                    </select>
                 </div>
-                <div class="modal-body" id="productModalBody">
-                    <!-- Aquí se mostrará la información detallada del producto -->
-                </div>
+
+                <button class="btn btn-echar-huacal" onclick="echarAlHuacal()">Echar al Huacal</button>
+                <button class="btn btn-comprar">Comprar</button>
             </div>
         </div>
     </div>
+</div>
 
     <!--footer-->
     <footer>
