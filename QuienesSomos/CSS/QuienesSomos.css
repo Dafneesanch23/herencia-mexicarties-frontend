@@ -119,6 +119,15 @@
   input[type="radio"]:checked {
     opacity: 1;
   }
+
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  input[type="radio"] {
+    width: 9px; 
+    height: 9px; 
+  }
+}
   
   #slider label,
   #slider label img {
@@ -205,6 +214,11 @@
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
   }
 
+/* Estilos para ocultar los botones de radio en todos los tamaños de pantalla */
+input[type="radio"] {
+  display: none;
+}
+  
 /* Simplify slider styles */
 /* .slider_section {
   display: flex;
@@ -284,8 +298,32 @@
 .linkedin-icon:hover i,
 .github-icon:hover i,
 .cv-icon:hover i {
-  color: #ff0646; /* Cambia el color al pasar el cursor */
-  transform: scale(1.2); /* Cambia el tamaño al 120% al pasar el cursor */
+  color: #ff0646;
+  transform: scale(1.2); 
 }
 
 
+/* Estilos para los iconos en pantalla normal (escritorio o laptop) */
+.responsive-icon {
+  font-size: 30px;
+}
+
+/* Estilos para los iconos en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .responsive-icon {
+    font-size: 1em; 
+  }
+}
+
+/* Estilos para el contenedor del video */
+#videoContainer {
+  margin-top: 20px; 
+}
+
+/* Estilos para ajustar el tamaño del video en pantallas grandes */
+@media (min-width: 992px) {
+  #videoContainer iframe {
+    width: 800px; 
+    height: 450px; 
+  }
+}

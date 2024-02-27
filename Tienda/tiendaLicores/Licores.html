@@ -3,26 +3,17 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Licores</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinos y Licores</title>
   <link rel="shortcut icon" href="../../Public/Imagenes/logo.png" type="">
-  <!--Importaciones para Bootstrap-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <!--NAVBAR CSS-->
+  <link rel="stylesheet" href="../../Tienda/tiendaLicores/CSS/tiendaLicores.css">
   <link rel="stylesheet" href="../../Public/CSS/main.css">
-  <!-- Custom styles for this template -->
-  <link rel="stylesheet" href="../../Tienda/tiendaLicores/CSS/tiendaLicores.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!--ICONS CDN-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="../../Tienda/tiendaLicores/CSS/tiendaLicores.css">
-  <!-- Script para desplazarse al inicio de la página -->
-  <script async src="../../Public/JS/main.js"></script>
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 
@@ -154,45 +145,50 @@
 
   <br>
   <br>
-</header>
 
+  <div class="container1">
+    <img src="../../Tienda/tiendaLicores/Img/charanda-licores_M.jpeg" alt="Portada" class="special-image">
+</div>
+<br>
+<br>
+<div class="container-list">
+    <h1>Vinos y Licores artesanales</h1>
+    <p class="text-artesanias">
+      México cuenta con una rica tradición en la producción de licores, muchos de los cuales son conocidos internacionalmente. Herencia Mexicarties ofrece una variedad de licores que reflejan la diversidad cultural y la artesanía destiladora del país. Aquí tienes algunas opciones que podrías encontrar con nosotros:
+    </div>
+    
 <!--Contenido-->
-<!-- <div class="container">
-  <div class="input-group mb-3">
-      <input type="text" class="form-control" id="searchBar" placeholder="Buscar por lugar, tipo o artesano"
-          oninput="filtrarProductos()">
-  </div>
+<div class="container">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" id="searchBar" placeholder="Buscar por lugar, tipo o artesano"
+            oninput="filtrarProductos()">
+    </div>
 
-  <div id="productosContainer" class="row">
+    <div id="productosContainer" class="row">
 
-  </div>
-  <br>
-</div> -->
-
-  <div class="container">
-    <img src="../tiendaLicores/Img/charanda-licores_M.jpeg" alt="" class="special-image">
-  </div>
-  <div class="container-list">
-  <h1 class="subTitulo-Tienda">Vinos y Licores Artesanales Mexicanos</h1>
-  <p class="text-licores">México cuenta con una rica tradición en la producción de licores, muchos de los cuales son conocidos internacionalmente. Herencia Mexicarties ofrece una variedad de licores que reflejan la diversidad cultural y la artesanía destiladora del país. Aquí tienes algunas opciones que podrías encontrar con nosotros:</p>
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4" id="liquor-grid"></div>
-  </div>
-
+    </div>
+    <br>
+    <div class="text-center">
+        <button class="btn btn-mostrar-mas" onclick="mostrarMasProductos()"
+            style="background-color: #ff0646; border: #ffff; color: #ffff;">Ver más vinos y licores</button>
+    </div>
+</div>
+<br>
+<br>
 <!-- Modal para mostrar la información detallada del producto -->
 <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="productModalLabel">Detalles del Producto</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body" id="productModalBody" class="btn-huacal">
-        <!-- Aquí se mostrará la información detallada del producto -->
-      </div>
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel">Detalles del Producto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="productModalBody">
+                <!-- Aquí se mostrará la información detallada del producto -->
+            </div>
+        </div>
     </div>
-  </div>
 </div>
-
 
 
   <!-- INCIO Pie de Página -->
@@ -242,14 +238,9 @@
       </div>
     </div>
   </footer>
-  <!-- FINAL del Pie de Página -->
-  <!-- Script para desplazarse al inicio de la página -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-  <!--Script para productos-->
-  <script src="./JS/tiendaLicores.js"></script>
-  <!--Scripts adicionales-->
-  <script src="../CrearCuenta/js/crearCuenta.js"></script>
-  <script src="../Login/js/login.js"></script>
+  <script src="../../Tienda/tiendaLicores/JS/tiendaLicores.js"></script>
+    <script src="../../Public/JS/main.js"></script>
+    <script async defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
