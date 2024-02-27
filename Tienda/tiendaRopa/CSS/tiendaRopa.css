@@ -234,7 +234,7 @@ h1 {
 }
 
 .darkmode .modal-content {
-    background-color: #000000;
+    background-color: #1d2a35 ;
     /* Cambiar el color de fondo del modal en modo oscuro */
     color: #fff;
     /* Cambiar el color del texto en el modal en modo oscuro */
@@ -313,3 +313,4 @@ body.darkmode .dark-card .card-text {
     background-color: #ff0646 !important;
     color: #fff !important;
 }
+
