@@ -130,6 +130,12 @@ display: flex;
 align-items: center;
 }
 
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item:hover {
+    background-color: #FF0646 !important;
+    color: #ffffff;
+}
+
 /* -------------- DARKMODE -------------- */
 
 /* -------------- BUTTON -------------- */
