@@ -16,13 +16,14 @@
 </head>
 
 <body>
-  
+
   <!-- Barra de navegación -->
   <header class="estilo-header">
 
     <div class="container options-user">
       <span id="textUser"></span>
       <button id="btn-sign-off"><a class="navbar-brand" id="txt-sign-off">Cerrar sesión</a></button>
+
       <button id="btn-register"><a class="navbar-brand" id="txt-register" href="../CrearCuenta/crearCuenta.html">Registrarse</a></button>
       <button id="btn-login"><a class="navbar-brand" id="txt-login" href="../Login/login.html">Iniciar sesión</a></button>
     </div>
@@ -125,61 +126,28 @@
   </section>
 
 
-    <main>
-        <div class="contenedor-principal row">
-            <div class="contenido-productos col-lg-8">
-                <div class="card product-card mb-3">
-                    <div class="row g-0">
-                        <div class="col-md-4 d-flex justify-content-center align-items-center">
-                            <img src="./img/huacal.png" class="img-fluid rounded-start" alt="Producto">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between">
-                                    <!-- Detalles del producto como el nombre y el artesano -->
-                                    <div class="card-info">
-                                        <h5 class="card-title">Nombre producto</h5>
-                                        <p class="card-text">Talla M</p>
-                                        <p class="card-text">Artesano Chayane</p>
-                                    </div>
-                                    <!-- Selector de cantidad -->
-                                    <div class="quantity-selector d-flex flex-row align-items-center">
-                                        <button class="btn d-flex align-items-center justify-content-center incrementar-disminuir"> - </button>
-                                        <input type="text" value="1" class="form-control">
-                                        <button class="btn d-flex align-items-center justify-content-center incrementar-disminuir"> + </button>
-                                    </div>
-                                    <!-- Precio -->
-                                    <p class="price mb-2 mb-sm-0">$500 MXN</p>
-                                </div>
-                                <div class="mt-auto"> <!-- Esta clase empuja el contenido hacia abajo -->
-                                    <div class="btn-container d-flex justify-content-between mt-2">
-                                        <button class="btn btn-opcion w-100 me-1 justify-content-center">Eliminar</button> <!-- me-1 añade un pequeño margen a la derecha -->
-                                        <button class="btn btn-opcion w-100 ms-1 justify-content-center">Guardar para después</button> <!-- ms-1 añade un pequeño margen a la izquierda -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <main>
+    <div class="contenedor-principal row">
+      <div class="contenido-productos col-lg-8">
+      </div>
 
-            <div class="resumen col-lg-4">
-                <h3 class="text-center">Resumen de compra</h3>
+      <div class="resumen col-lg-4">
+        <h3 class="text-center">Resumen de compra</h3>
 
-                <div class="item-resumen d-flex justify-content-between">
-                    <span>Productos (3)</span>
-                    <span>$1,500 MXN</span>
-                </div>
+        <div class="item-resumen d-flex justify-content-between">
+          <span>Productos (3)</span>
+          <span>$1,500 MXN</span>
+        </div>
 
-                <div class="item-resumen d-flex justify-content-between">
-                    <span>Costo de envío</span>
-                    <span>$150 MXN</span>
-                </div>
+        <div class="item-resumen d-flex justify-content-between">
+          <span>Costo de envío</span>
+          <span>$150 MXN</span>
+        </div>
 
-                <div class="item-resumen d-flex justify-content-between">
-                    <span>Impuestos</span>
-                    <span>$200 MXN</span>
-                </div>
+        <div class="item-resumen d-flex justify-content-between">
+          <span>Impuestos</span>
+          <span>$200 MXN</span>
+        </div>
 
                 <div class="total d-flex justify-content-between">
                     <strong>Total</strong>
@@ -190,8 +158,8 @@
                 </div>
             </div>
 
-        </div>
-    </main>
+    </div>
+  </main>
 
   <!-- INCIO Pie de Página -->
   <footer>
@@ -254,7 +222,7 @@
   <script src="/Public/JS/main.js"></script>
   <!--Propios-->
   <script src="./js/huacal.js"></script>
-  
+
 </body>
 
 </html>
