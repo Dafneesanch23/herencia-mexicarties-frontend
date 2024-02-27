@@ -57,8 +57,8 @@ function mostrarProductos(productosAMostrar) {
     productosAMostrar.slice(0, productosPorPagina).forEach(producto => {
         const productoCard = `
     <div class="col-md-3 producto dark-card">
-        <div class="card option_container" id="${producto.id}" data-producto='${JSON.stringify(producto)}' onclick="mostrarDetallesProducto.call(this)"">
-            <img src="${producto.imagen_url}" class="card-img-top" alt="${producto.nombre}">
+    <div class="card option_container" id="${producto.id}" data-producto='${JSON.stringify(producto)}' onclick="mostrarDetallesProducto(event)">
+    <img src="${producto.imagen_url}" class="card-img-top" alt="${producto.nombre}">
             <div class="card-body">
                 <h5 class="card-title">${producto.nombre}</h5>
                 <p class="card-text">Precio: ${producto.precio} MXN</p>
@@ -87,8 +87,8 @@ async function mostrarMasProductos() {
     productos.slice(productosMostrados, productosMostrados + productosPorPagina).forEach(producto => {
         const productoCard = `
         <div class="col-md-3 producto dark-card">
-        <div class="card option_container" id="${producto.id}" data-producto='${JSON.stringify(producto)}' onclick="mostrarDetallesProducto.call(this)">
-            <img src="${producto.imagen_url}" class="card-img-top" alt="${producto.nombre}">
+        <div class="card option_container" id="${producto.id}" data-producto='${JSON.stringify(producto)}' onclick="mostrarDetallesProducto(event)">
+        <img src="${producto.imagen_url}" class="card-img-top" alt="${producto.nombre}">
             <div class="card-body">
                 <h5 class="card-title">${producto.nombre}</h5>
                 <p class="card-text">Precio: ${producto.precio}MXN</p>
@@ -115,8 +115,13 @@ function echarAlHuacal() {
     huacalNumber.innerText = newCount;
 }
 
-function mostrarDetallesProducto() {
-    const productoString = this.getAttribute('data-producto');
+function mostrarDetallesProducto(event) {
+    const productoElement = event.currentTarget;
+    const productoString = productoElement.getAttribute('data-producto');
+    if (!productoString) {
+        console.error('No se pudo obtener el producto.');
+        return;
+    }
     const producto = JSON.parse(productoString);
     const modalBody = document.getElementById('productModalBody');
     modalBody.innerHTML = `
@@ -127,7 +132,6 @@ function mostrarDetallesProducto() {
       <button class="btn btn-echar-huacal" onclick="echarAlHuacal()">Echar al Huacal</button>
       <button class="btn btn-comprar">Comprar</button>
     `;
-
     $('#productModal').modal('show');
 }
 
