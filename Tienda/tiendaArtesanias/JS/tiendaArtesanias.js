@@ -151,11 +151,4 @@ function mostrarDetallesProducto() {
 
 /*Funciones a correr*/
 
-window.onload = function () {
-    const huacalNumber = localStorage.getItem('huacalNumber');
-    if (huacalNumber !== null) {
-        document.getElementById('huacal-number').innerText = huacalNumber;
-    }
-}
-
 cargarProductos();
