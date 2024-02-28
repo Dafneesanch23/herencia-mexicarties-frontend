@@ -13,6 +13,7 @@
     <!--Funcionalidad con JS-->
     <script async defer src="../DescubreMéxico/JS/descubreMexico.js"></script>
     <script async defer src="../Public/JS/main.js"></script>
+    <script async defer src="../DescubreMéxico/JS/traductor.js"></script>
     <!--ICONS CDN DARK MODE-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -135,7 +136,7 @@
     <div class="heading_container heading_center">
       <div class="container">
         <div class="heading_container heading_center">
-          <h4>D E S C U B R E </h4> 
+          <h4 id="texto1">D E S C U B R E </h4> 
           <h3> <span>MÉXICO</span></h3>  
         </div>
       </div>
@@ -147,7 +148,7 @@
 <p class="text-center"></p>
 </div>
      </div>
-   <p class="border-top border-3">
+   <p class="border-top border-3" id="textoBienvenida">
      <br>México es un país con una gran diversidad cultural. 
      <br>Si bien en nuestro sitio puedes adquirir una amplia variedad de las artesanias de nuestro país,
      <br>la riqueza artesanal que tenemos no nos hace posible tener aquí todo lo que se produce en México
@@ -1951,56 +1952,55 @@ La cerámica también juega un papel importante en la escena artesanal, con art�
 </div>
 <div class="my-4"></div>
 
-<!-- INCIO Pie de Página -->
-<footer>
-  <!-- Sección de Descripción -->
-  <div class="descripcion-section">
+
+  <!-- INCIO Pie de Página -->
+  <footer>
+    <!-- Sección de Descripción -->
+    <div class="descripcion-section">
       <div class="descripcion-content container">
-          <h4> Tejemos historias de tradición y pasión </h4> 
-          <div class="container"> 
-              <h3 class="text-center"> Descubre la autenticidad de México en cada detalle</h3>
-          </div>
-          <a href="#top">
-              <img src="../../Public/Imagenes/logo.png" alt="México" class="img-fluid mt-2">
+        <h4 id="textfooter1"> Tejemos historias de tradición y pasión </h4>
+        <div class="container">
+          <h3 class="text-center" id="textfooter2"> Descubre la autenticidad de México en cada detalle</h3>
+        </div>
+        <a href="#top">
+          <img src="/Public/Imagenes/logo.png" alt="México" class="img-fluid mt-2">
+        </a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 footer-left">
+          <ul>
+            <li><a href="/Terminos/TerminosCondiciones.html" class="footer-link" id="footerlink1">Términos y
+                condiciones</a></li>
+            <li><a href="/Contacto/contact.html" class="footer-link" id="footerlink2">Servicio al cliente</a></li>
+            <li><a href="/QuienesSomos/QuienesSomos.html" class="footer-link" id="footerlink3">Conócenos</a></li>
+            <li><a href="/Politicas/politicasPrivacidad.html" class="footer-link" id="footerlink4">Políticas de
+                privacidad</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 footer-center">
+          <p id="textfooter3">Recibe información exclusiva y promociones vía email</p>
+
+          <a href="/CrearCuenta/crearCuenta.html">
+            <button id="subscribeButton">Registrate</button>
           </a>
-      </div>
-  </div>
 
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-4 footer-left">
-              <ul>
-                  <li><a href="../../Terminos/TerminosCondiciones.html" class="footer-link">Términos y condiciones</a></li>
-                  <li><a href="../../Contacto/contact.html" class="footer-link">Servicio al cliente</a></li>
-                  <li><a href="../../QuienesSomos/QuienesSomos.html" class="footer-link">Conócenos</a></li>
-                  <li><a href="../../Politicas/politicasPrivacidad.html" class="footer-link">Políticas de privacidad</a></li>
-              </ul>
+        </div>
+        <div class="col-lg-4 footer-right">
+          <a href="#" class="footer-link" id="textfooter4">Métodos de pago</a>
+          <div class="img-pagos-container">
+            <img class="img-pagos" src="/Public/Imagenes/pagos.jpg" alt="logo-mercado-pago">
           </div>
-          <div class="col-lg-4 footer-center">
-              <p>Recibe información exclusiva y promociones vía email</p>
-
-              <a href="../../Login/login.html">
-                  <button id="subscribeButton">Suscríbete</button>
-              </a>
-
-          </div>
-          <div class="col-lg-4 footer-right">
-              <a href="#" class="footer-link">Métodos de pago</a>
-              <div class= "img-pagos-container">
-              <img class="img-pagos" src="../../Public/Imagenes/pagos.jpg" alt="logo-mercado-pago">
-              </div>
-          </div>
+        </div>
       </div>
       <div class="row">
-          <div class="col-lg-12 bottom-text">
-              <p>&copy; 2024 Herencia Mexicarties</p>
-          </div>
+        <div class="col-lg-12 bottom-text">
+          <p>&copy; 2024 Herencia Mexicarties</p>
+        </div>
       </div>
-  </div>
-</footer>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</body>
+    </div>
+  </footer>
   <!-- FINAL del Pie de Página -->
 </html>
