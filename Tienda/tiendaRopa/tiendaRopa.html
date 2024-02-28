@@ -169,31 +169,28 @@
           Tejida a mano y bordada con técnicas tradicionales, utiliza materiales locales y se distingue por colores vivos y diseños detallados.
           Prendas como huipiles y sarapes reflejan la identidad única de cada región, incorporando motivos florales y simbolismo cultural.
           Más allá de su aspecto estético, esta ropa representa la diversidad y la historia de las comunidades indígenas y regionales de México.</p>
-    </div>
-    <!--Contenido-->
+    </div><!--Contenido-->
     <div class="container">
         <div class="input-group mb-3">
             <input type="text" class="form-control" id="searchBar" placeholder="Buscar por lugar, tipo o artesano"
                 oninput="filtrarProductos()">
         </div>
-
+    
         <div id="productosContainer" class="row">
-
+    
         </div>
         <br>
         <div class="text-center">
             <button class="btn btn-mostrar-mas" onclick="mostrarMasProductos()"
-                style="background-color: #ff0646; border: #ffff; color: #ffff;">Ver más artesanias</button>
-        </div>
+                style="background-color: #ff0646; border: #ffff; color: #fff;">Ver más ropa</div>
     </div>
-<br>
-<br>
+    <br>
+    <br>
     <!-- Modal para mostrar la información detallada del producto -->
     <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="productModalLabel">Detalles del Producto</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="productModalBody">
@@ -202,7 +199,8 @@
             </div>
         </div>
     </div>
-
+    
+    
     <!--footer-->
     <footer>
         <!-- Sección de Descripción -->

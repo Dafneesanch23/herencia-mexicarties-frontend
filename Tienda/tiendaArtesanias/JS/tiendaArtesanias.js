@@ -111,28 +111,59 @@ async function mostrarMasProductos() {
     btnMostrarMas.style.display = productos.length > productosMostrados ? 'block' : 'none';
 }
 
-function echarAlHuacal() {
-    var huacalNumber = document.getElementById('huacal-number');
-    var currentCount = parseInt(huacalNumber.innerText);
-    var newCount = currentCount + 1;
-    huacalNumber.innerText = newCount;
-}
-
 function mostrarDetallesProducto() {
     const productoString = this.getAttribute('data-producto');
     const producto = JSON.parse(productoString);
     const modalBody = document.getElementById('productModalBody');
+
+    window.echarAlHuacal = function () {
+        var boton = this;
+        var huacalNumber = document.getElementById('huacal-number');
+        var currentCount = parseInt(huacalNumber.innerText);
+        var newCount = currentCount + 1;
+        huacalNumber.innerText = newCount;
+
+        localStorage.setItem('huacalNumber', newCount);
+
+        var storedProducts = JSON.parse(localStorage.getItem('storedProducts')) || [];
+        storedProducts.push(producto);
+        localStorage.setItem('storedProducts', JSON.stringify(storedProducts));
+
+    };
+
     modalBody.innerHTML = `
       <h2>${producto.nombre}</h2>
       <img src="${producto.imagen_url}" alt="${producto.nombre}">
       <p>${producto.descripcion}</p>
       <p>Precio: $${producto.precio}</p>
-      <button class="btn btn-echar-huacal" onclick="echarAlHuacal()">Echar al Huacal</button>
+      <button class="btn btn-echar-huacal" onclick="echarAlHuacal.call(this)">Echar al Huacal</button>
       <button class="btn btn-comprar">Comprar</button>
     `;
 
     $('#productModal').modal('show');
 }
+/*
+function echarAlHuacal(boton) {
+    var huacalNumber = document.getElementById('huacal-number');
+    var currentCount = parseInt(huacalNumber.innerText);
+    var newCount = currentCount + 1;
+    huacalNumber.innerText = newCount;
+
+    localStorage.setItem('huacalNumber', newCount);
+
+    var productoString = boton.closest('.option_container').getAttribute('data-producto');
+    var producto = JSON.parse(productoString);
+    console.log(productoString);
+
+    // Obtener los productos guardados previamente o inicializar como un array vacío
+    var storedProducts = JSON.parse(localStorage.getItem('storedProducts')) || [];
+
+    // Agregar el nuevo producto a la lista de productos guardados
+    storedProducts.push(producto);
+
+    // Guardar la lista de productos en el almacenamiento local
+    localStorage.setItem('storedProducts', JSON.stringify(storedProducts));
+}*/
 
 /*Funciones a correr*/
 

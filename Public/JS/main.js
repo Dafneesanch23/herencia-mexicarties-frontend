@@ -5,7 +5,7 @@ const icon = document.querySelector('.btn__icon');
 //to save the dark mode use the object "local storage".
 
 //function that stores the value true if the dark mode is activated or false if it's not.
-function store(value){
+function store(value) {
   localStorage.setItem('darkmode', value);
 }
 
@@ -14,17 +14,17 @@ function toggleDarkMode() {
 }
 
 //function that indicates if the "darkmode" property exists. It loads the page as we had left it.
-function load(){
+function load() {
   const darkmode = localStorage.getItem('darkmode');
 
   //if the dark mode was never activated
-  if(!darkmode){
+  if (!darkmode) {
     store(false);
     icon.classList.add('fa-sun');
-  } else if( darkmode == 'true'){ //if the dark mode is activated
+  } else if (darkmode == 'true') { //if the dark mode is activated
     body.classList.add('darkmode');
     icon.classList.add('fa-moon');
-  } else if(darkmode == 'false'){ //if the dark mode exists but is disabled
+  } else if (darkmode == 'false') { //if the dark mode exists but is disabled
     icon.classList.add('fa-sun');
   }
 }
@@ -39,18 +39,38 @@ btn_dark.addEventListener('click', () => {
   //save true or false
   store(body.classList.contains('darkmode'));
 
-  if(body.classList.contains('darkmode')){
+  if (body.classList.contains('darkmode')) {
     icon.classList.remove('fa-sun');
     icon.classList.add('fa-moon');
-  }else{
+  } else {
     icon.classList.remove('fa-moon');
     icon.classList.add('fa-sun');
   }
 
-  setTimeout( () => {
+  setTimeout(() => {
     icon.classList.remove('animated');
   }, 500)
 })
+
+// Selecciona el elemento del botón de hamburguesa
+const navbarToggler = document.querySelector('.navbar-toggler');
+
+// Función para cambiar el color del cursor
+function changeCursorColor() {
+  if (document.body.classList.contains('darkmode')) {
+    // Modo oscuro
+    navbarToggler.style.cursor = 'pointer';
+    navbarToggler.style.backgroundColor = '#ffffff'; 
+  } else {
+    // Modo claro
+    navbarToggler.style.cursor = 'pointer';
+    navbarToggler.style.backgroundColor = '#FF0646'; 
+  }
+}
+
+// Agrega un evento para llamar a la función cuando el cursor pasa sobre el botón de hamburguesa
+navbarToggler.addEventListener('mouseover', changeCursorColor);
+
 
 /****************************/
 /* Boton para cambiar idioma*/
@@ -114,3 +134,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+/******************************************/
+/*        Número Huacal                   */
+/******************************************/
+window.onload = function () {
+  const huacalNumber = localStorage.getItem('huacalNumber');
+  if (huacalNumber !== null) {
+    document.getElementById('huacal-number').innerText = huacalNumber;
+  }
+}
+
