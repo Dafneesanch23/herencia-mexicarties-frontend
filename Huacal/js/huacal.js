@@ -20,9 +20,9 @@ function mostrarProductosHuacal() {
                                 <p class="card-text">Artesano ${producto.artesano}</p>
                             </div>
                             <div class="quantity-selector d-flex flex-row align-items-center">
-                                <button class="btn btn-outline-secondary justify-content-center incrementar-disminuir" onclick="disminuirCantidad(this.nextElementSibling)"> - </button>
-                                <input type="text" value="1" class="form-control">
-                                <button class="btn btn-outline-secondary justify-content-center incrementar-disminuir" onclick="aumentarCantidad(this.previousElementSibling)"> + </button>
+                                <button class="btn  justify-content-center incrementar-disminuir" onclick="disminuirCantidad(this.nextElementSibling)"> - </button>
+                                <input type="text" value="1" class="count-form form-control">
+                                <button class="btn  justify-content-center incrementar-disminuir" onclick="aumentarCantidad(this.previousElementSibling)"> + </button>
                             </div>
                             <p class="price mb-2 mb-sm-0">$${producto.precio} USD</p>
                         </div>
@@ -51,7 +51,7 @@ function disminuirCantidad(input) {
         cantidad--;
         input.value = cantidad;
         var cardBody = input.closest('.card-body');
-        var precio = parseFloat(cardBody.querySelector('.price').innerText.replace('$', '').replace(' USD', ''));
+        var precio = parseFloat(cardBody.querySelector('.price').innerText.replace('$', '').replace(' MXN', ''));
         var cantidad = parseInt(input.value);
         var total = precio / (cantidad + 1) * cantidad;
         cardBody.querySelector('.price').innerText = '$' + total.toFixed(2) + ' USD';
@@ -70,7 +70,7 @@ function aumentarCantidad(input) {
     cantidad++;
     input.value = cantidad;
     var cardBody = input.closest('.card-body');
-    var precio = parseFloat(cardBody.querySelector('.price').innerText.replace('$', '').replace(' USD', ''));
+    var precio = parseFloat(cardBody.querySelector('.price').innerText.replace('$', '').replace(' MXN', ''));
     var cantidad = parseInt(input.value);
     var total = precio / (cantidad - 1) * cantidad;
     cardBody.querySelector('.price').innerText = '$' + total.toFixed(2) + ' USD';
