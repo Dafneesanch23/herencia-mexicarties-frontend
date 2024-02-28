@@ -7,6 +7,13 @@ main {
     padding-bottom: 10rem;
 }
 
+.card-container{
+    padding-bottom: 20%;
+    padding-top: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 .card {
     border-color: black;
     border-width: 2px;
@@ -43,7 +50,7 @@ main {
 
 
 .btn-primary {
-    width: 40%; 
+    width: 45%; 
     margin: 0 auto; 
     background-color: var(--color6);
     border-radius: 30px;

@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const validatePassword = (password) => {
             // Expresion regular para la validación de contraseña 
             // (Una minúscula, una mayúscula, un dígito y una longitud de 6 como mínimo)
-            const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/;
+            const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d$!"@#%^&*()-_+=¿?{}/]{6,}$/;
             return re.test(password);
         };
 

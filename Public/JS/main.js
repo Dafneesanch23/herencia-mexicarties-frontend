@@ -52,6 +52,26 @@ btn_dark.addEventListener('click', () => {
   }, 500)
 })
 
+// Selecciona el elemento del botón de hamburguesa
+const navbarToggler = document.querySelector('.navbar-toggler');
+
+// Función para cambiar el color del cursor
+function changeCursorColor() {
+  if (document.body.classList.contains('darkmode')) {
+    // Modo oscuro
+    navbarToggler.style.cursor = 'pointer';
+    navbarToggler.style.backgroundColor = '#ffffff'; 
+  } else {
+    // Modo claro
+    navbarToggler.style.cursor = 'pointer';
+    navbarToggler.style.backgroundColor = '#FF0646'; 
+  }
+}
+
+// Agrega un evento para llamar a la función cuando el cursor pasa sobre el botón de hamburguesa
+navbarToggler.addEventListener('mouseover', changeCursorColor);
+
+
 /****************************/
 /* Boton para cambiar idioma*/
 /****************************/
@@ -114,6 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
 /******************************************/
 /*        Número Huacal                   */

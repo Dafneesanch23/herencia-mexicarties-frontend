@@ -130,6 +130,12 @@ display: flex;
 align-items: center;
 }
 
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item:hover {
+    background-color: #FF0646 !important;
+    color: #ffffff;
+}
+
 /* -------------- DARKMODE -------------- */
 
 /* -------------- BUTTON -------------- */
@@ -168,6 +174,7 @@ align-items: center;
   color: var(--light-icon-color);
   font-size: 1rem;
 }
+
 
 /* -------------- ANIMATION ------------ */
 .btn__icon.animated{
@@ -224,6 +231,23 @@ body.darkmode .heading_container h3 {
 body.darkmode .heading_container h3::after {
     background: var(--light-color);
 }
+
+/* Estilo predeterminado del cursor cuando no está en modo oscuro */
+.navbar-toggler {
+  background-color: #FF0646; 
+}
+
+/* Cambia el color del cursor al pasar sobre el menú de hamburguesa */
+.navbar-toggler:hover {
+  background-color: #ffffff; 
+  cursor: pointer; 
+}
+
+/* Cambia automáticamente el color del menú de hamburguesa al blanco en modo oscuro */
+.darkmode .navbar-toggler {
+  background-color: #ffffff !important; 
+}
+
 
     /* Otras reglas de estilo para el modo oscuro */
 .darkmode {
