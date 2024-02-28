@@ -298,10 +298,12 @@ body.darkmode .dark-card .card-text {
   #productModal .modal-dialog .modal-content .modal-body {
     font-size: 16px; 
     line-height: 1.6; 
+    
   }
   
   #productModal .modal-dialog .modal-content .modal-body p {
     margin-bottom: 15px; 
+    
   }
 }
 
@@ -309,6 +311,7 @@ body.darkmode .dark-card .card-text {
 @media (max-width: 991px) {
   #productModal .modal-dialog {
     max-width: 80%;
+    margin: 0 auto;
   }
 }
 
