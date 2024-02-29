@@ -21,8 +21,8 @@ for (let i = 4; i <= 25; i++) {
         artesano: `Artesano${i}`,
         imagen: { url: `url_imagen_${i}.jpg`, alt: `${tipo} ${i}` },
         precio: getRandomNumber(50, 300),
-        lugarFabricacion: 'Puebla'
-    };
+        lugarFabricacion: ('Puebla','Baja California Sur')
+        };
 
     productos.push(nuevoProducto);
 }

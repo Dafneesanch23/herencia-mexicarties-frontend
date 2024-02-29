@@ -1,6 +1,3 @@
-
-
-
 /*Productos de tienda*/
 let productosMostrados = 0;
 const productosPorPagina = 15;
