@@ -16,7 +16,6 @@ function mostrarProductosHuacal() {
                         <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between">
                             <div class="card-info">
                                 <h5 class="card-title">${producto.nombre}</h5>
-                                <p class="card-text">${producto.descripcion}</p>
                                 <p class="card-text">Artesano ${producto.artesano}</p>
                             </div>
                             <div class="quantity-selector d-flex flex-row align-items-center">
