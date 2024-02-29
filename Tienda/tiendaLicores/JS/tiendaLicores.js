@@ -39,14 +39,17 @@ async function filtrarProductos() {
     const csvData = await response.text();
     const productos = parseCSV(csvData);
 
-    const productosFiltrados = productos.filter(producto =>
-        producto.lugar_fabricacion.toLowerCase().includes(filtro) ||
-        producto.tipo.toLowerCase().includes(filtro) ||
-        producto.artesano.toLowerCase().includes(filtro)
-    );
+    const productosFiltrados = productos.filter(producto => {
+        const lugarFabricacion = (producto.lugar_fabricacion || '').toLowerCase();
+        const tipo = (producto.tipo || '').toLowerCase();
+        const artesano = (producto.artesano || '').toLowerCase();
+
+        return lugarFabricacion.includes(filtro) || tipo.includes(filtro) || artesano.includes(filtro);
+    });
 
     mostrarProductos(productosFiltrados);
 }
+
 
 //mostrar productos
 function mostrarProductos(productosAMostrar) {
