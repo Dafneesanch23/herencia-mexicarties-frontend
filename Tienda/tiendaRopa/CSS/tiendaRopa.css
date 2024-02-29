@@ -309,6 +309,7 @@ body.darkmode .dark-card .card-text {
 @media (max-width: 991px) {
   #productModal .modal-dialog {
     max-width: 80%;
+    margin: 0 auto;
   }
 }
 

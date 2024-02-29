@@ -1,6 +1,7 @@
 function mostrarProductosHuacal() {
     const storedProducts = JSON.parse(localStorage.getItem('storedProducts')) || [];
     const huacalContainer = document.querySelector('.contenido-productos');
+    let totalPrecio = 0;
     huacalContainer.innerHTML = '';
 
     storedProducts.forEach(producto => {
@@ -19,9 +20,9 @@ function mostrarProductosHuacal() {
                                 <p class="card-text">Artesano ${producto.artesano}</p>
                             </div>
                             <div class="quantity-selector d-flex flex-row align-items-center">
-                                <button class="btn btn-outline-secondary justify-content-center incrementar-disminuir" onclick="disminuirCantidad(this.nextElementSibling)"> - </button>
-                                <input type="text" value="1" class="form-control">
-                                <button class="btn btn-outline-secondary justify-content-center incrementar-disminuir" onclick="aumentarCantidad(this.previousElementSibling)"> + </button>
+                                <button class="btn  justify-content-center incrementar-disminuir" onclick="disminuirCantidad(this.nextElementSibling)"> - </button>
+                                <input type="text" value="1" class="count-form form-control">
+                                <button class="btn  justify-content-center incrementar-disminuir" onclick="aumentarCantidad(this.previousElementSibling)"> + </button>
                             </div>
                             <p class="price mb-2 mb-sm-0">$${producto.precio} USD</p>
                         </div>
@@ -36,7 +37,12 @@ function mostrarProductosHuacal() {
         </div>
         `;
         huacalContainer.innerHTML += productoCard;
+        totalPrecio += parseFloat(producto.precio);
     });
+    localStorage.setItem('totalPrecio', totalPrecio.toFixed(2));
+    document.querySelector('.productos-precio').textContent = `$ ${totalPrecio} MXN`;
+    totalCompra = totalPrecio + 200;
+    document.querySelector('.total-de-compra').textContent = `$ ${totalCompra} MXN`;
 }
 
 function disminuirCantidad(input) {
@@ -45,10 +51,17 @@ function disminuirCantidad(input) {
         cantidad--;
         input.value = cantidad;
         var cardBody = input.closest('.card-body');
-        var precio = parseFloat(cardBody.querySelector('.price').innerText.replace('$', '').replace(' USD', ''));
+        var precio = parseFloat(cardBody.querySelector('.price').innerText.replace('$', '').replace(' MXN', ''));
         var cantidad = parseInt(input.value);
         var total = precio / (cantidad + 1) * cantidad;
-        cardBody.querySelector('.price').innerText = '$' + total.toFixed(2) + ' USD';
+        cardBody.querySelector('.price').innerText = '$' + total.toFixed(2) + ' MXN';
+        var huacalNumber = document.getElementById('huacal-number');
+        var currentCount = parseInt(huacalNumber.innerText);
+        var newCount = currentCount - 1;
+        huacalNumber.innerText = newCount;
+        localStorage.setItem('huacalNumber', newCount);
+        document.querySelector('.productos-resumen').textContent = `Productos (${newCount})`;
+        actualizarPrecioTotal();
     }
 }
 
@@ -57,10 +70,29 @@ function aumentarCantidad(input) {
     cantidad++;
     input.value = cantidad;
     var cardBody = input.closest('.card-body');
-    var precio = parseFloat(cardBody.querySelector('.price').innerText.replace('$', '').replace(' USD', ''));
+    var precio = parseFloat(cardBody.querySelector('.price').innerText.replace('$', '').replace(' MXN', ''));
     var cantidad = parseInt(input.value);
     var total = precio / (cantidad - 1) * cantidad;
-    cardBody.querySelector('.price').innerText = '$' + total.toFixed(2) + ' USD';
+    cardBody.querySelector('.price').innerText = '$' + total.toFixed(2) + ' MXN';
+    var huacalNumber = document.getElementById('huacal-number');
+    var currentCount = parseInt(huacalNumber.innerText);
+    var newCount = currentCount + 1;
+    huacalNumber.innerText = newCount;
+    localStorage.setItem('huacalNumber', newCount);
+    document.querySelector('.productos-resumen').textContent = `Productos (${newCount})`;
+    actualizarPrecioTotal();
+}
+
+function actualizarPrecioTotal() {
+    const precios = document.querySelectorAll('.price');
+    let totalPrecio = 0;
+    precios.forEach(precio => {
+        totalPrecio += parseFloat(precio.innerText.replace('$', '').replace(' MXN', ''));
+    });
+    localStorage.setItem('totalPrecio', totalPrecio.toFixed(2));
+    document.querySelector('.productos-precio').textContent = `$ ${totalPrecio} MXN`;
+    totalCompra = totalPrecio + 200;
+    document.querySelector('.total-de-compra').textContent = `$ ${totalCompra} MXN`;
 }
 
 function sacarDelHuacal(button) {
@@ -77,6 +109,7 @@ function sacarDelHuacal(button) {
     storedProducts = storedProducts.filter(product => product.nombre !== productName);
     localStorage.setItem('storedProducts', JSON.stringify(storedProducts));
     card.remove();
+    actualizarPrecioTotal();
 }
 
 mostrarProductosHuacal()

@@ -15,6 +15,7 @@
     <!--Funcionalidad con JS-->
     <script async src="./JS/contacto.js"></script>
     <script async src="../Public/JS/main.js"></script>
+    <script async src="../Contacto/js/traductor.js"></script>
     <!--ICONS CDN DARK MODE-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -53,9 +54,9 @@
               <a class="nav-link" href="../Inicio/inicio.html" id="homelink">INICIO</a>
             </li>
 
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown" >
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
+                data-bs-toggle="dropdown" aria-expanded="false" >
                 TIENDA
               </a>
               <ul class="dropdown-menu estilos-navbar" aria-labelledby="navbarDropdownMenuLink">
@@ -321,17 +322,18 @@
 
   
 
+
   <!-- INCIO Pie de Página -->
   <footer>
     <!-- Sección de Descripción -->
     <div class="descripcion-section">
       <div class="descripcion-content container">
-        <h4> Tejemos historias de tradición y pasión </h4>
+        <h4 id="textfooter1"> Tejemos historias de tradición y pasión </h4>
         <div class="container">
-          <h3 class="text-center"> Descubre la autenticidad de México en cada detalle</h3>
+          <h3 class="text-center" id="textfooter2"> Descubre la autenticidad de México en cada detalle</h3>
         </div>
         <a href="#top">
-          <img src="../Public/Imagenes/logo.png" alt="México" class="img-fluid mt-2">
+          <img src="/Public/Imagenes/logo.png" alt="México" class="img-fluid mt-2">
         </a>
       </div>
     </div>
@@ -340,24 +342,26 @@
       <div class="row">
         <div class="col-lg-4 footer-left">
           <ul>
-            <li><a href="../Terminos/TerminosCondiciones.html" class="footer-link">Términos y condiciones</a></li>
-            <li><a href="./contact.html" class="footer-link">Servicio al cliente</a></li>
-            <li><a href="/QuienesSomos/QuienesSomos.html" class="footer-link">Conócenos</a></li>
-            <li><a href="../Politicas/politicasPrivacidad.html" class="footer-link">Políticas de privacidad</a></li>
+            <li><a href="/Terminos/TerminosCondiciones.html" class="footer-link" id="footerlink1">Términos y
+                condiciones</a></li>
+            <li><a href="/Contacto/contact.html" class="footer-link" id="footerlink2">Servicio al cliente</a></li>
+            <li><a href="/QuienesSomos/QuienesSomos.html" class="footer-link" id="footerlink3">Conócenos</a></li>
+            <li><a href="/Politicas/politicasPrivacidad.html" class="footer-link" id="footerlink4">Políticas de
+                privacidad</a></li>
           </ul>
         </div>
         <div class="col-lg-4 footer-center">
-          <p>Recibe información exclusiva y promociones vía email</p>
+          <p id="textfooter3">Recibe información exclusiva y promociones vía email</p>
 
-          <a href="../Login/login.html">
-            <button id="subscribeButton">Suscríbete</button>
+          <a href="/CrearCuenta/crearCuenta.html">
+            <button id="subscribeButton">Registrate</button>
           </a>
 
         </div>
         <div class="col-lg-4 footer-right">
-          <a href="../ProcesoCompra/ProcesoCompra.html" class="footer-link">Métodos de pago</a>
+          <a href="#" class="footer-link" id="textfooter4">Métodos de pago</a>
           <div class="img-pagos-container">
-            <img class="img-pagos" src="../Public/Imagenes/pagos.jpg" alt="logo-mercado-pago">
+            <img class="img-pagos" src="/Public/Imagenes/pagos.jpg" alt="logo-mercado-pago">
           </div>
         </div>
       </div>
