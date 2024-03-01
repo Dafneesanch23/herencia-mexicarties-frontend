@@ -9,7 +9,7 @@ function mostrarProductosHuacal() {
         <div class="card product-card mb-3">
             <div class="row g-0">
                 <div class="col-md-4 d-flex justify-content-center align-items-center">
-                    <img src="../Tienda/tiendaArtesanias/${producto.url}" class="img-fluid rounded-start" alt="${producto.nombre}">
+                    <img src="${producto.url}" class="img-fluid rounded-start" alt="${producto.nombre}">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
