@@ -1,10 +1,4 @@
-/* Botones */
-const nuevoBoton = document.createElement("button");
-nuevoBoton.textContent = "Echar al huacal";
-nuevoBoton.classList.add("btn", "btn-primary", "add-to-huacal");
-document.body.appendChild(nuevoBoton);
-
-/* Productos de tienda */
+/*Productos de tienda*/
 let productosMostrados = 0;
 const productosPorPagina = 15;
 
@@ -30,7 +24,6 @@ function parseCSV(csvData) {
         for (let j = 0; j < headers.length; j++) {
             producto[headers[j]] = currentLine[j];
         }
-        producto.talla = currentLine[headers.indexOf('talla')];
 
         productos.push(producto);
     }
@@ -38,7 +31,7 @@ function parseCSV(csvData) {
     return productos;
 }
 
-// Filtrar productos
+//filtrar productos
 async function filtrarProductos() {
     const searchBar = document.getElementById('searchBar');
     const filtro = searchBar.value.toLowerCase();
@@ -55,7 +48,7 @@ async function filtrarProductos() {
     mostrarProductos(productosFiltrados);
 }
 
-// Mostrar productos
+//mostrar productos
 function mostrarProductos(productosAMostrar) {
     const productosContainer = document.getElementById('productosContainer');
     productosContainer.innerHTML = '';
@@ -63,20 +56,19 @@ function mostrarProductos(productosAMostrar) {
 
     productosAMostrar.slice(0, productosPorPagina).forEach(producto => {
         const productoCard = `
-            <div class="col-md-3 producto dark-card">
-                <div class="card option_container" id="${producto.id}" data-producto='${JSON.stringify(producto)}' onclick="mostrarDetallesProducto.call(this)">
-                    <img src="${producto.imagen_url}" class="card-img-top" alt="${producto.nombre}">
-                    <div class="card-body">
-                        <h5 class="card-title">${producto.nombre}</h5>
-                        <p class="card-text">Precio: ${producto.precio} MXN</p>
-                        <p>Lugar de origen: ${producto.lugar_fabricacion}</p>
-                    </div>
-                    <div class="overlay-text" onclick="mostrarDetallesProducto()">
-                        Ver más
-                    </div>
-                </div>
+    <div class="col-md-3 producto dark-card">
+        <div class="card option_container" id="${producto.id}" data-producto='${JSON.stringify(producto)}' onclick="mostrarDetallesProducto.call(this)"">
+            <img src="${producto.imagen_url}" class="card-img-top" alt="${producto.nombre}">
+            <div class="card-body">
+                <h5 class="card-title">${producto.nombre}</h5>
+                <p class="card-text">Precio: $ ${producto.precio} </p>
             </div>
-        `;
+            <div class="overlay-text" onclick="mostrarDetallesProducto()">
+                Ver más
+            </div>
+        </div>
+    </div>
+    `;
 
         productosContainer.innerHTML += productoCard;
         productosMostrados++;
@@ -94,20 +86,19 @@ async function mostrarMasProductos() {
 
     productos.slice(productosMostrados, productosMostrados + productosPorPagina).forEach(producto => {
         const productoCard = `
-            <div class="col-md-3 producto dark-card">
-                <div class="card option_container" id="${producto.id}" data-producto='${JSON.stringify(producto)}' onclick="mostrarDetallesProducto.call(this)">
-                    <img src="${producto.imagen_url}" class="card-img-top" alt="${producto.nombre}">
-                    <div class="card-body">
-                        <h5 class="card-title">${producto.nombre}</h5>
-                        <p class="card-text">Precio: ${producto.precio}MXN</p>
-                        <p class="card-text">Lugar de origen: ${producto.lugar_fabricacion}</p>
-                    </div>
-                    <div class="overlay-text" onclick="mostrarDetallesProducto()">
-                        Ver más
-                    </div>
-                </div>
+        <div class="col-md-3 producto dark-card">
+        <div class="card option_container" id="${producto.id}" data-producto='${JSON.stringify(producto)}' onclick="mostrarDetallesProducto.call(this)">
+            <img src="${producto.imagen_url}" class="card-img-top" alt="${producto.nombre}">
+            <div class="card-body">
+                <h5 class="card-title">${producto.nombre}</h5>
+                <p class="card-text">Precio: $ ${producto.precio}</p>
             </div>
-        `;
+            <div class="overlay-text" onclick="mostrarDetallesProducto()">
+                Ver más
+            </div>
+        </div>
+    </div>
+    `;
 
         productosContainer.innerHTML += productoCard;
         productosMostrados++;
@@ -117,64 +108,60 @@ async function mostrarMasProductos() {
     btnMostrarMas.style.display = productos.length > productosMostrados ? 'block' : 'none';
 }
 
-function echarAlHuacal() {
-    // Incrementa el contador del huacal
-    var huacalNumber = document.getElementById('huacal-number');
-    var currentCount = parseInt(huacalNumber.innerText);
-    var newCount = currentCount + 1;
-    huacalNumber.innerText = newCount;
-
-    // Muestra el mensaje de confirmación
-    var confirmationMessage = document.createElement("div");
-    confirmationMessage.textContent = 'Producto echado al huacal';
-    confirmationMessage.classList.add('confirmation-message');
-    document.body.appendChild(confirmationMessage);
-
-    // Oculta el mensaje después de 2 segundos
-    setTimeout(function () {
-        confirmationMessage.remove();
-    }, 2000);
-}
-
 function mostrarDetallesProducto() {
     const productoString = this.getAttribute('data-producto');
     const producto = JSON.parse(productoString);
     const modalBody = document.getElementById('productModalBody');
+
+    window.echarAlHuacal = function () {
+        var boton = this;
+        var huacalNumber = document.getElementById('huacal-number');
+        var currentCount = parseInt(huacalNumber.innerText);
+        var newCount = currentCount + 1;
+        huacalNumber.innerText = newCount;
+
+        localStorage.setItem('huacalNumber', newCount);
+
+        var storedProducts = JSON.parse(localStorage.getItem('storedProducts')) || [];
+        storedProducts.push(producto);
+        localStorage.setItem('storedProducts', JSON.stringify(storedProducts));
+
+    };
+
     modalBody.innerHTML = `
       <h2>${producto.nombre}</h2>
       <img src="${producto.imagen_url}" alt="${producto.nombre}">
-      <p>Precio: $${producto.precio}</p>
-      <p>Lugar de origen: ${producto.lugar_fabricacion}</p>
-      <p>Artesano: ${producto.artesano}</p>
       <p>${producto.descripcion}</p>
-      <button class="btn btn-echar-huacal" onclick="echarAlHuacal()">Echar al Huacal</button>
+      <p>Precio: $${producto.precio}</p>
+      <button class="btn btn-echar-huacal" onclick="echarAlHuacal.call(this)">Echar al Huacal</button>
       <button class="btn btn-comprar">Comprar</button>
     `;
 
     $('#productModal').modal('show');
 }
-
-/* Funciones a correr */
-cargarProductos();
-
-function echarAlHuacal() {
-    // Incrementa el contador del huacal
+/*
+function echarAlHuacal(boton) {
     var huacalNumber = document.getElementById('huacal-number');
     var currentCount = parseInt(huacalNumber.innerText);
     var newCount = currentCount + 1;
     huacalNumber.innerText = newCount;
 
-    // Muestra el mensaje de confirmación sobre el modal
-    var confirmationMessage = document.createElement("div");
-    confirmationMessage.textContent = 'Producto echado al huacal';
-    confirmationMessage.classList.add('confirmation-message');
-    
-    // Agrega el mensaje de confirmación como un hijo del modal
-    var modalContent = document.querySelector('.modal-content');
-    modalContent.appendChild(confirmationMessage);
+    localStorage.setItem('huacalNumber', newCount);
 
-    // Oculta el mensaje después de 2 segundos
-    setTimeout(function () {
-        confirmationMessage.remove();
-    }, 2000);
-}
+    var productoString = boton.closest('.option_container').getAttribute('data-producto');
+    var producto = JSON.parse(productoString);
+    console.log(productoString);
+
+    // Obtener los productos guardados previamente o inicializar como un array vacío
+    var storedProducts = JSON.parse(localStorage.getItem('storedProducts')) || [];
+
+    // Agregar el nuevo producto a la lista de productos guardados
+    storedProducts.push(producto);
+
+    // Guardar la lista de productos en el almacenamiento local
+    localStorage.setItem('storedProducts', JSON.stringify(storedProducts));
+}*/
+
+/*Funciones a correr*/
+
+cargarProductos();
