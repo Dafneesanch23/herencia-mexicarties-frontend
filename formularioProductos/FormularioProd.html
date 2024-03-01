@@ -139,7 +139,7 @@
       <div class="card">
         <div class="card-body">
           <legend class="card-title text-center mt-4">DATOS DEL PRODUCTO</legend>
-          <form class="m-4" id="formulario-productos">
+          <form class="m-4" id="formulario-productos" action="" method="post">
             <div class="form-group">
               <label for="nombre-producto">Nombre del producto</label>
               <input type="text" class="form-control" id="nombre-producto" name="nombre-producto"
@@ -222,7 +222,7 @@
                 aria-label="Default select example" required>
             </div>
             <div class="d-flex justify-content-center">
-              <button type="button" onclick="save(event)" class="btn btn-primary btn-block">Guardar</button>
+              <button type="submit" onclick="save(event)" class="btn btn-primary btn-block">Guardar</button>
             </div>
           </form>
           <div id="error-message" class="alert alert-danger" style="display:none;">
