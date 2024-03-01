@@ -1,19 +1,22 @@
 
-
+const apiUrl = 'http://18.217.164.185/api/products/';
 
 /*Productos de tienda*/
 let productosMostrados = 0;
 const productosPorPagina = 15;
 
 async function cargarProductos() {
-    const response = await fetch('../../../Tienda/tiendaArtesanias/JS/productos.csv');
-    const csvData = await response.text();
+    //const response = await fetch('../../../Tienda/tiendaArtesanias/JS/productos.csv');
+    const response = await fetch(apiUrl);
+    //const csvData = await response.text();
+    const productos = await response.json();
+    const artesanias = productos.filter(producto => producto.category.id === 1);
+    //const productos = parseCSV(csvData);
 
-    const productos = parseCSV(csvData);
-
-    mostrarProductos(productos);
+    //mostrarProductos(productos);
+    mostrarProductos(artesanias);
 }
-
+/*
 function parseCSV(csvData) {
     const lines = csvData.split('\n');
     const headers = lines[0].split(',');
@@ -32,23 +35,34 @@ function parseCSV(csvData) {
     }
 
     return productos;
-}
+}*/
 
 //filtrar productos
 async function filtrarProductos() {
     const searchBar = document.getElementById('searchBar');
     const filtro = searchBar.value.toLowerCase();
-    const response = await fetch('../../../Tienda/tiendaArtesanias/JS/productos.csv');
-    const csvData = await response.text();
-    const productos = parseCSV(csvData);
+    //const response = await fetch('../../../Tienda/tiendaArtesanias/JS/productos.csv');
+    //const csvData = await response.text();
+    const response = await fetch(apiUrl);
+    const productos = await response.json();
+    //const productos = parseCSV(csvData);
+    const artesanias = productos.filter(producto => producto.category.id === 1);
 
-    const productosFiltrados = productos.filter(producto =>
+    /*const productosFiltrados = productos.filter(producto =>
         producto.lugar_fabricacion.toLowerCase().includes(filtro) ||
         producto.tipo.toLowerCase().includes(filtro) ||
         producto.artesano.toLowerCase().includes(filtro)
+    );*/
+
+    //const productosFiltrados = productos.filter(producto =>
+    const artesaniasfiltradas = artesanias.filter(producto =>
+        producto.product_location.toLowerCase().includes(filtro) ||
+        producto.name_product.toLowerCase().includes(filtro) ||
+        producto.handicraftsman.name_handicraftsman.toLowerCase().includes(filtro)
     );
 
-    mostrarProductos(productosFiltrados);
+    //mostrarProductos(productosFiltrados);
+    mostrarProductos(artesaniasfiltradas);
 }
 
 //mostrar productos
@@ -57,7 +71,7 @@ function mostrarProductos(productosAMostrar) {
     productosContainer.innerHTML = '';
     productosMostrados = 0;
 
-    productosAMostrar.slice(0, productosPorPagina).forEach(producto => {
+    /*productosAMostrar.slice(0, productosPorPagina).forEach(producto => {
         const productoCard = `
     <div class="col-md-3 producto dark-card">
         <div class="card option_container" id="${producto.id}" data-producto='${JSON.stringify(producto)}' onclick="mostrarDetallesProducto.call(this)"">
@@ -65,6 +79,21 @@ function mostrarProductos(productosAMostrar) {
             <div class="card-body">
                 <h5 class="card-title">${producto.nombre}</h5>
                 <p class="card-text">Precio: $ ${producto.precio} </p>
+            </div>
+            <div class="overlay-text" onclick="mostrarDetallesProducto()">
+                Ver más
+            </div>
+        </div>
+    </div>
+    `;*/
+    productosAMostrar.slice(0, productosPorPagina).forEach(producto => {
+        const productoCard = `
+    <div class="col-md-3 producto dark-card">
+        <div class="card option_container" id="${producto.id}" data-producto='${JSON.stringify(producto)}' onclick="mostrarDetallesProducto.call(this)"">
+            <img src="${producto.url}" class="card-img-top" alt="${producto.name_product}">
+            <div class="card-body">
+                <h5 class="card-title">${producto.name_product}</h5>
+                <p class="card-text">Precio: $ ${producto.price} </p>
             </div>
             <div class="overlay-text" onclick="mostrarDetallesProducto()">
                 Ver más
@@ -83,11 +112,14 @@ function mostrarProductos(productosAMostrar) {
 
 async function mostrarMasProductos() {
     const productosContainer = document.getElementById('productosContainer');
-    const response = await fetch('../../../Tienda/tiendaArtesanias/JS/productos.csv');
-    const csvData = await response.text();
-    const productos = parseCSV(csvData);
+    //const response = await fetch('../../../Tienda/tiendaArtesanias/JS/productos.csv');
+    //const csvData = await response.text();
+    const response = await fetch(apiUrl);
+    const productos = await response.json();
+    //const productos = parseCSV(csvData);
+    const artesanias = productos.filter(producto => producto.category.id === 1);
 
-    productos.slice(productosMostrados, productosMostrados + productosPorPagina).forEach(producto => {
+    /*productos.slice(productosMostrados, productosMostrados + productosPorPagina).forEach(producto => {
         const productoCard = `
         <div class="col-md-3 producto dark-card">
         <div class="card option_container" id="${producto.id}" data-producto='${JSON.stringify(producto)}' onclick="mostrarDetallesProducto.call(this)">
@@ -95,6 +127,22 @@ async function mostrarMasProductos() {
             <div class="card-body">
                 <h5 class="card-title">${producto.nombre}</h5>
                 <p class="card-text">Precio: $ ${producto.precio}</p>
+            </div>
+            <div class="overlay-text" onclick="mostrarDetallesProducto()">
+                Ver más
+            </div>
+        </div>
+    </div>
+    `;*/
+    //productos.slice(productosMostrados, productosMostrados + productosPorPagina).forEach(producto => {
+    artesanias.slice(productosMostrados, productosMostrados + productosPorPagina).forEach(producto => {
+        const productoCard = `
+        <div class="col-md-3 producto dark-card">
+        <div class="card option_container" id="${producto.id}" data-producto='${JSON.stringify(producto)}' onclick="mostrarDetallesProducto.call(this)">
+            <img src="${producto.url}" class="card-img-top" alt="${producto.name_product}">
+            <div class="card-body">
+                <h5 class="card-title">${producto.name_product}</h5>
+                <p class="card-text">Precio: $ ${producto.price}</p>
             </div>
             <div class="overlay-text" onclick="mostrarDetallesProducto()">
                 Ver más
@@ -131,11 +179,19 @@ function mostrarDetallesProducto() {
 
     };
 
-    modalBody.innerHTML = `
+    /*modalBody.innerHTML = `
       <h2>${producto.nombre}</h2>
       <img src="${producto.imagen_url}" alt="${producto.nombre}">
       <p>${producto.descripcion}</p>
       <p>Precio: $${producto.precio}</p>
+      <button class="btn btn-echar-huacal" onclick="echarAlHuacal.call(this)">Echar al Huacal</button>
+      <button class="btn btn-comprar">Comprar</button>
+    `;*/
+    modalBody.innerHTML = `
+      <h2>${producto.name_product}</h2>
+      <img src="${producto.url}" alt="${producto.name_product}">
+      <p>${producto.description}</p>
+      <p>Precio: $${producto.price}</p>
       <button class="btn btn-echar-huacal" onclick="echarAlHuacal.call(this)">Echar al Huacal</button>
       <button class="btn btn-comprar">Comprar</button>
     `;
