@@ -9,21 +9,21 @@ function mostrarProductosHuacal() {
         <div class="card product-card mb-3">
             <div class="row g-0">
                 <div class="col-md-4 d-flex justify-content-center align-items-center">
-                    <img src="../Tienda/tiendaArtesanias/${producto.imagen_url}" class="img-fluid rounded-start" alt="${producto.nombre}">
+                    <img src="${producto.url}" class="img-fluid rounded-start" alt="${producto.nombre}">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
                         <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between">
                             <div class="card-info">
-                                <h5 class="card-title">${producto.nombre}</h5>
-                                <p class="card-text">Artesano ${producto.artesano}</p>
+                                <h5 class="card-title">${producto.name_product}</h5>
+                                <p class="card-text">Artesano ${producto.handicraftsman.name_handicraftsman}</p>
                             </div>
                             <div class="quantity-selector d-flex flex-row align-items-center">
                                 <button class="btn  justify-content-center incrementar-disminuir" onclick="disminuirCantidad(this.nextElementSibling)"> - </button>
                                 <input type="text" value="1" class="count-form form-control">
                                 <button class="btn  justify-content-center incrementar-disminuir" onclick="aumentarCantidad(this.previousElementSibling)"> + </button>
                             </div>
-                            <p class="price mb-2 mb-sm-0">$${producto.precio} USD</p>
+                            <p class="price mb-2 mb-sm-0">$${producto.price} USD</p>
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-between mt-2">
@@ -36,7 +36,7 @@ function mostrarProductosHuacal() {
         </div>
         `;
         huacalContainer.innerHTML += productoCard;
-        totalPrecio += parseFloat(producto.precio);
+        totalPrecio += parseFloat(producto.price);
     });
     localStorage.setItem('totalPrecio', totalPrecio.toFixed(2));
     document.querySelector('.productos-precio').textContent = `$ ${totalPrecio} MXN`;
