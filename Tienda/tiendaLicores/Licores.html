@@ -147,15 +147,16 @@
   <br>
 
   <div class="container1">
-    <img src="../../Tienda/tiendaLicores/Img/charanda-licores_M.jpeg" alt="Portada" class="special-image">
+    <img src="../../Tienda/tiendaLicores/Imagenes/charanda-licores_M.jpeg" alt="Portada" class="special-image">
 </div>
 <br>
 <br>
 <div class="container-list">
     <h1>Vinos y Licores artesanales</h1>
     <p class="text-artesanias">
-      México cuenta con una rica tradición en la producción de licores, muchos de los cuales son conocidos internacionalmente. Herencia Mexicarties ofrece una variedad de licores que reflejan la diversidad cultural y la artesanía destiladora del país. Aquí tienes algunas opciones que podrías encontrar con nosotros:
-    </div>
+        México cuenta con una rica tradición en la producción de licores, muchos de los cuales son conocidos internacionalmente. Herencia Mexicarties ofrece una variedad de licores que reflejan la diversidad cultural y la artesanía destiladora del país. Aquí tienes algunas opciones que podrías encontrar con nosotros:
+    </p>
+</div>
 
 <!--Contenido-->
 <div class="container">
@@ -163,10 +164,10 @@
         <input type="text" class="form-control" id="searchBar" placeholder="Buscar por lugar, tipo o artesano"
             oninput="filtrarProductos()">
     </div>
-
     <div id="productosContainer" class="row">
-
     </div>
+    <!-- Elemento para mostrar notificaciones -->
+    <div id="notification" style="display: none;"></div>
     <br>
     <div class="text-center">
         <button class="btn btn-mostrar-mas" onclick="mostrarMasProductos()"
@@ -183,14 +184,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="productModalBody">
-                <!-- Aquí se mostrará la información detallada del producto -->
             </div>
         </div>
     </div>
 </div>
 
-
-  <!-- INCIO Pie de Página -->
+<!-- INCIO Pie de Página -->
   <footer>
     <!-- Sección de Descripción -->
     <div class="descripcion-section">

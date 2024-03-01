@@ -9,14 +9,13 @@ function mostrarProductosHuacal() {
         <div class="card product-card mb-3">
             <div class="row g-0">
                 <div class="col-md-4 d-flex justify-content-center align-items-center">
-                    <img src="../Tienda/tiendaArtesanias/${producto.imagen_url}" class="img-fluid rounded-start" alt="${producto.nombre}">
+                    <img src="../Tienda/tiendaArtesanias/${producto.imagen_url}" class="img-fluid" style="border-radius: 0.9rem;" alt="${producto.nombre}">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
                         <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between">
                             <div class="card-info">
                                 <h5 class="card-title">${producto.nombre}</h5>
-                                <p class="card-text">${producto.descripcion}</p>
                                 <p class="card-text">Artesano ${producto.artesano}</p>
                             </div>
                             <div class="quantity-selector d-flex flex-row align-items-center">
@@ -24,7 +23,7 @@ function mostrarProductosHuacal() {
                                 <input type="text" value="1" class="count-form form-control">
                                 <button class="btn  justify-content-center incrementar-disminuir" onclick="aumentarCantidad(this.previousElementSibling)"> + </button>
                             </div>
-                            <p class="price mb-2 mb-sm-0">$${producto.precio} USD</p>
+                            <p class="price mb-2 mb-sm-0">$${producto.precio} MXN</p>
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-between mt-2">
@@ -113,3 +112,93 @@ function sacarDelHuacal(button) {
 }
 
 mostrarProductosHuacal()
+
+function continuarCompra(){
+    
+    let contenedorDirec = document.getElementById("direccion-entrega");
+
+    let cardDirection = document.createElement("div");
+    cardDirection.classList.add("direccion-container");
+
+    const cardContainer = document.querySelector('.direccion-entrega');
+    cardContainer.innerHTML = '';
+
+    let directionForm = `
+    
+<div class="card">
+    <div class="card-body">
+        <form  id="formulario-direccion" action="" method="post">
+            <div class="form-group">
+                <div class="address-title">
+                    <h3>DIRECCIÓN DE ENVÍO</h3>
+                </div>
+                 <input type="text" class="form-control" id="name_user" name="name_user"
+                placeholder="Nombre completo de quien recibe" autocomplete="off" required></input>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="address" id="address"
+                placeholder="Calle y colonia" autocomplete="off" required></input>
+             </div>
+             <div class="form-group">
+                <input type="text" class="form-control" name="num_ext" id="num_ext"
+                placeholder="Número exterior" autocomplete="off" required></input>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="num_int" id="num_int"
+                placeholder="Número interior (Si aplica)" autocomplete="off"></input>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="city" name="city"
+                placeholder="Ciudad" autocomplete="off" required></input>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="country" name="country"
+                placeholder="País" autocomplete="off" required></input>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="zip_code" name="zip_code"
+                placeholder="C.P." autocomplete="off" required></input>
+            </div>
+            <div class="container text-center mb-3">
+                <h3>MÉTODOS DE PAGO</h3>
+            </div>
+                <form id="formulario-pago" action="" method="post">
+                    <div class="form-group row justify-content-center">
+                        <div class="col-auto">
+                            <div class="form-check form-check-inline">                            
+                                <input type="radio" id="tarjeta_credito" name="metodo_pago" value="1">
+                                <label for="tarjeta_credito">Tarjeta de crédito</label><br>                            
+                            </div>
+                        </div>    
+                    <div class="col-auto">
+                        <div class="form-check form-check-inline">                              
+                            <input type="radio" id="paypal" name="metodo_pago" value="2">
+                            <label for="paypal">Paypal</label><br>                            
+                        </div>
+                    </div>
+                        <div class="col-auto">
+                            <div class="form-check form-check-inline">                           
+                                <input type="radio" id="tarjeta_debito" name="metodo_pago" value="3">
+                                <label for="tarjeta_debito">Tarjeta de débito</label><br>                            
+                            </div>                            
+                        </div>
+                    </div>
+                        <div class="text-center">
+                        <img class="img-pagos img-fluid" src="../Public/Imagenes/pagos.jpg" alt="logo-mercado-pago">
+                    </div>
+                </form>
+                    <div class="d-flex justify-content-between mt-2">
+                        <input type="submit" class="btn btn-compra" value="Comprar">
+                    </div>
+                </form> `;
+
+    cardDirection.innerHTML = directionForm;
+    cardContainer.appendChild(cardDirection);
+}
+    
+document.addEventListener("DOMContentLoaded", function() {
+
+    let btnCompra = document.getElementById("conti-compra");
+    btnCompra.addEventListener("click", continuarCompra);
+    });
+    
