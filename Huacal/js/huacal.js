@@ -9,7 +9,7 @@ function mostrarProductosHuacal() {
         <div class="card product-card mb-3">
             <div class="row g-0">
                 <div class="col-md-4 d-flex justify-content-center align-items-center">
-                    <img src="${producto.url}" class="img-fluid rounded-start" style=" border-radius: 0.9rem;" alt="${producto.nombre}">
+                    <img src="${producto.url}" class="img-fluid rounded-start" alt="${producto.nombre}">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
@@ -112,89 +112,3 @@ function sacarDelHuacal(button) {
 }
 
 mostrarProductosHuacal()
-
-function continuarCompra(){
-    // let btnCompra = document.getElementById("conti-compra");
-    let contenedorDirec = document.getElementById("direccion-entrega");
-
-    let card = document.createElement("div");
-    card.classList.add("direccion-container");
-
-    const cardContainer = document.querySelector('.direccion-entrega');
-    cardContainer.innerHTML = '';
-
-    let directionForm = `
-    
-    <div class="card">
-        <div class="card-body">
-        <form  id="formulario-direccion" action="" method="post">
-    <div class="form-group">
-    <div class="address-title">
-        <h3>DIRECCIÓN DE ENVÍO</h3>
-    </div>
-        <input type="text" class="form-control" id="name_user" name="name_user"
-        placeholder="Nombre completo de quien recibe" autocomplete="off" required></input>
-    </div>
-    <div class="form-group">
-        <input type="text" class="form-control" name="address" id="address"
-        placeholder="Calle y colonia" autocomplete="off" required></input>
-    </div>
-    <div class="form-group">
-        <input type="text" class="form-control" name="num_ext" id="num_ext"
-        placeholder="Número exterior" autocomplete="off" required></input>
-    </div>
-    <div class="form-group">
-        <input type="text" class="form-control" name="num_int" id="num_int"
-        placeholder="Número interior (Si aplica)" autocomplete="off"></input>
-    </div>
-    <div class="form-group">
-        <input type="text" class="form-control" id="city" name="city"
-        placeholder="Ciudad" autocomplete="off" required></input>
-    </div>
-    <div class="form-group">
-        <input type="text" class="form-control" id="country" name="country"
-        placeholder="País" autocomplete="off" required></input>
-    </div>
-    <div class="form-group">
-        <input type="text" class="form-control" id="zip_code" name="zip_code"
-        placeholder="C.P." autocomplete="off" required></input>
-    </div>
-    <div class="container text-center mb-3">
-    <h3>MÉTODOS DE PAGO</h3>
-</div>
-<form id="formulario-pago" action="" method="post">
-    <div class="form-group row justify-content-center">
-        <div class="col-auto">
-            <div class="form-check form-check-inline">                            
-                <input type="radio" id="tarjeta_credito" name="metodo_pago" value="1">
-                <label for="tarjeta_credito">Tarjeta de crédito</label><br>                            
-            </div>
-        </div>    
-        <div class="col-auto">
-            <div class="form-check form-check-inline">                              
-                <input type="radio" id="paypal" name="metodo_pago" value="2">
-                <label for="paypal">Paypal</label><br>                            
-            </div>
-        </div>
-        <div class="col-auto">
-            <div class="form-check form-check-inline">                           
-                <input type="radio" id="tarjeta_debito" name="metodo_pago" value="3">
-                <label for="tarjeta_debito">Tarjeta de débito</label><br>                            
-            </div>                            
-        </div>
-    </div>
-    <div class="text-center">
-        <img class="img-pagos img-fluid" src="../Public/Imagenes/pagos.jpg" alt="logo-mercado-pago">
-    </div>
-</form>
-    <div class="d-flex justify-content-between mt-2">
-        <input type="submit" class="btn btn-primary" value="Comprar">
-    </div>
-  </form> `;
-
-    card.innerHTML = directionForm;
-    cardContainer.appendChild(card);
-}
-
-    let btnCompra = document.getElementById("conti-compra");
-    btnCompra.addEventListener("click", continuarCompra);
