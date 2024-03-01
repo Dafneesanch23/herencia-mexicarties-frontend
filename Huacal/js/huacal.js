@@ -11,7 +11,7 @@ function mostrarProductosHuacal() {
                 <div class="col-md-4 d-flex justify-content-center align-items-center">
                     <img src="../Tienda/tiendaArtesanias/${producto.imagen_url}" class="img-fluid" style="border-radius: 0.9rem;" alt="${producto.nombre}">
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 ">
                     <div class="card-body">
                         <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between">
                             <div class="card-info">
@@ -37,6 +37,8 @@ function mostrarProductosHuacal() {
         `;
         huacalContainer.innerHTML += productoCard;
         totalPrecio += parseFloat(producto.precio);
+
+      
     });
     localStorage.setItem('totalPrecio', totalPrecio.toFixed(2));
     document.querySelector('.productos-precio').textContent = `$ ${totalPrecio} MXN`;
@@ -194,6 +196,8 @@ function continuarCompra(){
 
     cardDirection.innerHTML = directionForm;
     cardContainer.appendChild(cardDirection);
+    cardDirection.style.margin = "auto";
+    cardDirection.style.width = "50%";
 }
     
 document.addEventListener("DOMContentLoaded", function() {
@@ -202,3 +206,4 @@ document.addEventListener("DOMContentLoaded", function() {
     btnCompra.addEventListener("click", continuarCompra);
     });
     
+
