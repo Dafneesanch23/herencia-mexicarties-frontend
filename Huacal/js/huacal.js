@@ -115,24 +115,23 @@ function sacarDelHuacal(button) {
 
 mostrarProductosHuacal()
 
-function continuarCompra(){
-    
-    let contenedorDirec = document.getElementById("direccion-entrega");
-
-    let cardDirection = document.createElement("div");
-    cardDirection.classList.add("direccion-container");
-
+function continuarCompra() {
     const cardContainer = document.querySelector('.direccion-entrega');
+
+    // Limpiar el contenido existente del contenedor
     cardContainer.innerHTML = '';
 
-    let directionForm = `
-    
+    // Crear un nuevo contenedor para el formulario de dirección
+    const cardDirection = document.createElement('div');
+    cardDirection.classList.add('direccion-container');
+
+    const directionForm = `
 <div class="card">
     <div class="card-body">
         <form  id="formulario-direccion" action="" method="post">
             <div class="form-group">
                 <div class="address-title">
-                    <h3>DIRECCIÓN DE ENVÍO</h3>
+                    <h3>Dirección de envio</h3>
                 </div>
                  <input type="text" class="form-control" id="name_user" name="name_user"
                 placeholder="Nombre completo de quien recibe" autocomplete="off" required></input>
@@ -197,7 +196,7 @@ function continuarCompra(){
     cardDirection.innerHTML = directionForm;
     cardContainer.appendChild(cardDirection);
     cardDirection.style.margin = "auto";
-    cardDirection.style.width = "50%";
+    cardDirection.style.width = "120%";
 }
     
 document.addEventListener("DOMContentLoaded", function() {

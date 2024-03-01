@@ -87,9 +87,6 @@ main{
     color: var(--color6);
 }
 
-.resumen{
-   
-}
 
 
 /*************************************/
@@ -119,7 +116,7 @@ main{
     justify-content: center;
     align-items: center;
     padding-top: 20px;
-    width: 70%;
+    width: 120%;
 }
 
 .card{
@@ -203,3 +200,41 @@ main{
 .darkmode .price{
     color: white;
 }
+
+/* Añade estas clases para igualar la altura y hacer los contenedores responsivos */
+.contenedor-comun, .contenedor-principal, .contenido-productos, .resumen {
+    height: 100%;
+}
+
+.card.product-card {
+    height: 100%; /* Ajusta la altura de las tarjetas */
+}
+
+.resumen {
+    height: 100%; /* Ajusta la altura del contenedor de resumen */
+}
+
+/* Ajusta la altura de los elementos internos de las tarjetas */
+.product-card .card-body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Ajusta la altura de los elementos internos del resumen */
+.resumen .item-resumen {
+    height: auto; 
+}
+
+/* Asegúrate de que ambos contenedores sean flexibles */
+.contenedor-comun {
+    display: flex;
+}
+
+.contenedor-principal, .resumen {
+    flex: 1; 
+}
+
+
+
