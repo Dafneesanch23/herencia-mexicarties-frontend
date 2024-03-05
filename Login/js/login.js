@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if(dataUser.typeUser === 1){ // Usuario comprador
         window.location.href = '/Inicio/inicio.html';
       }else {
-        window.location.href = '/formularioProductos/FormularioProd.html';
+        window.location.href = '//Inicio/inicio.html';
       }
 
       
