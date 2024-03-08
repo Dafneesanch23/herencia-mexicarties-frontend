@@ -3,7 +3,7 @@ let productosMostrados = 0;
 const productosPorPagina = 8;
 
 async function cargarProductos() {
-    const response = await fetch('../../../Tienda/tiendaLicores/JS/productosLicores.csv');
+    const response = await fetch('../../Tienda/tiendaLicores/JS/productosLicores.csv');
     const csvData = await response.text();
 
     const productos = parseCSV(csvData);
@@ -35,7 +35,7 @@ function parseCSV(csvData) {
 async function filtrarProductos() {
     const searchBar = document.getElementById('searchBar');
     const filtro = searchBar.value.toLowerCase();
-    const response = await fetch('../../../Tienda/tiendaLicores/JS/productosLicores.csv');
+    const response = await fetch('../../Tienda/tiendaLicores/JS/productosLicores.csv');
     const csvData = await response.text();
     const productos = parseCSV(csvData);
 
@@ -83,7 +83,7 @@ function mostrarProductos(productosAMostrar) {
 
 async function mostrarMasProductos() {
     const productosContainer = document.getElementById('productosContainer');
-    const response = await fetch('../../../Tienda/tiendaLicores/JS/productosLicores.csv');
+    const response = await fetch('../../Tienda/tiendaLicores/JS/productosLicores.csv');
     const csvData = await response.text();
     const productos = parseCSV(csvData);
 
